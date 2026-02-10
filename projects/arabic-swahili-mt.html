@@ -3,39 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arabic-Swahili MT | Asim Osman</title>
+    <title>Arabic-Swahili Machine Translation | Asim Osman</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>.gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .arabic { font-family: 'Amiri', serif; direction: rtl; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-50 text-gray-900">
     <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
         <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="text-xl font-bold gradient-text">AO</a>
-            <a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+            <a href="/journey.html#chapter-4" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
         </div>
     </nav>
+
     <main class="pt-24 pb-16">
         <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
             <div class="mb-8">
-                <span class="text-4xl">🌍</span>
-                <h1 class="text-3xl font-bold mt-4">Arabic-to-Swahili Machine Translation</h1>
-                <p class="text-gray-500 mt-2">2022 — Graduation Project</p>
-            </div>
-            <div class="prose max-w-none">
-                <h2 class="text-xl font-semibold mb-4">About This Project</h2>
-                <p class="text-gray-600 mb-6">My graduation project — building a neural machine translation system for a challenging low-resource language pair. Arabic to Swahili translation using sequence-to-sequence models with attention mechanisms.</p>
-                <h2 class="text-xl font-semibold mb-4">Tech Stack</h2>
-                <div class="flex gap-2 flex-wrap mb-6">
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Python</span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">PyTorch</span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Seq2Seq</span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">NLP</span>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">🌍</span>
+                    <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">Published @ ICLR 2023</span>
                 </div>
-                <a href="https://github.com/Asimawad/Arabic-to-Swahili-Machine-Translation" target="_blank" class="inline-block px-4 py-2 bg-gray-900 text-white rounded-lg">View on GitHub →</a>
+                <h1 class="text-4xl font-bold">Arabic-Swahili Machine Translation</h1>
+                <p class="text-gray-500 mt-2 text-lg">Graduation Project — Low-Resource Neural Machine Translation</p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">NMT</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Transformers</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Low-Resource</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Back-Translation</span>
+                </div>
             </div>
-            <div class="mt-8 pt-8 border-t"><a href="/journey.html#chapter-1" class="text-indigo-600 hover:text-indigo-700 font-medium">← Back to The Beginning</a></div>
+
+            <!-- Publication Banner -->
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-xl mb-10">
+                <div class="flex items-start gap-4">
+                    <span class="text-3xl">📄</span>
+                    <div>
+                        <h2 class="font-bold text-lg">MACHINE TRANSLATION BASELINES FOR ARABIC - SWAHILI</h2>
+                        <p class="text-blue-100 text-sm mt-1">Tiny Papers @ ICLR 2023</p>
+                        <p class="text-blue-200 text-sm mt-2">
+                            <strong>Authors:</strong> Asim Awad Osman, Ahmed Emadeldin Almahady, Muhammed Saeed, Hiba Hassan Sayed
+                        </p>
+                        <a href="https://openreview.net/pdf?id=aVepdnlRb5" target="_blank" 
+                           class="inline-block mt-3 px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-sm font-medium transition">
+                            Read Paper →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abstract -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Abstract</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Building neural machine translation (NMT) systems for low-resource languages poses several challenges, 
+                    mainly due to the lack of parallel data. In this research, we propose a baseline NMT system for translating 
+                    between Arabic and Swahili. Despite being spoken by nearly <strong>300 million individuals worldwide</strong>, 
+                    the parallel corpus between these two languages is severely underrepresented. We scraped and processed 
+                    <strong>the largest high-quality parallel corpus</strong> of Swahili and Arabic to our knowledge.
+                </p>
+                <div class="flex gap-4 mt-4">
+                    <a href="https://github.com/Asimawad/Arabic-to-Swahili-Machine-Translation" target="_blank" 
+                       class="text-indigo-600 hover:text-indigo-700 font-medium">View on GitHub →</a>
+                    <a href="https://openreview.net/forum?id=aVepdnlRb5" target="_blank" 
+                       class="text-indigo-600 hover:text-indigo-700 font-medium">OpenReview →</a>
+                </div>
+            </section>
+
+            <!-- The Problem -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">The Problem</h2>
+                <div class="bg-amber-50 border border-amber-200 p-4 rounded-lg">
+                    <p class="text-amber-800">
+                        <strong>Africa has 2,000+ languages</strong> but they're severely underrepresented in NLP. 
+                        The focus has been on high-resource languages (English, Chinese, etc.), leaving millions of 
+                        Arabic and Swahili speakers without translation technology.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Dataset -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Dataset Contribution</h2>
+                <div class="grid md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-white p-4 rounded-lg border text-center">
+                        <p class="text-3xl font-bold text-indigo-600">32,000</p>
+                        <p class="text-sm text-gray-500">Sentence pairs</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border text-center">
+                        <p class="text-3xl font-bold text-green-600">Largest</p>
+                        <p class="text-sm text-gray-500">AR-SW corpus to date</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border text-center">
+                        <p class="text-3xl font-bold text-amber-600">300M</p>
+                        <p class="text-sm text-gray-500">Speakers combined</p>
+                    </div>
+                </div>
+                <p class="text-gray-600">
+                    We scraped and curated the largest high-quality parallel corpus for Arabic-Swahili translation, 
+                    providing a foundation for future research in this language pair.
+                </p>
+            </section>
+
+            <!-- Translation Examples -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Translation Examples</h2>
+                
+                <div class="space-y-4">
+                    <!-- Example 1 -->
+                    <div class="bg-white p-4 rounded-lg border">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">Arabic (Source)</p>
+                                <p class="arabic text-xl text-gray-800">السلام عليكم ورحمة الله وبركاته</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">Swahili (Target)</p>
+                                <p class="text-lg text-gray-800">Amani iwe juu yenu na rehema ya Mungu na baraka zake</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2">English: Peace be upon you and God's mercy and blessings</p>
+                    </div>
+
+                    <!-- Example 2 -->
+                    <div class="bg-white p-4 rounded-lg border">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">Arabic (Source)</p>
+                                <p class="arabic text-xl text-gray-800">التعليم هو أساس التقدم والتنمية</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">Swahili (Target)</p>
+                                <p class="text-lg text-gray-800">Elimu ni msingi wa maendeleo na ustawi</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2">English: Education is the foundation of progress and development</p>
+                    </div>
+
+                    <!-- Example 3 -->
+                    <div class="bg-white p-4 rounded-lg border">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">Arabic (Source)</p>
+                                <p class="arabic text-xl text-gray-800">نحن نعمل معاً من أجل مستقبل أفضل</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">Swahili (Target)</p>
+                                <p class="text-lg text-gray-800">Tunafanya kazi pamoja kwa mustakabali bora</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2">English: We work together for a better future</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Results</h2>
+                
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-white p-4 rounded-lg border text-center">
+                        <p class="text-sm text-gray-500">Baseline Model</p>
+                        <p class="text-3xl font-bold text-gray-400">~10</p>
+                        <p class="text-sm text-gray-500">BLEU Score</p>
+                    </div>
+                    <div class="bg-green-50 border-green-200 p-4 rounded-lg border text-center">
+                        <p class="text-sm text-green-600">Fine-tuned Model</p>
+                        <p class="text-3xl font-bold text-green-600">30.9</p>
+                        <p class="text-sm text-green-600">BLEU Score ⭐</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-medium mb-2">Key Findings:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>• <strong>Fine-tuning multilingual Transformers</strong> significantly outperforms training from scratch</li>
+                        <li>• <strong>Back-translation</strong> technique further improved performance</li>
+                        <li>• Even with limited data (32K pairs), fine-tuning achieves competitive results</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Methodology -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Methodology</h2>
+                
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ol class="space-y-4 text-gray-700">
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">1</span>
+                            <div>
+                                <strong>Data Collection</strong>
+                                <p class="text-sm text-gray-600">Scraped and processed the largest AR-SW parallel corpus (32K pairs)</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">2</span>
+                            <div>
+                                <strong>Baseline Models</strong>
+                                <p class="text-sm text-gray-600">Trained Transformer models from scratch as reference</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">3</span>
+                            <div>
+                                <strong>Fine-tuning</strong>
+                                <p class="text-sm text-gray-600">Fine-tuned multilingual Transformer variants with our dataset</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">4</span>
+                            <div>
+                                <strong>Back-Translation</strong>
+                                <p class="text-sm text-gray-600">Used synthetic data generation to augment training</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>✅ <strong>Published at ICLR 2023</strong> (Tiny Papers track)</li>
+                        <li>✅ <strong>Created largest AR-SW corpus</strong> (32,000 sentence pairs)</li>
+                        <li>✅ <strong>3x BLEU improvement</strong> with fine-tuning (10 → 30.9)</li>
+                        <li>✅ <strong>Addresses underrepresentation</strong> of African languages in NLP</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html#chapter-4" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <div class="flex gap-3">
+                    <a href="https://openreview.net/pdf?id=aVepdnlRb5" target="_blank" 
+                       class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                        Read Paper
+                    </a>
+                    <a href="https://github.com/Asimawad/Arabic-to-Swahili-Machine-Translation" target="_blank" 
+                       class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
         </div>
     </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
 </body>
 </html>
