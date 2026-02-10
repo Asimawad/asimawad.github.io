@@ -133,7 +133,14 @@
                 </div>
 
                 <h3 class="text-lg font-semibold mb-4">ITS Strategies Implemented</h3>
-                <div class="grid md:grid-cols-3 gap-4">
+                
+                <!-- AIDE Base Framework -->
+                <div class="bg-white p-4 rounded-xl border mb-6">
+                    <img src="/assets/thesis/fig_3_1_aide_tree.png" alt="AIDE Solution Tree" class="w-full max-w-2xl mx-auto rounded-lg">
+                    <p class="text-sm text-gray-500 text-center mt-2">Figure 3.1: AIDE solution tree - drafting, fixing, and improvement steps</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4 mb-6">
                     <div class="bg-amber-50 p-4 rounded-lg border border-amber-200">
                         <div class="text-2xl mb-2">🔄</div>
                         <h4 class="font-semibold text-amber-800">Self-Reflection</h4>
@@ -150,6 +157,22 @@
                         <p class="text-sm text-green-700 mt-1">Separate Planner + Coder agents. <strong>Most effective for 32B.</strong></p>
                     </div>
                 </div>
+
+                <!-- Strategy Diagrams -->
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-white p-4 rounded-xl border">
+                        <img src="/assets/thesis/fig_3_2_self_reflection.png" alt="Self-Reflection" class="w-full rounded-lg">
+                        <p class="text-xs text-gray-500 text-center mt-2">Figure 3.2: Self-Reflection workflow</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border">
+                        <img src="/assets/thesis/fig_3_3_planner_coder.png" alt="Planner-Coder" class="w-full rounded-lg">
+                        <p class="text-xs text-gray-500 text-center mt-2">Figure 3.3: Planner-Coder decomposition</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border mb-6">
+                    <img src="/assets/thesis/fig_3_4_self_consistency.png" alt="Self-Consistency" class="w-full max-w-xl mx-auto rounded-lg">
+                    <p class="text-xs text-gray-500 text-center mt-2">Figure 3.4: Self-Consistency - sample N scripts, execute, pick winner</p>
+                </div>
             </section>
 
             <!-- Results -->
@@ -159,7 +182,7 @@
                 <!-- Figure 4.1: Headline Performance -->
                 <div class="mb-8">
                     <div class="bg-white p-4 rounded-xl border">
-                        <img src="/assets/thesis/results_page_28.png" alt="Headline Performance Comparison" class="w-full rounded-lg">
+                        <img src="/assets/thesis/fig_4_1_headline.png" alt="Headline Performance Comparison" class="w-full rounded-lg">
                         <p class="text-sm text-gray-500 text-center mt-3">Figure 4.1: Comparison of top-performing agents. DS-32B + Decomposed achieves 30% medal rate (Pass@6), matching o4-mini.</p>
                     </div>
                 </div>
@@ -167,7 +190,7 @@
                 <!-- Figure 4.2: Comparative Analysis -->
                 <div class="mb-8">
                     <div class="bg-white p-4 rounded-xl border">
-                        <img src="/assets/thesis/results_page_34.png" alt="Comparative Analysis" class="w-full rounded-lg">
+                        <img src="/assets/thesis/fig_4_2_comparative.png" alt="Comparative Analysis" class="w-full rounded-lg">
                         <p class="text-sm text-gray-500 text-center mt-3">Figure 4.2: Any Medal % (Pass@6) across all configurations. Task decomposition provides the biggest gains for the 32B model.</p>
                     </div>
                 </div>
