@@ -1,8 +1,134 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Feature Visualization | Asim Osman</title><script src="https://cdn.tailwindcss.com"></script><style>.gradient-text{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}</style></head>
-<body class="bg-gray-50 text-gray-900 font-sans"><nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100"><div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center"><a href="/" class="text-xl font-bold gradient-text">AO</a><a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a></div></nav>
-<main class="pt-24 pb-16"><div class="max-w-4xl mx-auto px-6"><div class="mb-8"><span class="text-4xl">🧠</span><h1 class="text-3xl font-bold mt-4">Feature Visualization (NMA)</h1><p class="text-gray-500 mt-2">2023 — Neuromatch Academy</p></div>
-<div class="prose max-w-none"><h2 class="text-xl font-semibold mb-4">About</h2><p class="text-gray-600 mb-6">Neuromatch Academy project exploring feature visualization techniques in neural networks. Understanding what CNNs "see" by visualizing learned features and activations.</p>
-<div class="flex gap-2 flex-wrap mb-6"><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Deep Learning</span><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Visualization</span><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">PyTorch</span></div>
-<a href="https://github.com/Asimawad/Attempt-at-Feature-Visualization-NMA" target="_blank" class="inline-block px-4 py-2 bg-gray-900 text-white rounded-lg">View on GitHub →</a></div>
-<div class="mt-8 pt-8 border-t"><a href="/journey.html#chapter-1" class="text-indigo-600">← Back</a></div></div></main></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Visualization | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }</script>
+    <style>
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="mb-8">
+                <span class="text-4xl">🧠</span>
+                <h1 class="text-3xl font-bold mt-4">Feature Visualization</h1>
+                <p class="text-gray-500 mt-2">Neuromatch Academy Project - Understanding what CNNs "see"</p>
+                <a href="https://github.com/Asimawad/Attempt-at-Feature-Visualization-NMA" target="_blank" class="inline-block mt-3 px-4 py-1.5 bg-gray-900 text-white text-sm rounded-full hover:bg-gray-700 transition">View on GitHub →</a>
+            </div>
+
+            <div class="prose max-w-none">
+                <!-- Question -->
+                <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-8 mb-8">
+                    <h2 class="text-xl font-bold text-purple-800 mb-2">🔬 The Question</h2>
+                    <p class="text-gray-700 text-lg">
+                        What do the intermediate representations in a CNN look like, and how do they evolve through the network?
+                    </p>
+                </div>
+
+                <!-- Filters -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <h2 class="text-xl font-bold mb-4">1. Learned Convolutional Filters</h2>
+                    <p class="text-gray-600 mb-4">
+                        The first layer learns to detect basic features like edges, gradients, and textures. 
+                        Deeper layers combine these into more complex, abstract features.
+                    </p>
+                    <img src="/projects/feature-viz-images/filters.png" alt="Learned Filters" class="rounded-lg w-full mb-4">
+                    
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h3 class="font-semibold text-gray-700 mb-2">Observations</h3>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li>• Layer 1 filters detect simple patterns (edges, gradients)</li>
+                            <li>• Deeper layers combine these into complex features</li>
+                            <li>• Filters show diverse orientations and frequencies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Activations -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <h2 class="text-xl font-bold mb-4">2. Feature Maps (Activations)</h2>
+                    <p class="text-gray-600 mb-4">
+                        Each filter produces an activation map showing where it "fires" in the input.
+                        Watch how spatial resolution decreases but feature richness increases through layers.
+                    </p>
+                    <img src="/projects/feature-viz-images/activations.png" alt="Activations" class="rounded-lg w-full mb-4">
+                    
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h3 class="font-semibold text-gray-700 mb-2">Observations</h3>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li>• Early layers preserve spatial structure</li>
+                            <li>• Deeper layers: smaller spatial resolution, richer features</li>
+                            <li>• Different channels respond to different input aspects</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Channel Activations -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <h2 class="text-xl font-bold mb-4">3. Individual Channel Activations</h2>
+                    <p class="text-gray-600 mb-4">
+                        Each channel in a layer responds to different features. 
+                        Some act as edge detectors, others respond to textures or patterns.
+                    </p>
+                    <img src="/projects/feature-viz-images/channel_activations.png" alt="Channel Activations" class="rounded-lg w-full mb-4">
+                </div>
+
+                <!-- Technical Details -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <h2 class="text-xl font-bold mb-4">📐 Technical Details</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Architecture</h3>
+                            <pre class="bg-gray-50 p-4 rounded-lg text-sm overflow-x-auto">
+SimpleCNN:
+├── Conv(32, 3×3) + ReLU + Pool
+├── Conv(64, 3×3) + ReLU + Pool
+├── Conv(64, 3×3) + ReLU
+├── Flatten → Dense(128)
+└── Output(10)</pre>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Stack</h3>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• <strong>Framework:</strong> JAX/Flax</li>
+                                <li>• <strong>Hardware:</strong> TPU v4</li>
+                                <li>• <strong>Dataset:</strong> MNIST</li>
+                                <li>• <strong>Context:</strong> Neuromatch Academy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Findings -->
+                <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-white">
+                    <h2 class="text-xl font-bold mb-4">💡 Key Findings</h2>
+                    <ol class="text-indigo-100 space-y-2">
+                        <li><strong>1. Hierarchical representations:</strong> Early layers detect edges, deeper layers detect complex patterns</li>
+                        <li><strong>2. Specialization:</strong> Different filters specialize in different features</li>
+                        <li><strong>3. Spatial preservation:</strong> Feature maps preserve spatial relationships from input</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t">
+                <a href="/journey.html#chapter-1" class="text-indigo-600 hover:text-indigo-700 font-medium">
+                    ← Back to Journey
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
