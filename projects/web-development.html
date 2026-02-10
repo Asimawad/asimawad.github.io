@@ -1,8 +1,148 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Web Development | Asim Osman</title><script src="https://cdn.tailwindcss.com"></script><style>.gradient-text{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}</style></head>
-<body class="bg-gray-50 text-gray-900 font-sans"><nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100"><div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center"><a href="/" class="text-xl font-bold gradient-text">AO</a><a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a></div></nav>
-<main class="pt-24 pb-16"><div class="max-w-4xl mx-auto px-6"><div class="mb-8"><span class="text-4xl">🌐</span><h1 class="text-3xl font-bold mt-4">Web Development Projects</h1><p class="text-gray-500 mt-2">2023 — Practice</p></div>
-<div class="prose max-w-none"><h2 class="text-xl font-semibold mb-4">About</h2><p class="text-gray-600 mb-6">A collection of web development practice projects: Blog Website, Newsletter signup, and To-Do List applications. Learning the fundamentals of frontend development.</p>
-<div class="flex gap-2 flex-wrap mb-6"><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">HTML</span><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">CSS</span><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">JavaScript</span></div>
-<a href="https://github.com/Asimawad/Web-Development" target="_blank" class="inline-block px-4 py-2 bg-gray-900 text-white rounded-lg">View on GitHub →</a></div>
-<div class="mt-8 pt-8 border-t"><a href="/journey.html#chapter-1" class="text-indigo-600">← Back</a></div></div></main></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }</script>
+    <style>
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="mb-8">
+                <span class="text-4xl">🌐</span>
+                <h1 class="text-3xl font-bold mt-4">Web Development Practice</h1>
+                <p class="text-gray-500 mt-2">Learning frontend and backend fundamentals</p>
+                <a href="https://github.com/Asimawad/Web-Development" target="_blank" class="inline-block mt-3 px-4 py-1.5 bg-gray-900 text-white text-sm rounded-full hover:bg-gray-700 transition">View on GitHub →</a>
+            </div>
+
+            <div class="prose max-w-none">
+                <p class="text-gray-600 mb-8 text-lg">
+                    A collection of web development projects built while learning HTML, CSS, JavaScript, and Node.js/Express.
+                    These projects helped me understand both frontend design and backend server logic.
+                </p>
+
+                <!-- Newsletter Signup -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-2xl">📧</span>
+                        <h2 class="text-xl font-bold">Newsletter Signup</h2>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <img src="/projects/web-dev-images/newsletter.jpg" alt="Newsletter Signup" class="rounded-lg shadow-md w-full">
+                        </div>
+                        <div>
+                            <p class="text-gray-600 mb-4">
+                                A newsletter signup form with Mailchimp integration. Users can subscribe with their name and email.
+                            </p>
+                            <h3 class="font-semibold text-gray-700 mb-2">Features</h3>
+                            <ul class="text-gray-600 text-sm space-y-1 mb-4">
+                                <li>• Bootstrap 5 responsive design</li>
+                                <li>• Express.js backend</li>
+                                <li>• Mailchimp API integration</li>
+                                <li>• Success/failure pages</li>
+                            </ul>
+                            <div class="flex gap-2 flex-wrap">
+                                <span class="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">HTML</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">CSS</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-700 rounded text-xs">JavaScript</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- To-Do List -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-2xl">✅</span>
+                        <h2 class="text-xl font-bold">To-Do List App</h2>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        A dynamic to-do list application with MongoDB database for persistent storage.
+                        Create custom lists, add items, and check them off when done.
+                    </p>
+                    
+                    <h3 class="font-semibold text-gray-700 mb-2">Features</h3>
+                    <ul class="text-gray-600 text-sm space-y-1 mb-4">
+                        <li>• EJS templating</li>
+                        <li>• MongoDB with Mongoose</li>
+                        <li>• Dynamic route handling</li>
+                        <li>• CRUD operations</li>
+                    </ul>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Node.js</span>
+                        <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Express</span>
+                        <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">MongoDB</span>
+                        <span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">EJS</span>
+                    </div>
+                </div>
+
+                <!-- Blog Website -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-2xl">📝</span>
+                        <h2 class="text-xl font-bold">Blog Website</h2>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        A simple blog platform where users can compose and publish posts.
+                        Learned routing, templating, and handling form submissions.
+                    </p>
+                    
+                    <h3 class="font-semibold text-gray-700 mb-2">Features</h3>
+                    <ul class="text-gray-600 text-sm space-y-1 mb-4">
+                        <li>• Home, About, Contact pages</li>
+                        <li>• Compose new posts</li>
+                        <li>• Dynamic post pages</li>
+                        <li>• Partials for reusable components</li>
+                    </ul>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Node.js</span>
+                        <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Express</span>
+                        <span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">EJS</span>
+                    </div>
+                </div>
+
+                <!-- What I Learned -->
+                <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-white">
+                    <h2 class="text-xl font-bold mb-4">🎓 What I Learned</h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="text-indigo-100 space-y-1 text-sm">
+                            <li>• HTML/CSS fundamentals</li>
+                            <li>• Bootstrap responsive design</li>
+                            <li>• JavaScript DOM manipulation</li>
+                        </ul>
+                        <ul class="text-indigo-100 space-y-1 text-sm">
+                            <li>• Node.js & Express servers</li>
+                            <li>• RESTful routing</li>
+                            <li>• Database integration (MongoDB)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t">
+                <a href="/journey.html#chapter-1" class="text-indigo-600 hover:text-indigo-700 font-medium">
+                    ← Back to Journey
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
