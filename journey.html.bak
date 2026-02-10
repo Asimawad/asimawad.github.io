@@ -297,19 +297,233 @@
                 </div>
             </div>
 
-            <!-- Chapter 2: ML Deep Dive -->
+            <!-- Chapter 2: 2023 -->
             <div id="chapter-2" class="mb-20 scroll-mt-24">
                 <div class="flex items-center gap-4 mb-8">
                     <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
                         2
                     </div>
                     <div>
-                        <h2 class="text-2xl font-bold">The Deep Dive</h2>
-                        <p class="text-gray-500">Late 2024 — Intensive ML, CV, RL, and Bayesian methods</p>
+                        <h2 class="text-2xl font-bold">Building Foundations</h2>
+                        <p class="text-gray-500">2023 — Expanding skills, exploring new domains</p>
                     </div>
                 </div>
                 
                 <div class="ml-6 pl-10 border-l-2 border-indigo-200 space-y-6">
+                    <p class="text-gray-600 italic">
+                        "A year of exploration — from web development to neural networks, 
+                        building a broader foundation in computer science."
+                    </p>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">Web Development Projects</h3>
+                            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Practice</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            A collection of web development practice projects: Blog Website, Newsletter signup, 
+                            and To-Do List applications. Learning the fundamentals of frontend development.
+                        </p>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">HTML</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">CSS</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/Asimawad/Web-Development" target="_blank" 
+                           class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
+                            View on GitHub →
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">Feature Visualization (NMA)</h3>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Neuromatch Academy</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Neuromatch Academy project exploring feature visualization techniques in neural networks. 
+                            Understanding what CNNs "see" by visualizing learned features and activations.
+                        </p>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Deep Learning</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Visualization</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">PyTorch</span>
+                        </div>
+                        <a href="https://github.com/Asimawad/Attempt-at-Feature-Visualization-NMA" target="_blank" 
+                           class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
+                            View on GitHub →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 3: 2024 -->
+            <div id="chapter-3" class="mb-20 scroll-mt-24">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                        3
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold">The Deep Dive</h2>
+                        <p class="text-gray-500">2024 — RL, Computer Vision, Bayesian Learning & more</p>
+                    </div>
+                </div>
+                
+                <div class="ml-6 pl-10 border-l-2 border-indigo-200 space-y-6">
+                    <p class="text-gray-600 italic">
+                        "This was the year everything clicked. From AgriTech to reinforcement learning, 
+                        I dove deep into the areas that would define my research direction."
+                    </p>
+                    
+                    <!-- Competitive Programming -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">Competitive Programming</h3>
+                            <span class="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded">Practice</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Solutions to Codeforces problems and algorithmic challenges. Building problem-solving 
+                            skills through competitive programming practice.
+                        </p>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Algorithms</span>
+                        </div>
+                        <a href="https://github.com/Asimawad/Competitve-Programming" target="_blank" 
+                           class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
+                            View on GitHub →
+                        </a>
+                    </div>
+
+                    <!-- DUKKAN -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">DUKKAN</h3>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">University Project</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            A supermarket management Java application developed as part of the Java Programming 
+                            course at University of Khartoum. Full desktop application with inventory management.
+                        </p>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Java</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Desktop App</span>
+                        </div>
+                        <a href="https://github.com/Asimawad/DUKKAN" target="_blank" 
+                           class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
+                            View on GitHub →
+                        </a>
+                    </div>
+
+                    <!-- Cryptography -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">Cryptography Implementations</h3>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">University Project</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Python implementations of classic cryptographic algorithms: SHA hashing, 
+                            AES encryption, and Vigenère cipher. Understanding security fundamentals from scratch.
+                        </p>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Cryptography</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Security</span>
+                        </div>
+                        <a href="https://github.com/Asimawad/Cryptography-and-Security-Technology" target="_blank" 
+                           class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
+                            View on GitHub →
+                        </a>
+                    </div>
+
+                    <!-- Assembly -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">Assembly Encryption</h3>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">University Project</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Low-level encryption and decryption programs written in Assembly language. 
+                            Understanding computing at the hardware level.
+                        </p>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Assembly</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Low-level</span>
+                        </div>
+                        <a href="https://github.com/Asimawad/Assembly-Code" target="_blank" 
+                           class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
+                            View on GitHub →
+                        </a>
+                    </div>
+
+                    <!-- Computer Graphics -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">Computer Graphics</h3>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">University Project</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            C++ implementations of computer graphics fundamentals: drawing shapes, curves, 
+                            and 3D rendering. Learning the math behind visual computing.
+                        </p>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">C++</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Graphics</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">3D</span>
+                        </div>
+                        <a href="https://github.com/Asimawad/Computer-Graphics-code-CPP" target="_blank" 
+                           class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
+                            View on GitHub →
+                        </a>
+                    </div>
+
+                    <!-- AgriTech Section -->
+                    <div class="mt-8 mb-4">
+                        <h3 class="text-lg font-semibold text-gray-700">🌾 AgriTech Projects</h3>
+                        <p class="text-sm text-gray-500">Using AI for agriculture and farming</p>
+                    </div>
+
+                    <!-- Crop Monitoring -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">Crop Monitoring</h3>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">AgriTech</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Amundata project for monitoring crop health. Using data analysis to help 
+                            farmers make better decisions about their fields.
+                        </p>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Agriculture</span>
+                        </div>
+                        <a href="https://github.com/Asimawad/Crop-Monitoring" target="_blank" 
+                           class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
+                            View on GitHub →
+                        </a>
+                    </div>
+
+                    <!-- Field Monitoring -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">Field Monitoring</h3>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">AgriTech</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Using satellite imagery and computer vision to help farmers map fields, 
+                            track crop health, and receive actionable recommendations via a dashboard.
+                        </p>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Computer Vision</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Satellite</span>
+                        </div>
+                        <a href="https://github.com/Asimawad/Field-Monitoring" target="_blank" 
+                           class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
+                            View on GitHub →
+                        </a>
+                    </div>
+
                     <!-- Late 2024 - ML Deep Dive -->
                     <div class="mt-12 mb-4">
                         <h3 class="text-lg font-semibold text-gray-700">🧠 The ML Deep Dive (Late 2024)</h3>
