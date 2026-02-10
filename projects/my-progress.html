@@ -9,54 +9,385 @@
     <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }</script>
     <style>
         .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .project-card { transition: all 0.3s ease; }
+        .project-card:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
     <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
-        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="text-xl font-bold gradient-text">AO</a>
             <a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
         </div>
     </nav>
 
     <main class="pt-24 pb-16">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="mb-8">
-                <span class="text-4xl">📊</span>
-                <h1 class="text-3xl font-bold mt-4">My-Progress</h1>
-                <p class="text-gray-500 mt-2">2022 — First steps into ML & Data Science</p>
-                <span class="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">🔒 Private Repository</span>
+        <div class="max-w-5xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-12 text-center">
+                <span class="text-6xl">📊</span>
+                <h1 class="text-4xl font-bold mt-4">My ML Journey</h1>
+                <p class="text-gray-500 mt-2 text-lg">2022 — First steps into Machine Learning & Data Science</p>
+                <span class="inline-block mt-3 px-4 py-1.5 bg-gray-100 text-gray-600 text-sm rounded-full">🔒 Private Repository</span>
             </div>
 
-            <div class="prose max-w-none">
-                <h2 class="text-xl font-semibold mb-4">About This Project</h2>
-                <p class="text-gray-600 mb-6">
-                    This is where my journey into AI and data science began. A collection of small projects 
-                    working through classic ML problems — Titanic survival prediction, exploratory data analysis, 
-                    and learning the fundamentals of Python for machine learning.
+            <!-- Intro -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm mb-12">
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    This is where my journey into AI and data science began. A collection of projects working through 
+                    classic ML problems — from exploratory data analysis to building neural networks from scratch.
+                    Each project taught me something new about the foundations of machine learning.
                 </p>
+            </div>
 
-                <h2 class="text-xl font-semibold mb-4">What I Learned</h2>
-                <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                    <li>Python basics and data manipulation with Pandas</li>
-                    <li>Exploratory Data Analysis (EDA) techniques</li>
-                    <li>Basic ML models with Scikit-learn</li>
-                    <li>The importance of data preprocessing</li>
-                </ul>
-
-                <h2 class="text-xl font-semibold mb-4">Tech Stack</h2>
-                <div class="flex gap-2 flex-wrap mb-6">
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Python</span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Pandas</span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Scikit-learn</span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Matplotlib</span>
+            <!-- Table of Contents -->
+            <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-6 mb-12">
+                <h2 class="text-lg font-semibold mb-4">📑 Projects in this Repository</h2>
+                <div class="grid md:grid-cols-2 gap-3">
+                    <a href="#911-calls" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition">
+                        <span class="text-lg">🚨</span> 911 Calls Analysis
+                    </a>
+                    <a href="#advertising" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition">
+                        <span class="text-lg">📢</span> Advertising Click Prediction
+                    </a>
+                    <a href="#housing" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition">
+                        <span class="text-lg">🏠</span> Housing Price Prediction
+                    </a>
+                    <a href="#ecommerce" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition">
+                        <span class="text-lg">🛒</span> E-commerce Analysis
+                    </a>
+                    <a href="#finance" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition">
+                        <span class="text-lg">📈</span> Bank Stock Analysis
+                    </a>
+                    <a href="#mnist" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition">
+                        <span class="text-lg">🔢</span> MNIST Digit Classification
+                    </a>
+                    <a href="#titanic" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition">
+                        <span class="text-lg">🚢</span> Titanic Survival Prediction
+                    </a>
+                    <a href="#deep-learning" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition">
+                        <span class="text-lg">🧠</span> Deep Learning Coursera
+                    </a>
                 </div>
             </div>
 
-            <div class="mt-8 pt-8 border-t">
+            <!-- Project 1: 911 Calls -->
+            <section id="911-calls" class="mb-16 scroll-mt-24">
+                <div class="bg-white rounded-2xl p-8 shadow-sm project-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-3xl">🚨</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">911 Calls Exploratory Data Analysis</h2>
+                            <p class="text-gray-500">Analyzing emergency call patterns in Montgomery County, PA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Dataset</h3>
+                            <p class="text-gray-600 text-sm">~100,000 emergency calls with location, timestamp, and call type information.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Key Findings</h3>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• <strong>EMS:</strong> 48,877 calls (49%)</li>
+                                <li>• <strong>Traffic:</strong> 35,695 calls (36%)</li>
+                                <li>• <strong>Fire:</strong> 14,920 calls (15%)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <img src="https://raw.githubusercontent.com/Asimawad/My-progress/main/911%20Calls%20Exploratory%20data%20analysis/images/fig_1.png" alt="Calls by Reason" class="rounded-lg w-full">
+                        <img src="https://raw.githubusercontent.com/Asimawad/My-progress/main/911%20Calls%20Exploratory%20data%20analysis/images/fig_10.png" alt="Heatmap" class="rounded-lg w-full">
+                    </div>
+
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Pandas</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Seaborn</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">EDA</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 2: Advertising -->
+            <section id="advertising" class="mb-16 scroll-mt-24">
+                <div class="bg-white rounded-2xl p-8 shadow-sm project-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-3xl">📢</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">Advertising Click Prediction</h2>
+                            <p class="text-gray-500">Predicting ad clicks with Logistic Regression</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6">
+                        Using user behavior data (time on site, age, income, internet usage) to predict whether 
+                        someone will click on an advertisement. Clear separation visible between clickers and non-clickers.
+                    </p>
+
+                    <div class="mb-6">
+                        <img src="https://raw.githubusercontent.com/Asimawad/My-progress/main/ADVERTISING/images/fig_6.png" alt="Pairplot" class="rounded-lg w-full max-w-2xl mx-auto">
+                    </div>
+
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Logistic Regression</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Scikit-learn</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Classification</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 3: Housing -->
+            <section id="housing" class="mb-16 scroll-mt-24">
+                <div class="bg-white rounded-2xl p-8 shadow-sm project-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-3xl">🏠</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">USA Housing Price Prediction</h2>
+                            <p class="text-gray-500">Linear Regression for price estimation</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6">
+                        Predicting house prices based on area income, house age, number of rooms, and population.
+                        <strong>Key insight:</strong> Area income is the strongest predictor of house price.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <img src="https://raw.githubusercontent.com/Asimawad/My-progress/main/Boston%20House%20Price%20Predictions/images/fig_4.png" alt="Predictions" class="rounded-lg w-full">
+                        <img src="https://raw.githubusercontent.com/Asimawad/My-progress/main/Boston%20House%20Price%20Predictions/images/fig_5.png" alt="Residuals" class="rounded-lg w-full">
+                    </div>
+
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Linear Regression</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Scikit-learn</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Regression</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 4: E-commerce -->
+            <section id="ecommerce" class="mb-16 scroll-mt-24">
+                <div class="bg-white rounded-2xl p-8 shadow-sm project-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-3xl">🛒</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">E-commerce Customer Analysis</h2>
+                            <p class="text-gray-500">Should they focus on mobile app or website?</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Helping an e-commerce company make a strategic decision about resource allocation.
+                    </p>
+
+                    <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-4 mb-6">
+                        <h3 class="font-semibold text-green-800 mb-2">💡 Business Recommendation</h3>
+                        <p class="text-green-700 text-sm">
+                            The mobile app clearly drives more revenue per minute spent. Either <strong>develop the website</strong> 
+                            to catch up, or <strong>double down on the app</strong> since it's already performing well.
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <img src="https://raw.githubusercontent.com/Asimawad/My-progress/main/Ecommerce%20company/images/fig_4.png" alt="Pairplot" class="rounded-lg w-full max-w-2xl mx-auto">
+                    </div>
+
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Linear Regression</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Business Analytics</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 5: Finance -->
+            <section id="finance" class="mb-16 scroll-mt-24">
+                <div class="bg-white rounded-2xl p-8 shadow-sm project-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-3xl">📈</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">Bank Stock Analysis</h2>
+                            <p class="text-gray-500">Analyzing the 2008 Financial Crisis</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Exploratory analysis of major US bank stocks (Bank of America, CitiGroup, Goldman Sachs, 
+                        JPMorgan, Morgan Stanley, Wells Fargo) during and after the 2008 crisis.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-700 mb-2">Analysis Performed</h3>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• Daily returns calculation</li>
+                                <li>• Risk assessment (std deviation)</li>
+                                <li>• Correlation heatmaps</li>
+                                <li>• Moving averages</li>
+                                <li>• Bollinger Bands</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-700 mb-2">Key Findings</h3>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• 2008 crash clearly visible in all banks</li>
+                                <li>• CitiGroup was most volatile</li>
+                                <li>• High correlation between banks</li>
+                                <li>• Stock splits affected patterns</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">pandas_datareader</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Cufflinks</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Technical Analysis</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 6: MNIST -->
+            <section id="mnist" class="mb-16 scroll-mt-24">
+                <div class="bg-white rounded-2xl p-8 shadow-sm project-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-3xl">🔢</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">MNIST Digit Classification</h2>
+                            <p class="text-gray-500">The "Hello World" of Deep Learning</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6">
+                        My first neural network! Classifying 70,000 handwritten digits (28×28 grayscale images) 
+                        into 10 classes. This project taught me the fundamentals of deep learning.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <img src="https://raw.githubusercontent.com/Asimawad/My-progress/main/MNIST/images/fig_1.png" alt="Sample Digits" class="rounded-lg w-full">
+                        <img src="https://raw.githubusercontent.com/Asimawad/My-progress/main/MNIST/images/fig_2.png" alt="Results" class="rounded-lg w-full">
+                    </div>
+
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Neural Networks</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">TensorFlow</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Image Classification</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 7: Titanic -->
+            <section id="titanic" class="mb-16 scroll-mt-24">
+                <div class="bg-white rounded-2xl p-8 shadow-sm project-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-3xl">🚢</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">Titanic Survival Prediction</h2>
+                            <p class="text-gray-500">The classic Kaggle challenge</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Predicting passenger survival using features like class, gender, age, and fare.
+                    </p>
+
+                    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-4 mb-6">
+                        <h3 class="font-semibold text-blue-800 mb-2">💡 Key Insights</h3>
+                        <ul class="text-blue-700 text-sm space-y-1">
+                            <li>• <strong>"Women and children first"</strong> — females had much higher survival rates</li>
+                            <li>• <strong>Class matters</strong> — 1st class passengers survived more often</li>
+                            <li>• <strong>Higher fare = better survival</strong> — better cabins, closer to deck</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-4 mb-6">
+                        <img src="https://raw.githubusercontent.com/Asimawad/My-progress/main/titanic/images/fig_1.png" alt="Analysis 1" class="rounded-lg w-full">
+                        <img src="https://raw.githubusercontent.com/Asimawad/My-progress/main/titanic/images/fig_2.png" alt="Analysis 2" class="rounded-lg w-full">
+                        <img src="https://raw.githubusercontent.com/Asimawad/My-progress/main/titanic/images/fig_3.png" alt="Analysis 3" class="rounded-lg w-full">
+                    </div>
+
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Logistic Regression</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Feature Engineering</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Kaggle</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 8: Deep Learning Coursera -->
+            <section id="deep-learning" class="mb-16 scroll-mt-24">
+                <div class="bg-white rounded-2xl p-8 shadow-sm project-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-3xl">🧠</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">Deep Learning Specialization</h2>
+                            <p class="text-gray-500">Andrew Ng's Coursera Course</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6">
+                        Building neural networks from scratch — no frameworks, just NumPy. 
+                        This taught me the math behind deep learning before using TensorFlow/PyTorch.
+                    </p>
+
+                    <div class="grid md:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-700 mb-2">Planar Data</h3>
+                            <p class="text-gray-600 text-sm">Classifying non-linearly separable data with a 2-layer network.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-700 mb-2">DNN from Scratch</h3>
+                            <p class="text-gray-600 text-sm">Forward prop, backprop, gradient descent — all implemented manually.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-700 mb-2">Cat Classifier</h3>
+                            <p class="text-gray-600 text-sm">L-layer network for cat vs non-cat image classification.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">NumPy</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Backpropagation</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">From Scratch</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What I Learned -->
+            <section class="mb-12">
+                <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-white">
+                    <h2 class="text-2xl font-bold mb-4">🎓 What I Learned</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold mb-2">Technical Skills</h3>
+                            <ul class="text-indigo-100 space-y-1">
+                                <li>• Data manipulation with Pandas</li>
+                                <li>• Visualization with Matplotlib & Seaborn</li>
+                                <li>• ML models with Scikit-learn</li>
+                                <li>• Neural networks from scratch</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">Key Concepts</h3>
+                            <ul class="text-indigo-100 space-y-1">
+                                <li>• EDA best practices</li>
+                                <li>• Feature engineering</li>
+                                <li>• Model evaluation metrics</li>
+                                <li>• Overfitting and regularization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <div class="mt-8 pt-8 border-t flex justify-between items-center">
                 <a href="/journey.html#chapter-1" class="text-indigo-600 hover:text-indigo-700 font-medium">
                     ← Back to The Beginning
                 </a>
+                <p class="text-gray-400 text-sm">
+                    This repository represents my foundation in ML/DS
+                </p>
             </div>
         </div>
     </main>
