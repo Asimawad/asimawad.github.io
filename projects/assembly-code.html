@@ -1,8 +1,202 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Assembly Code | Asim Osman</title><script src="https://cdn.tailwindcss.com"></script><style>.gradient-text{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}</style></head>
-<body class="bg-gray-50 text-gray-900 font-sans"><nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100"><div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center"><a href="/" class="text-xl font-bold gradient-text">AO</a><a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a></div></nav>
-<main class="pt-24 pb-16"><div class="max-w-4xl mx-auto px-6"><div class="mb-8"><span class="text-4xl">⚙️</span><h1 class="text-3xl font-bold mt-4">Assembly Encryption</h1><p class="text-gray-500 mt-2">2024 — Low-level Programming</p></div>
-<div class="prose max-w-none"><h2 class="text-xl font-semibold mb-4">About</h2><p class="text-gray-600 mb-6">Low-level encryption and decryption programs written in Assembly language. Understanding computing at the hardware level.</p>
-<div class="flex gap-2 flex-wrap mb-6"><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Assembly</span><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Low-level</span><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Encryption</span></div>
-<a href="https://github.com/Asimawad/Assembly-Code" target="_blank" class="inline-block px-4 py-2 bg-gray-900 text-white rounded-lg">View on GitHub →</a></div>
-<div class="mt-8 pt-8 border-t"><a href="/journey.html#chapter-1" class="text-indigo-600">← Back</a></div></div></main></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assembly Code | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+        .demo-box {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <span class="text-5xl">⚙️</span>
+                <h1 class="text-4xl font-bold mt-4">Assembly Language</h1>
+                <p class="text-gray-500 mt-2 text-lg">2024 — Base64 Encoding/Decoding in x86-64 Assembly</p>
+            </div>
+
+            <!-- About -->
+            <div class="prose max-w-none mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Low-level implementation of <strong>Base64 encoding and decoding</strong> in x86-64 Assembly (NASM).
+                    Understanding computing at the hardware level — manipulating bits, bytes, and registers directly.
+                </p>
+            </div>
+
+            <!-- Live Demo -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">🎮 Live Demo</h2>
+                <div class="demo-box p-6 rounded-xl text-white">
+                    <p class="text-gray-300 text-sm mb-4">Try the same algorithm implemented in the assembly code:</p>
+                    
+                    <div class="mb-4">
+                        <label class="block text-sm text-gray-400 mb-1">Input Text</label>
+                        <input type="text" id="b64-input" value="AS164073" 
+                               class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white mono focus:outline-none focus:border-indigo-500">
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-gray-800/50 p-4 rounded-lg">
+                            <p class="text-sm text-gray-400 mb-1">Encoded (Base64):</p>
+                            <p id="b64-encoded" class="text-lg mono text-green-400 font-bold">QVMxNjQwNzM=</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-lg">
+                            <p class="text-sm text-gray-400 mb-1">Decoded back:</p>
+                            <p id="b64-decoded" class="text-lg mono text-blue-400 font-bold">AS164073</p>
+                        </div>
+                    </div>
+                    
+                    <details class="mt-4">
+                        <summary class="text-sm text-gray-400 cursor-pointer hover:text-gray-300">How Base64 works</summary>
+                        <p class="text-sm text-gray-400 mt-2">
+                            Every 3 bytes (24 bits) are split into 4 groups of 6 bits. Each 6-bit value (0-63) maps to a character:
+                            A-Z (0-25), a-z (26-51), 0-9 (52-61), +/ (62-63). Padding with '=' if input isn't divisible by 3.
+                        </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Terminal Demo -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">💻 Running on Linux</h2>
+                <div class="bg-gray-900 p-4 rounded-xl overflow-x-auto">
+                    <pre class="text-sm text-gray-300 mono"><code><span class="text-gray-500">$</span> nasm -f elf64 base64_encode_linux.asm -o encode.o
+<span class="text-gray-500">$</span> ld encode.o -o encode
+<span class="text-gray-500">$</span> ./encode
+<span class="text-green-400">Input:   AS164073
+Encoded: QVMxNjQwNzM=</span>
+
+<span class="text-gray-500">$</span> nasm -f elf64 base64_decode_linux.asm -o decode.o
+<span class="text-gray-500">$</span> ld decode.o -o decode
+<span class="text-gray-500">$</span> ./decode
+<span class="text-green-400">Encoded: QVMxNjQwNzM=
+Decoded: AS164073</span></code></pre>
+                </div>
+            </div>
+
+            <!-- Code Sample -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Code Sample: Encoding 3 Bytes</h2>
+                <div class="bg-gray-900 p-4 rounded-xl overflow-x-auto">
+                    <pre class="text-sm text-gray-300 mono"><code><span class="text-gray-500">; Load 3 bytes into rax, convert to 4 base64 chars</span>
+mov al, [input + rcx]        <span class="text-gray-500">; First byte</span>
+shl rax, 16
+mov bl, [input + rcx + 1]    <span class="text-gray-500">; Second byte</span>
+shl rbx, 8
+or rax, rbx
+mov bl, [input + rcx + 2]    <span class="text-gray-500">; Third byte</span>
+or rax, rbx
+
+<span class="text-gray-500">; Extract 6-bit groups and lookup in table</span>
+mov r9, rax
+shr rax, 18                  <span class="text-gray-500">; Bits 23-18 → char 1</span>
+and rax, 0x3F
+mov al, [table + rax]        <span class="text-gray-500">; Lookup in Base64 table</span>
+mov [output + rdx], al</code></pre>
+                </div>
+            </div>
+
+            <!-- Bit Manipulation Visualization -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">📊 Bit Manipulation</h2>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <p class="text-gray-600 mb-4">Converting "AS1" (3 bytes) to Base64 "QVMx" (4 chars):</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm mono">
+                            <tr class="border-b">
+                                <td class="py-2 pr-4 text-gray-500">Input bytes:</td>
+                                <td class="py-2"><span class="bg-red-100 px-1">01000001</span> <span class="bg-green-100 px-1">01010011</span> <span class="bg-blue-100 px-1">00110001</span></td>
+                                <td class="py-2 text-gray-500 pl-4">A=65, S=83, 1=49</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2 pr-4 text-gray-500">6-bit groups:</td>
+                                <td class="py-2"><span class="bg-purple-100 px-1">010000</span> <span class="bg-yellow-100 px-1">010101</span> <span class="bg-pink-100 px-1">001100</span> <span class="bg-cyan-100 px-1">110001</span></td>
+                                <td class="py-2 text-gray-500 pl-4">16, 21, 12, 49</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 pr-4 text-gray-500">Base64 chars:</td>
+                                <td class="py-2 text-lg font-bold"><span class="text-purple-600">Q</span><span class="text-yellow-600">V</span><span class="text-pink-600">M</span><span class="text-cyan-600">x</span></td>
+                                <td class="py-2 text-gray-500 pl-4">table[16,21,12,49]</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What I Learned -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">What I Learned</h2>
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Direct register manipulation (RAX, RBX, RCX, RDX, RSI, RDI)</li>
+                        <li>• Bit shifting operations (SHL, SHR) for extracting bit groups</li>
+                        <li>• Linux system calls (syscall) for I/O without libc</li>
+                        <li>• Memory addressing modes and the x86-64 ABI</li>
+                        <li>• How high-level operations map to machine instructions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Tech Stack</h2>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">x86-64 Assembly</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">NASM</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Linux Syscalls</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Bit Manipulation</span>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="flex gap-4">
+                <a href="https://github.com/Asimawad/Assembly-Code" target="_blank" 
+                   class="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    View Source Code
+                </a>
+            </div>
+
+            <!-- Back -->
+            <div class="mt-12 pt-8 border-t">
+                <a href="/journey.html#chapter-1" class="text-indigo-600 hover:text-indigo-700 font-medium">← Back to Journey</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function updateBase64() {
+            const input = document.getElementById('b64-input').value;
+            const encoded = btoa(input);
+            const decoded = atob(encoded);
+            document.getElementById('b64-encoded').textContent = encoded;
+            document.getElementById('b64-decoded').textContent = decoded;
+        }
+        
+        document.getElementById('b64-input').addEventListener('input', updateBase64);
+    </script>
+</body>
+</html>
