@@ -1,8 +1,138 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>IndabaX 2022 | Asim Osman</title><script src="https://cdn.tailwindcss.com"></script><style>.gradient-text{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}</style></head>
-<body class="bg-gray-50 text-gray-900 font-sans"><nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100"><div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center"><a href="/" class="text-xl font-bold gradient-text">AO</a><a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a></div></nav>
-<main class="pt-24 pb-16"><div class="max-w-4xl mx-auto px-6"><div class="mb-8"><span class="text-4xl">🎓</span><h1 class="text-3xl font-bold mt-4">IndabaX 2022</h1><p class="text-gray-500 mt-2">2022 — Workshop</p></div>
-<div class="prose max-w-none"><h2 class="text-xl font-semibold mb-4">About</h2><p class="text-gray-600 mb-6">Content from introductory sessions at IndabaX — Africa's premier machine learning conference. My first exposure to the broader ML community.</p>
-<div class="flex gap-2 flex-wrap mb-6"><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Workshop</span><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">ML Community</span></div>
-<a href="https://github.com/Asimawad/IndabaX-2022" target="_blank" class="inline-block px-4 py-2 bg-gray-900 text-white rounded-lg">View on GitHub →</a></div>
-<div class="mt-8 pt-8 border-t"><a href="/journey.html#chapter-1" class="text-indigo-600">← Back</a></div></div></main></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndabaX 2022 | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }</script>
+    <style>
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="mb-8">
+                <span class="text-4xl">🎓</span>
+                <h1 class="text-3xl font-bold mt-4">IndabaX 2022</h1>
+                <p class="text-gray-500 mt-2">Africa's premier machine learning workshop</p>
+                <a href="https://github.com/Asimawad/IndabaX-2022" target="_blank" class="inline-block mt-3 px-4 py-1.5 bg-gray-900 text-white text-sm rounded-full hover:bg-gray-700 transition">View on GitHub →</a>
+            </div>
+
+            <div class="prose max-w-none">
+                <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-8 mb-8">
+                    <p class="text-gray-700 text-lg">
+                        My first exposure to the broader ML community! IndabaX is a series of workshops across Africa 
+                        that aim to strengthen African machine learning. These are my notes and code from the introductory sessions.
+                    </p>
+                </div>
+
+                <!-- Day 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <h2 class="text-xl font-bold mb-4">📅 Day 1: Python & EDA Fundamentals</h2>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                            <span class="text-xl">🐍</span>
+                            <div>
+                                <h3 class="font-medium">Python Refresher</h3>
+                                <p class="text-gray-500 text-sm">Variables, data types, control flow, functions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                            <span class="text-xl">📊</span>
+                            <div>
+                                <h3 class="font-medium">Intro to EDA</h3>
+                                <p class="text-gray-500 text-sm">Data exploration, visualization, outlier detection</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                            <span class="text-xl">📈</span>
+                            <div>
+                                <h3 class="font-medium">Linear Regression</h3>
+                                <p class="text-gray-500 text-sm">First ML model with scikit-learn</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                            <span class="text-xl">🚢</span>
+                            <div>
+                                <h3 class="font-medium">Classification - Titanic</h3>
+                                <p class="text-gray-500 text-sm">Binary classification challenge</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="font-semibold mb-3">EDA Visualizations</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <img src="/projects/indabax-images/fig_1.png" alt="Boxplot" class="rounded-lg w-full">
+                        <img src="/projects/indabax-images/fig_2.png" alt="Distribution" class="rounded-lg w-full">
+                        <img src="/projects/indabax-images/fig_4.png" alt="Histogram" class="rounded-lg w-full">
+                        <img src="/projects/indabax-images/fig_5.png" alt="Heatmap" class="rounded-lg w-full">
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <h2 class="text-xl font-bold mb-4">📅 Day 2: Deep Learning</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                            <span class="text-xl">🔢</span>
+                            <div>
+                                <h3 class="font-medium">Mathematics for Deep Learning</h3>
+                                <p class="text-gray-500 text-sm">Linear algebra, calculus basics</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                            <span class="text-xl">🔥</span>
+                            <div>
+                                <h3 class="font-medium">Introduction to PyTorch</h3>
+                                <p class="text-gray-500 text-sm">Tensors, autograd, basic operations</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                            <span class="text-xl">🧠</span>
+                            <div>
+                                <h3 class="font-medium">Deep Learning 1 & 2</h3>
+                                <p class="text-gray-500 text-sm">Neural networks, backpropagation, training</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What I Learned -->
+                <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-white">
+                    <h2 class="text-xl font-bold mb-4">🎓 What I Learned</h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="text-indigo-100 space-y-1 text-sm">
+                            <li>• Professional EDA workflow</li>
+                            <li>• Data cleaning best practices</li>
+                            <li>• Outlier detection techniques</li>
+                        </ul>
+                        <ul class="text-indigo-100 space-y-1 text-sm">
+                            <li>• PyTorch fundamentals</li>
+                            <li>• Neural network intuition</li>
+                            <li>• African ML community!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t">
+                <a href="/journey.html#chapter-1" class="text-indigo-600 hover:text-indigo-700 font-medium">
+                    ← Back to Journey
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
