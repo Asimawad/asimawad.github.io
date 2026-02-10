@@ -112,14 +112,91 @@ SimpleCNN:
                     </div>
                 </div>
 
+                <!-- RNN Section -->
+                <div class="border-t-4 border-indigo-200 my-12"></div>
+                
+                <div class="text-center mb-8">
+                    <span class="text-4xl">🔄</span>
+                    <h2 class="text-2xl font-bold mt-2">Part 2: RNN/LSTM Visualization</h2>
+                    <p class="text-gray-500">What happens inside recurrent networks?</p>
+                </div>
+
+                <!-- RNN Hidden State -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <h2 class="text-xl font-bold mb-4">4. Hidden State Evolution</h2>
+                    <p class="text-gray-600 mb-4">
+                        As the LSTM processes each element in the sequence, its hidden state evolves to encode relevant information.
+                    </p>
+                    <img src="/projects/feature-viz-images/rnn_hidden_evolution.png" alt="Hidden Evolution" class="rounded-lg w-full mb-4">
+                </div>
+
+                <!-- RNN Gates -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <h2 class="text-xl font-bold mb-4">5. LSTM Gate Activations</h2>
+                    <p class="text-gray-600 mb-4">
+                        The three gates control information flow through the network:
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4 mb-4">
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-red-700">Forget Gate</h3>
+                            <p class="text-red-600 text-sm">What to discard from memory</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-green-700">Input Gate</h3>
+                            <p class="text-green-600 text-sm">What new info to store</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-blue-700">Output Gate</h3>
+                            <p class="text-blue-600 text-sm">What to output</p>
+                        </div>
+                    </div>
+                    <img src="/projects/feature-viz-images/rnn_gates.png" alt="Gates" class="rounded-lg w-full">
+                </div>
+
+                <!-- RNN Cell State -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <h2 class="text-xl font-bold mb-4">6. Cell State (Memory) Dynamics</h2>
+                    <p class="text-gray-600 mb-4">
+                        The cell state carries information across the sequence — the LSTM's "memory".
+                    </p>
+                    <img src="/projects/feature-viz-images/rnn_cell_state.png" alt="Cell State" class="rounded-lg w-full">
+                </div>
+
+                <!-- RNN Summary -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                    <h2 class="text-xl font-bold mb-4">7. RNN Summary</h2>
+                    <img src="/projects/feature-viz-images/rnn_summary.png" alt="RNN Summary" class="rounded-lg w-full mb-4">
+                    
+                    <div class="bg-green-50 rounded-lg p-4">
+                        <h3 class="font-semibold text-green-800 mb-2">🎯 Task & Results</h3>
+                        <p class="text-green-700 text-sm">
+                            <strong>Task:</strong> Count if a binary sequence has more 1s than 0s<br>
+                            <strong>Test Accuracy: 100%</strong> — The LSTM learns to count!
+                        </p>
+                    </div>
+                </div>
+
                 <!-- Key Findings -->
                 <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-white">
                     <h2 class="text-xl font-bold mb-4">💡 Key Findings</h2>
-                    <ol class="text-indigo-100 space-y-2">
-                        <li><strong>1. Hierarchical representations:</strong> Early layers detect edges, deeper layers detect complex patterns</li>
-                        <li><strong>2. Specialization:</strong> Different filters specialize in different features</li>
-                        <li><strong>3. Spatial preservation:</strong> Feature maps preserve spatial relationships from input</li>
-                    </ol>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold mb-2">CNNs:</h3>
+                            <ol class="text-indigo-100 space-y-1 text-sm">
+                                <li>1. Hierarchical representations (edges → patterns)</li>
+                                <li>2. Different filters specialize in different features</li>
+                                <li>3. Spatial relationships preserved</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">RNNs/LSTMs:</h3>
+                            <ol class="text-indigo-100 space-y-1 text-sm">
+                                <li>1. Gates control what to remember/forget</li>
+                                <li>2. Cell state maintains long-term memory</li>
+                                <li>3. Hidden state encodes sequence context</li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </div>
 
