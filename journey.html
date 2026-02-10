@@ -43,29 +43,37 @@
             box-shadow: 0 8px 30px rgba(0,0,0,0.1);
         }
         /* Collapsible sections */
-        details {
-            margin-bottom: 1rem;
-        }
-        details summary {
+        .collapsible-header {
             cursor: pointer;
-            list-style: none;
+            user-select: none;
         }
-        details summary::-webkit-details-marker {
-            display: none;
-        }
-        details summary::before {
+        .collapsible-header::before {
             content: '▶';
             display: inline-block;
             margin-right: 0.5rem;
             transition: transform 0.2s;
         }
-        details[open] summary::before {
+        .collapsible-header.open::before {
             transform: rotate(90deg);
         }
-        details .content {
+        .collapsible-content {
+            display: none;
             padding-top: 1rem;
         }
+        .collapsible-content.open {
+            display: block;
+        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.collapsible-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    header.classList.toggle('open');
+                    header.nextElementSibling.classList.toggle('open');
+                });
+            });
+        });
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
     <!-- Navigation -->
@@ -408,11 +416,11 @@
                     </div>
 
                     <!-- Active Learning Section -->
-                    <details class="mb-6">
-                        <summary class="bg-gradient-to-r from-purple-50 to-indigo-50 p-4 rounded-lg">
+                    <div class="mb-6">
+                        <div class="collapsible-header bg-gradient-to-r from-purple-50 to-indigo-50 p-4 rounded-lg">
                             <span class="font-medium text-purple-800">📊 Active Learning & Uncertainty (3 projects)</span>
-                        </summary>
-                        <div class="content space-y-4">
+                        </div>
+                        <div class="collapsible-content space-y-4">
                             <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
                                 <h3 class="text-lg font-semibold mb-2">Bayesian Deep Active Learning</h3>
                                 <p class="text-gray-600 text-sm mb-3">
@@ -449,14 +457,14 @@
                                 <a href="https://github.com/Asimawad/Active-Learning-Core-Concepts" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
                             </div>
                         </div>
-                    </details>
+                    </div>
 
                     <!-- Computer Vision Section -->
-                    <details class="mb-6">
-                        <summary class="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg">
+                    <div class="mb-6">
+                        <div class="collapsible-header bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg">
                             <span class="font-medium text-blue-800">👁️ Computer Vision (4 projects)</span>
-                        </summary>
-                        <div class="content space-y-4">
+                        </div>
+                        <div class="collapsible-content space-y-4">
                             <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
                                 <h3 class="text-lg font-semibold mb-2">CNN Architectures (CIFAR-10)</h3>
                                 <p class="text-gray-600 text-sm mb-3">
@@ -506,14 +514,14 @@
                                 <a href="https://github.com/Asimawad/Vehicle-Re-Identification-Using-the-VeRi-Dataset" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
                             </div>
                         </div>
-                    </details>
+                    </div>
 
                     <!-- Reinforcement Learning Section -->
-                    <details class="mb-6">
-                        <summary class="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-lg">
+                    <div class="mb-6">
+                        <div class="collapsible-header bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-lg">
                             <span class="font-medium text-green-800">🎮 Reinforcement Learning (4 projects)</span>
-                        </summary>
-                        <div class="content space-y-4">
+                        </div>
+                        <div class="collapsible-content space-y-4">
                             <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
                                 <h3 class="text-lg font-semibold mb-2">DQN — CartPole</h3>
                                 <p class="text-gray-600 text-sm mb-3">Deep Q-Network with Q-learning, epsilon-greedy exploration, and neural network function approximation.</p>
@@ -551,14 +559,14 @@
                                 <a href="https://github.com/Asimawad/Reinforcement-Learning-LunarLander-REINFORCE" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
                             </div>
                         </div>
-                    </details>
+                    </div>
 
                     <!-- ML Fundamentals Section -->
-                    <details class="mb-6">
-                        <summary class="bg-gradient-to-r from-amber-50 to-yellow-50 p-4 rounded-lg">
+                    <div class="mb-6">
+                        <div class="collapsible-header bg-gradient-to-r from-amber-50 to-yellow-50 p-4 rounded-lg">
                             <span class="font-medium text-amber-800">📈 ML Fundamentals (4 projects)</span>
-                        </summary>
-                        <div class="content space-y-4">
+                        </div>
+                        <div class="collapsible-content space-y-4">
                             <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
                                 <h3 class="text-lg font-semibold mb-2">Neural Network from Scratch</h3>
                                 <p class="text-gray-600 text-sm mb-3">Step-by-step implementation of a neural network from scratch. XOR problem, backpropagation, and visualization.</p>
@@ -596,7 +604,7 @@
                                 <a href="https://github.com/Asimawad/Recommender-Sys-Engine-with-Collaborative-Filtering" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
                             </div>
                         </div>
-                    </details>
+                    </div>
                 </div>
             </div>
 
