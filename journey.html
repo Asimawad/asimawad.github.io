@@ -42,6 +42,29 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(0,0,0,0.1);
         }
+        /* Collapsible sections */
+        details {
+            margin-bottom: 1rem;
+        }
+        details summary {
+            cursor: pointer;
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary::before {
+            content: '▶';
+            display: inline-block;
+            margin-right: 0.5rem;
+            transition: transform 0.2s;
+        }
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+        details .content {
+            padding-top: 1rem;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
@@ -385,206 +408,195 @@
                     </div>
 
                     <!-- Active Learning Section -->
-                    <div class="bg-gradient-to-r from-purple-50 to-indigo-50 p-4 rounded-lg mb-4">
-                        <h4 class="font-medium text-purple-800">📊 Active Learning & Uncertainty</h4>
-                    </div>
+                    <details class="mb-6">
+                        <summary class="bg-gradient-to-r from-purple-50 to-indigo-50 p-4 rounded-lg">
+                            <span class="font-medium text-purple-800">📊 Active Learning & Uncertainty (3 projects)</span>
+                        </summary>
+                        <div class="content space-y-4">
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">Bayesian Deep Active Learning</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Active Learning experiments using Bayesian neural networks (BNNs) for uncertainty quantification.
+                                </p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">BNNs</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Uncertainty</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Bayesian-Deep-Active-Learning" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">Bayesian Deep Active Learning</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Active Learning experiments using Bayesian neural networks (BNNs) for uncertainty quantification.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">BNNs</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Uncertainty</span>
-                        </div>
-                        <a href="https://github.com/Asimawad/Bayesian-Deep-Active-Learning" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">Uncertainty Methods Comparison</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Using information theory to quantify uncertainty in deep learning models.
+                                </p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Information Theory</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Deep Learning</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Comparing-Uncertainty-Methods-Active-Learning" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">Uncertainty Methods Comparison</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Using information theory to quantify uncertainty in deep learning models.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Information Theory</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Deep Learning</span>
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">Active Learning Core Concepts</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Exploring active learning principles through the Forest Covertype Dataset with various query strategies.
+                                </p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Active Learning</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Query Strategies</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Active-Learning-Core-Concepts" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
                         </div>
-                        <a href="https://github.com/Asimawad/Comparing-Uncertainty-Methods-Active-Learning" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">Active Learning Core Concepts</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Exploring active learning principles through the Forest Covertype Dataset with various query strategies.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Active Learning</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Query Strategies</span>
-                        </div>
-                        <a href="https://github.com/Asimawad/Active-Learning-Core-Concepts" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
+                    </details>
 
                     <!-- Computer Vision Section -->
-                    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg mb-4 mt-8">
-                        <h4 class="font-medium text-blue-800">👁️ Computer Vision</h4>
-                    </div>
+                    <details class="mb-6">
+                        <summary class="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg">
+                            <span class="font-medium text-blue-800">👁️ Computer Vision (4 projects)</span>
+                        </summary>
+                        <div class="content space-y-4">
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">CNN Architectures (CIFAR-10)</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Implementing and evaluating various CNN architectures on CIFAR-10. Exploring model complexity, regularization, and data augmentation.
+                                </p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">CNN</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Classification</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Computer-Vision-Basics-CIFAR10" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">CNN Architectures (CIFAR-10)</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Implementing and evaluating various CNN architectures on CIFAR-10. Exploring model complexity, regularization, and data augmentation.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">CNN</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Classification</span>
-                        </div>
-                        <a href="https://github.com/Asimawad/Computer-Vision-Basics-CIFAR10" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">Transfer Learning & Saliency Maps</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Training CIFAR-10 classifier with transfer learning. Investigating model focus using saliency maps.
+                                </p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Transfer Learning</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Interpretability</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Computer-Vision-Transfer-Learning" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">Transfer Learning & Saliency Maps</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Training CIFAR-10 classifier with transfer learning. Investigating model focus using saliency maps.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Transfer Learning</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Interpretability</span>
-                        </div>
-                        <a href="https://github.com/Asimawad/Computer-Vision-Transfer-Learning" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">Image Denoising Autoencoder</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    Fully convolutional network for image denoising on LFWcrop dataset. Reconstructing clean images from noisy inputs.
+                                </p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Autoencoder</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Denoising</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Fully-Convolutional-Networks-for-Image-Denoising" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">Image Denoising Autoencoder</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Fully convolutional network for image denoising on LFWcrop dataset. Reconstructing clean images from noisy inputs.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Autoencoder</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Denoising</span>
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">Vehicle Re-Identification</h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    ResNet50 + triplet loss for vehicle re-ID on VeRi dataset. Comparing random vs semi-hard triplet mining strategies.
+                                </p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">ResNet</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Triplet Loss</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Re-ID</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Vehicle-Re-Identification-Using-the-VeRi-Dataset" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
                         </div>
-                        <a href="https://github.com/Asimawad/Fully-Convolutional-Networks-for-Image-Denoising" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">Vehicle Re-Identification</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            ResNet50 + triplet loss for vehicle re-ID on VeRi dataset. Comparing random vs semi-hard triplet mining strategies.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">ResNet</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Triplet Loss</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Re-ID</span>
-                        </div>
-                        <a href="https://github.com/Asimawad/Vehicle-Re-Identification-Using-the-VeRi-Dataset" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
+                    </details>
 
                     <!-- Reinforcement Learning Section -->
-                    <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-lg mb-4 mt-8">
-                        <h4 class="font-medium text-green-800">🎮 Reinforcement Learning</h4>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">DQN — CartPole</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Deep Q-Network implementation with Q-learning, epsilon-greedy exploration, and neural network function approximation.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">DQN</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">OpenAI Gym</span>
+                    <details class="mb-6">
+                        <summary class="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-lg">
+                            <span class="font-medium text-green-800">🎮 Reinforcement Learning (4 projects)</span>
+                        </summary>
+                        <div class="content space-y-4">
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">DQN — CartPole</h3>
+                                <p class="text-gray-600 text-sm mb-3">Deep Q-Network with Q-learning, epsilon-greedy exploration, and neural network function approximation.</p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">DQN</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">OpenAI Gym</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Reinforcement-Learning-Cartpole-DQN" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">DQN — LunarLander</h3>
+                                <p class="text-gray-600 text-sm mb-3">Deep Q-Network tackling the more complex LunarLander-v2 environment.</p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">DQN</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">LunarLander</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Reinforcement-Learning-LunarLander-DQN" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">REINFORCE — CartPole</h3>
+                                <p class="text-gray-600 text-sm mb-3">Policy gradient method using REINFORCE algorithm. Learning to optimize actions that lead to higher returns.</p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Policy Gradient</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">REINFORCE</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/REINFORCE-Algorithm-CartPole" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">REINFORCE — LunarLander</h3>
+                                <p class="text-gray-600 text-sm mb-3">REINFORCE policy gradient method applied to the LunarLander-v2 environment.</p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Policy Gradient</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">LunarLander</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Reinforcement-Learning-LunarLander-REINFORCE" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
                         </div>
-                        <a href="https://github.com/Asimawad/Reinforcement-Learning-Cartpole-DQN" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">DQN — LunarLander</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Deep Q-Network tackling the more complex LunarLander-v2 environment.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">DQN</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">LunarLander</span>
-                        </div>
-                        <a href="https://github.com/Asimawad/Reinforcement-Learning-LunarLander-DQN" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">REINFORCE — CartPole</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Policy gradient method using REINFORCE algorithm. Learning to optimize actions that lead to higher returns.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Policy Gradient</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">REINFORCE</span>
-                        </div>
-                        <a href="https://github.com/Asimawad/REINFORCE-Algorithm-CartPole" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">REINFORCE — LunarLander</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            REINFORCE policy gradient method applied to the LunarLander-v2 environment.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Policy Gradient</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">LunarLander</span>
-                        </div>
-                        <a href="https://github.com/Asimawad/Reinforcement-Learning-LunarLander-REINFORCE" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
+                    </details>
 
                     <!-- ML Fundamentals Section -->
-                    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 p-4 rounded-lg mb-4 mt-8">
-                        <h4 class="font-medium text-amber-800">📈 ML Fundamentals</h4>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">Neural Network from Scratch</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Step-by-step implementation of a neural network from scratch. XOR problem, backpropagation, and visualization.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">From Scratch</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Backprop</span>
+                    <details class="mb-6">
+                        <summary class="bg-gradient-to-r from-amber-50 to-yellow-50 p-4 rounded-lg">
+                            <span class="font-medium text-amber-800">📈 ML Fundamentals (4 projects)</span>
+                        </summary>
+                        <div class="content space-y-4">
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">Neural Network from Scratch</h3>
+                                <p class="text-gray-600 text-sm mb-3">Step-by-step implementation of a neural network from scratch. XOR problem, backpropagation, and visualization.</p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">From Scratch</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Backprop</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/XOR-Neural-Network-from-Scratch" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">Overtraining Analysis</h3>
+                                <p class="text-gray-600 text-sm mb-3">Exploring binary classification with decision stumps and trees. Analyzing performance vs overtraining tendencies.</p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Decision Trees</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Overfitting</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Machine-Learning-Overtraining-" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">Calorimeter Shower Classifier</h3>
+                                <p class="text-gray-600 text-sm mb-3">Physics ML: Classifying electron showers vs hadron showers based on depth and width.</p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Physics</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Classification</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Machine-Learning-Calorimeter-Showers-Classifier" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                                <h3 class="text-lg font-semibold mb-2">Recommender System</h3>
+                                <p class="text-gray-600 text-sm mb-3">Collaborative filtering with ALS. Latent factor embeddings for users and movies.</p>
+                                <div class="flex gap-2 mb-3">
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">RecSys</span>
+                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">ALS</span>
+                                </div>
+                                <a href="https://github.com/Asimawad/Recommender-Sys-Engine-with-Collaborative-Filtering" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
+                            </div>
                         </div>
-                        <a href="https://github.com/Asimawad/XOR-Neural-Network-from-Scratch" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">Overtraining Analysis</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Exploring binary classification with decision stumps and trees. Analyzing performance vs overtraining tendencies.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Decision Trees</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Overfitting</span>
-                        </div>
-                        <a href="https://github.com/Asimawad/Machine-Learning-Overtraining-" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">Calorimeter Shower Classifier</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Physics ML: Classifying electron showers (signal) vs hadron showers (background) based on depth and width.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Physics</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Classification</span>
-                        </div>
-                        <a href="https://github.com/Asimawad/Machine-Learning-Calorimeter-Showers-Classifier" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                        <h3 class="text-lg font-semibold mb-2">Recommender System</h3>
-                        <p class="text-gray-600 text-sm mb-3">
-                            Collaborative filtering with Alternating Least Squares (ALS). Latent factor embeddings for users and movies.
-                        </p>
-                        <div class="flex gap-2 mb-3">
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">RecSys</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">ALS</span>
-                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Matrix Factorization</span>
-                        </div>
-                        <a href="https://github.com/Asimawad/Recommender-Sys-Engine-with-Collaborative-Filtering" target="_blank" class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">View on GitHub →</a>
-                    </div>
+                    </details>
                 </div>
             </div>
 
