@@ -1,8 +1,211 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>DUKKAN | Asim Osman</title><script src="https://cdn.tailwindcss.com"></script><style>.gradient-text{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}</style></head>
-<body class="bg-gray-50 text-gray-900 font-sans"><nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100"><div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center"><a href="/" class="text-xl font-bold gradient-text">AO</a><a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a></div></nav>
-<main class="pt-24 pb-16"><div class="max-w-4xl mx-auto px-6"><div class="mb-8"><span class="text-4xl">🛒</span><h1 class="text-3xl font-bold mt-4">DUKKAN</h1><p class="text-gray-500 mt-2">2024 — University of Khartoum</p></div>
-<div class="prose max-w-none"><h2 class="text-xl font-semibold mb-4">About</h2><p class="text-gray-600 mb-6">A supermarket management Java application developed as part of the Java Programming course at University of Khartoum. Full desktop application with inventory management.</p>
-<div class="flex gap-2 flex-wrap mb-6"><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Java</span><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Desktop App</span><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">OOP</span></div>
-<a href="https://github.com/Asimawad/DUKKAN" target="_blank" class="inline-block px-4 py-2 bg-gray-900 text-white rounded-lg">View on GitHub →</a></div>
-<div class="mt-8 pt-8 border-t"><a href="/journey.html#chapter-1" class="text-indigo-600">← Back</a></div></div></main></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUKKAN | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <span class="text-5xl">🛒</span>
+                <h1 class="text-4xl font-bold mt-4">DUKKAN</h1>
+                <p class="text-gray-500 mt-2 text-lg">2024 — Supermarket Inventory Management System (Java)</p>
+            </div>
+
+            <!-- About -->
+            <div class="prose max-w-none mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    A <strong>Java console application</strong> for managing supermarket inventory. 
+                    Built as part of the Java Programming course at <strong>University of Khartoum</strong>. 
+                    Features item management, stock tracking, buy/sell operations, and reporting.
+                </p>
+                <p class="text-gray-500 mt-2 italic">
+                    "Dukkan" (دكان) means "shop" or "small store" in Arabic.
+                </p>
+            </div>
+
+            <!-- Terminal Demo -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">💻 Running the App</h2>
+                <div class="bg-gray-900 p-4 rounded-xl overflow-x-auto">
+                    <pre class="text-sm text-gray-300 mono"><code><span class="text-gray-500">$</span> java -cp out dukkan.Dukkan
+
+<span class="text-green-400">How Can We Help You? (Select 1-8):</span>
+<span class="text-blue-400">1.</span> Add new items to the stock
+<span class="text-blue-400">2.</span> Search for specific item
+<span class="text-blue-400">3.</span> Inquiry about price
+<span class="text-blue-400">4.</span> Inquiry about quantity
+<span class="text-blue-400">5.</span> Sell items
+<span class="text-blue-400">6.</span> Buy items
+<span class="text-blue-400">7.</span> Report all items
+<span class="text-blue-400">8.</span> Exit
+
+Select Number: <span class="text-yellow-400">7</span>
+
+<span class="text-green-400">The Current Stock</span>
+<span class="text-gray-500">Name        Price       Quantity</span>
+<span class="text-gray-500">---------------------------------</span>
+alwtania    300         500
+almoshrf    200         200
+alrawdaa    100         400
+brkaBisc    250         100
+royalBis    150         150</code></pre>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">✨ Features</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-5 rounded-xl shadow-sm">
+                        <div class="text-2xl mb-2">📦</div>
+                        <h3 class="font-semibold mb-1">Inventory Management</h3>
+                        <p class="text-gray-600 text-sm">Add, search, and track items in stock with name, price, and quantity.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm">
+                        <div class="text-2xl mb-2">💰</div>
+                        <h3 class="font-semibold mb-1">Buy & Sell</h3>
+                        <p class="text-gray-600 text-sm">Process purchases (add to stock) and sales (reduce stock) with validation.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm">
+                        <div class="text-2xl mb-2">🔍</div>
+                        <h3 class="font-semibold mb-1">Search & Query</h3>
+                        <p class="text-gray-600 text-sm">Find items by name, check prices, and query available quantities.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm">
+                        <div class="text-2xl mb-2">📊</div>
+                        <h3 class="font-semibold mb-1">Stock Reports</h3>
+                        <p class="text-gray-600 text-sm">Generate complete inventory reports showing all items and their status.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Structure -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">📁 Code Structure</h2>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h3 class="font-semibold mono text-indigo-600">Dukkan.java</h3>
+                            <p class="text-gray-500 text-sm mt-1">Main class with menu loop and user interaction</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mono text-indigo-600">items.java</h3>
+                            <p class="text-gray-500 text-sm mt-1">Item model class (name, price, quantity)</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mono text-indigo-600">use_item.java</h3>
+                            <p class="text-gray-500 text-sm mt-1">Business logic (CRUD operations on stock)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Sample -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Code Sample: Selling Items</h2>
+                <div class="bg-gray-900 p-4 rounded-xl overflow-x-auto">
+                    <pre class="text-sm text-gray-300 mono"><code><span class="text-purple-400">static void</span> sale_items(String name, <span class="text-blue-400">int</span> quantity) {
+    <span class="text-purple-400">for</span> (items item : stock) {
+        <span class="text-purple-400">if</span> (item.item_name.equalsIgnoreCase(name)) {
+            <span class="text-purple-400">if</span> (quantity < item.item_quantity) {
+                System.out.println(<span class="text-green-400">"Sale Successful"</span>);
+                item.item_quantity -= quantity;
+            } <span class="text-purple-400">else</span> {
+                System.out.println(<span class="text-green-400">"Not enough Quantity"</span>);
+                System.out.println(<span class="text-green-400">"Available: "</span> + item.item_quantity);
+            }
+            <span class="text-purple-400">return</span>;
+        }
+    }
+    System.out.println(<span class="text-green-400">"Item Not Found"</span>);
+}</code></pre>
+                </div>
+            </div>
+
+            <!-- How to Run -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">🚀 How to Run</h2>
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ol class="space-y-3 text-gray-700">
+                        <li class="flex gap-3">
+                            <span class="bg-indigo-100 text-indigo-700 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold shrink-0">1</span>
+                            <span>Clone: <code class="bg-white px-2 py-0.5 rounded">git clone https://github.com/Asimawad/DUKKAN.git</code></span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="bg-indigo-100 text-indigo-700 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold shrink-0">2</span>
+                            <span>Compile: <code class="bg-white px-2 py-0.5 rounded">javac -d out src/dukkan/*.java</code></span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="bg-indigo-100 text-indigo-700 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold shrink-0">3</span>
+                            <span>Run: <code class="bg-white px-2 py-0.5 rounded">java -cp out dukkan.Dukkan</code></span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- What I Learned -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">What I Learned</h2>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Object-Oriented Programming: Classes, objects, encapsulation</li>
+                        <li>• Java Collections: ArrayList for dynamic inventory storage</li>
+                        <li>• User Input: Scanner for interactive console applications</li>
+                        <li>• Control Flow: Switch statements, loops, conditionals</li>
+                        <li>• Basic CRUD operations on in-memory data structures</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Tech Stack</h2>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Java</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">OOP</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">ArrayList</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">NetBeans</span>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="flex gap-4">
+                <a href="https://github.com/Asimawad/DUKKAN" target="_blank" 
+                   class="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    View Source Code
+                </a>
+            </div>
+
+            <!-- Back -->
+            <div class="mt-12 pt-8 border-t">
+                <a href="/journey.html#chapter-1" class="text-indigo-600 hover:text-indigo-700 font-medium">← Back to Journey</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
