@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender Demo | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #0f0f0f; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .movie-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .movie-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+        }
+        .poster-placeholder {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        .seed-btn {
+            transition: all 0.2s;
+        }
+        .seed-btn:hover {
+            transform: scale(1.02);
+        }
+        .seed-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-color: transparent;
+        }
+        .glow {
+            box-shadow: 0 0 40px rgba(102, 126, 234, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white">
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/projects/aims/recommender-system.html" class="text-gray-400 hover:text-white">← Back to Project</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Movie Recommender</span> Demo
+                </h1>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Select a movie you like and get personalized recommendations powered by 
+                    <strong class="text-white">Collaborative Filtering</strong> trained on 32M ratings.
+                </p>
+            </div>
+
+            <!-- Movie Selector -->
+            <div class="mb-12">
+                <h2 class="text-xl font-semibold mb-4 text-gray-300">Pick a movie you enjoy:</h2>
+                <div id="seedMovies" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Selected Movie -->
+            <div id="selectedSection" class="hidden mb-12">
+                <div class="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-6 glow">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div id="selectedPoster" class="w-40 h-60 rounded-lg overflow-hidden flex-shrink-0 poster-placeholder">
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-indigo-400 text-sm mb-1">You selected:</p>
+                            <h3 id="selectedTitle" class="text-2xl font-bold mb-2"></h3>
+                            <p id="selectedGenres" class="text-gray-400 mb-4"></p>
+                            <a id="selectedImdb" href="#" target="_blank" 
+                               class="inline-flex items-center gap-2 bg-yellow-500 text-black px-4 py-2 rounded-lg font-medium hover:bg-yellow-400 transition">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M14.31 10L14.13 10.03L14.07 10.2L14 10.31L13.92 10.2L13.86 10.03L13.68 10H13.5V14H13.95V11.77L14.31 14H14.61L14.97 11.77V14H15.42V10H14.31M11.07 10V14H12.5V13.5H11.62V12.5H12.37V12H11.62V10.5H12.5V10H11.07M9.28 10V14H10.74V13.5H9.82V10H9.28M3 5V19H21V5H3M19 17H5V7H19V17Z"/></svg>
+                                View on IMDb
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div id="recommendationsSection" class="hidden">
+                <h2 class="text-2xl font-bold mb-6">
+                    <span class="gradient-text">Recommended for you</span>
+                </h2>
+                <div id="recommendations" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- How it works -->
+            <div class="mt-16 bg-gray-900/50 rounded-2xl p-8">
+                <h2 class="text-xl font-bold mb-4">How it works</h2>
+                <div class="grid md:grid-cols-3 gap-6 text-sm text-gray-400">
+                    <div>
+                        <div class="text-3xl mb-2">🧮</div>
+                        <h3 class="text-white font-semibold mb-1">Matrix Factorization</h3>
+                        <p>The model learns 25-dimensional embeddings for 84K movies from 32M user ratings.</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">🎯</div>
+                        <h3 class="text-white font-semibold mb-1">Similarity Scoring</h3>
+                        <p>Recommendations are based on embedding similarity — movies with similar latent features to your pick.</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">🎬</div>
+                        <h3 class="text-white font-semibold mb-1">TMDB Integration</h3>
+                        <p>Posters and metadata fetched from TMDB API. Links go to IMDb for more info.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-black border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 text-center text-gray-500 text-sm">
+            Model trained on MovieLens 32M · Posters from TMDB · © 2025 Asim Osman
+        </div>
+    </footer>
+
+    <script>
+        // TMDB API (free, read-only key for demo purposes)
+        const TMDB_API_KEY = '2a52f2627578ae8fc90522ef88ab6a07';
+        const TMDB_IMG_BASE = 'https://image.tmdb.org/t/p/w300';
+        
+        let demoData = {};
+        let posterCache = {};
+
+        async function loadDemoData() {
+            const response = await fetch('/assets/recommender-system/demo_data.json');
+            demoData = await response.json();
+            renderSeedMovies();
+        }
+
+        async function fetchPoster(tmdbId) {
+            if (!tmdbId) return null;
+            if (posterCache[tmdbId]) return posterCache[tmdbId];
+            
+            try {
+                const response = await fetch(
+                    `https://api.themoviedb.org/3/movie/${tmdbId}?api_key=${TMDB_API_KEY}`
+                );
+                const data = await response.json();
+                const posterUrl = data.poster_path ? TMDB_IMG_BASE + data.poster_path : null;
+                posterCache[tmdbId] = posterUrl;
+                return posterUrl;
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function renderSeedMovies() {
+            const container = document.getElementById('seedMovies');
+            container.innerHTML = '';
+            
+            Object.keys(demoData).forEach(title => {
+                const movie = demoData[title];
+                const btn = document.createElement('button');
+                btn.className = 'seed-btn bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-left hover:border-indigo-500';
+                btn.innerHTML = `
+                    <div class="font-medium text-sm truncate">${title.replace(/\s*\(\d{4}\)$/, '')}</div>
+                    <div class="text-xs text-gray-500 truncate">${movie.genres.split('|').slice(0, 2).join(', ')}</div>
+                `;
+                btn.onclick = () => selectMovie(title);
+                container.appendChild(btn);
+            });
+        }
+
+        async function selectMovie(title) {
+            const movie = demoData[title];
+            if (!movie) return;
+
+            // Update buttons
+            document.querySelectorAll('.seed-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.includes(title.replace(/\s*\(\d{4}\)$/, ''))) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Show selected section
+            document.getElementById('selectedSection').classList.remove('hidden');
+            document.getElementById('selectedTitle').textContent = title;
+            document.getElementById('selectedGenres').textContent = movie.genres.replace(/\|/g, ' · ');
+            document.getElementById('selectedImdb').href = `https://www.imdb.com/title/${movie.imdbId}/`;
+
+            // Load poster
+            const posterEl = document.getElementById('selectedPoster');
+            posterEl.innerHTML = '<div class="w-full h-full flex items-center justify-center text-gray-600">Loading...</div>';
+            const posterUrl = await fetchPoster(movie.tmdbId);
+            if (posterUrl) {
+                posterEl.innerHTML = `<img src="${posterUrl}" alt="${title}" class="w-full h-full object-cover">`;
+            } else {
+                posterEl.innerHTML = `<div class="w-full h-full flex items-center justify-center text-gray-600 text-4xl">🎬</div>`;
+            }
+
+            // Show recommendations
+            document.getElementById('recommendationsSection').classList.remove('hidden');
+            await renderRecommendations(movie.recommendations);
+        }
+
+        async function renderRecommendations(recommendations) {
+            const container = document.getElementById('recommendations');
+            container.innerHTML = recommendations.map((rec, i) => `
+                <div class="movie-card bg-gray-800 rounded-lg overflow-hidden" id="rec-${i}">
+                    <div class="aspect-[2/3] poster-placeholder flex items-center justify-center text-gray-600">
+                        <svg class="w-12 h-12 animate-pulse" fill="currentColor" viewBox="0 0 24 24"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>
+                    </div>
+                    <div class="p-3">
+                        <h4 class="font-medium text-sm truncate">${rec.title.replace(/\s*\(\d{4}\)$/, '')}</h4>
+                        <p class="text-xs text-gray-500 truncate">${rec.genres.split('|').slice(0, 2).join(', ')}</p>
+                        ${rec.imdbId ? `<a href="https://www.imdb.com/title/${rec.imdbId}/" target="_blank" class="text-xs text-indigo-400 hover:text-indigo-300 mt-1 inline-block">IMDb →</a>` : ''}
+                    </div>
+                </div>
+            `).join('');
+
+            // Load posters async
+            recommendations.forEach(async (rec, i) => {
+                const posterUrl = await fetchPoster(rec.tmdbId);
+                const card = document.getElementById(`rec-${i}`);
+                if (card && posterUrl) {
+                    card.querySelector('.aspect-\\[2\\/3\\]').innerHTML = 
+                        `<img src="${posterUrl}" alt="${rec.title}" class="w-full h-full object-cover">`;
+                } else if (card) {
+                    card.querySelector('.aspect-\\[2\\/3\\]').innerHTML = 
+                        `<div class="w-full h-full flex items-center justify-center text-gray-600 text-4xl">🎬</div>`;
+                }
+            });
+        }
+
+        // Initialize
+        loadDemoData();
+    </script>
+</body>
+</html>
