@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master's Thesis: Inference-Time Scaling | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">🎓</span>
+                    <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">Master's Thesis</span>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold leading-tight">Scaling Inference Time Compute for Machine Learning Engineering Agents</h1>
+                <p class="text-gray-500 mt-3 text-lg">June 2025 — AIMS South Africa (AI for Science Program)</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Inference-Time Scaling</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">LLM Agents</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">DeepSeek-R1</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">MLE-Bench</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">AIDE</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Self-Consistency</span>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="flex flex-wrap gap-4 mb-10">
+                <a href="/assets/thesis/ITS_ML_Engineering_Thesis.pdf" target="_blank" 
+                   class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-2.5 rounded-lg hover:from-purple-500 hover:to-indigo-500 transition font-medium shadow-lg shadow-purple-500/25">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Full Thesis (PDF)
+                </a>
+                <a href="https://github.com/Asimawad/aide-agent" target="_blank" 
+                   class="inline-flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    Code (AIDE Fork)
+                </a>
+            </div>
+
+            <!-- Abstract -->
+            <section class="mb-12">
+                <h2 class="text-xl font-semibold mb-4">Abstract</h2>
+                <div class="bg-white p-6 rounded-xl border border-gray-200">
+                    <p class="text-gray-600 leading-relaxed">
+                        Recent findings suggest that <strong>reasoning strategies applied during inference</strong> can bring greater 
+                        performance gains in LLMs than simply increasing model size. In this work, we systematically implement 
+                        and evaluate inference-time scaling (ITS) strategies within an open-source, agentic framework tailored 
+                        to machine-learning engineering tasks.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mt-4">
+                        We enhance the <strong>AIDE agent scaffold</strong> with multiple ITS techniques—<em>self-consistency, 
+                        self-reflection, and modular task decomposition</em>—and apply these to distilled <strong>DeepSeek-R1</strong> 
+                        models (7B, 14B, 32B). Our best agent achieves a <strong class="text-purple-600">30% medal rate</strong> on 
+                        MLE-Bench, matching OpenAI's o4-mini and surpassing GPT-4-Turbo.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Key Result -->
+            <section class="mb-12">
+                <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-2xl p-8">
+                    <div class="text-center">
+                        <div class="text-6xl font-bold mb-2">30%</div>
+                        <div class="text-xl opacity-90">Medal Rate (Pass@6)</div>
+                        <p class="mt-4 opacity-80">
+                            DeepSeek-32B + Decomposed Planner-Coder<br>
+                            <span class="font-semibold">Matches o4-mini • Surpasses GPT-4-Turbo</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Questions -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Research Questions</h2>
+                <div class="space-y-4">
+                    <div class="bg-white p-5 rounded-lg border">
+                        <div class="text-purple-600 font-semibold mb-2">RQ1: Efficacy of ITS on Distilled Models</div>
+                        <p class="text-gray-600">To what extent can ITS strategies improve the performance of distilled DeepSeek models on ML engineering tasks?</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg border">
+                        <div class="text-purple-600 font-semibold mb-2">RQ2: Trade-offs Between Strategies</div>
+                        <p class="text-gray-600">What are the performance trade-offs between different ITS strategies (self-consistency, self-reflection, task decomposition)?</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Methodology -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Methodology</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-white p-5 rounded-lg border">
+                        <h3 class="font-semibold text-indigo-600 mb-3">🤖 Models Tested</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• <strong>DeepSeek-R1 7B</strong> (distilled)</li>
+                            <li>• <strong>DeepSeek-R1 14B</strong> (distilled)</li>
+                            <li>• <strong>DeepSeek-R1 32B</strong> (distilled)</li>
+                            <li class="text-gray-400">Baselines: GPT-4-Turbo, o4-mini</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg border">
+                        <h3 class="font-semibold text-green-600 mb-3">📊 Benchmark</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• <strong>MLE-Bench</strong> (10 competitions)</li>
+                            <li>• Image/Text Classification</li>
+                            <li>• Tabular, Seq2Seq, Audio tasks</li>
+                            <li>• Pass@6 evaluation protocol</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold mb-4">ITS Strategies Implemented</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-amber-50 p-4 rounded-lg border border-amber-200">
+                        <div class="text-2xl mb-2">🔄</div>
+                        <h4 class="font-semibold text-amber-800">Self-Reflection</h4>
+                        <p class="text-sm text-amber-700 mt-1">Iterative refinement based on execution feedback. Best for "competent but flawed" models.</p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div class="text-2xl mb-2">🎲</div>
+                        <h4 class="font-semibold text-blue-800">Self-Consistency</h4>
+                        <p class="text-sm text-blue-700 mt-1">Generate N candidates, verify and select best. Increases reliability.</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                        <div class="text-2xl mb-2">🧩</div>
+                        <h4 class="font-semibold text-green-800">Task Decomposition</h4>
+                        <p class="text-sm text-green-700 mt-1">Separate Planner + Coder agents. <strong>Most effective for 32B.</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Key Results</h2>
+                
+                <div class="bg-white rounded-lg border overflow-hidden mb-6">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-semibold">Model + Strategy</th>
+                                <th class="px-4 py-3 text-center font-semibold">Valid Submission</th>
+                                <th class="px-4 py-3 text-center font-semibold">Above Median</th>
+                                <th class="px-4 py-3 text-center font-semibold">Any Medal</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y">
+                            <tr class="bg-purple-50">
+                                <td class="px-4 py-3 font-medium">o4-mini (baseline)</td>
+                                <td class="px-4 py-3 text-center">90%</td>
+                                <td class="px-4 py-3 text-center">70%</td>
+                                <td class="px-4 py-3 text-center font-bold text-purple-600">30%</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">GPT-4-Turbo (baseline)</td>
+                                <td class="px-4 py-3 text-center">80%</td>
+                                <td class="px-4 py-3 text-center">40%</td>
+                                <td class="px-4 py-3 text-center">20%</td>
+                            </tr>
+                            <tr class="bg-green-50">
+                                <td class="px-4 py-3 font-medium">🏆 DS-32B + Decomposed</td>
+                                <td class="px-4 py-3 text-center">80%</td>
+                                <td class="px-4 py-3 text-center">60%</td>
+                                <td class="px-4 py-3 text-center font-bold text-green-600">30%</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">DS-32B + Self-Consistency</td>
+                                <td class="px-4 py-3 text-center">80%</td>
+                                <td class="px-4 py-3 text-center">50%</td>
+                                <td class="px-4 py-3 text-center">10%</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">DS-14B + Self-Reflection</td>
+                                <td class="px-4 py-3 text-center">80%</td>
+                                <td class="px-4 py-3 text-center">30%</td>
+                                <td class="px-4 py-3 text-center">20%</td>
+                            </tr>
+                            <tr class="text-gray-500">
+                                <td class="px-4 py-3">DS-7B (all strategies)</td>
+                                <td class="px-4 py-3 text-center">50%</td>
+                                <td class="px-4 py-3 text-center">10%</td>
+                                <td class="px-4 py-3 text-center">0%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-sm text-gray-500 text-center">Pass@6 results on 10 MLE-Bench competitions</p>
+            </section>
+
+            <!-- Key Findings -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Key Findings</h2>
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-r from-red-50 to-orange-50 p-5 rounded-lg border border-red-200">
+                        <h4 class="font-semibold text-red-800 mb-2">🚫 ITS Cannot Rescue Weak Models</h4>
+                        <p class="text-sm text-red-700">The 7B model's fundamental code generation deficits meant no ITS strategy could produce medal-winning solutions. ITS amplifies capability—it doesn't create it.</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-5 rounded-lg border border-green-200">
+                        <h4 class="font-semibold text-green-800 mb-2">🏆 Task Decomposition Wins for Capable Models</h4>
+                        <p class="text-sm text-green-700">Planner-Coder separation enforces architectural coherence, avoiding library confusion. The 32B model with this strategy matches o4-mini.</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 p-5 rounded-lg border border-amber-200">
+                        <h4 class="font-semibold text-amber-800 mb-2">🎯 Self-Reflection: Sweet Spot at 14B</h4>
+                        <p class="text-sm text-amber-700">Most effective for "competent but flawed" models. Doubled the 14B medal rate but caused "overthinking" in the already-capable 32B.</p>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-5 rounded-lg border border-blue-200">
+                        <h4 class="font-semibold text-blue-800 mb-2">⚖️ No One-Size-Fits-All Strategy</h4>
+                        <p class="text-sm text-blue-700">The optimal ITS strategy depends on both model scale and task type. Strategy selection is a critical design decision.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contributions -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Contributions</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-5 rounded-lg border">
+                        <div class="text-3xl mb-3">🛠️</div>
+                        <h4 class="font-semibold mb-2">Open-Source Agent Scaffold</h4>
+                        <p class="text-sm text-gray-600">Accessible, specialized agentic framework optimized for ITS strategies in ML engineering tasks.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg border">
+                        <div class="text-3xl mb-3">📊</div>
+                        <h4 class="font-semibold mb-2">Empirical Validation</h4>
+                        <p class="text-sm text-gray-600">Comprehensive experiments showing ITS can elevate open-source LLMs to match proprietary SOTA.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Supervisors -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Supervision</h2>
+                <div class="bg-gray-100 p-4 rounded-lg text-sm text-gray-600">
+                    <p><strong>Supervisors:</strong> Arnol Fokam, Arnu Pretorius</p>
+                    <p><strong>Institutions:</strong> InstaDeep & Stellenbosch University, South Africa</p>
+                    <p><strong>Program:</strong> AI for Science Masters, AIMS South Africa (DeepMind Partnership)</p>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <div class="flex gap-3">
+                    <a href="/assets/thesis/ITS_ML_Engineering_Thesis.pdf" target="_blank" 
+                       class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+                        Download Thesis
+                    </a>
+                    <a href="https://github.com/Asimawad/aide-agent" target="_blank" 
+                       class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                        View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
+</body>
+</html>
