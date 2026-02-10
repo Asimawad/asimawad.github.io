@@ -1,8 +1,160 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Field Monitoring | Asim Osman</title><script src="https://cdn.tailwindcss.com"></script><style>.gradient-text{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}</style></head>
-<body class="bg-gray-50 text-gray-900 font-sans"><nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100"><div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center"><a href="/" class="text-xl font-bold gradient-text">AO</a><a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a></div></nav>
-<main class="pt-24 pb-16"><div class="max-w-4xl mx-auto px-6"><div class="mb-8"><span class="text-4xl">🛰️</span><h1 class="text-3xl font-bold mt-4">Field Monitoring</h1><p class="text-gray-500 mt-2">2024 — Satellite Imagery</p></div>
-<div class="prose max-w-none"><h2 class="text-xl font-semibold mb-4">About</h2><p class="text-gray-600 mb-6">Using satellite imagery and computer vision to help farmers map fields, track crop health, and receive actionable recommendations via a user-friendly dashboard.</p>
-<div class="flex gap-2 flex-wrap mb-6"><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Python</span><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Satellite</span><span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Computer Vision</span></div>
-<a href="https://github.com/Asimawad/Field-Monitoring" target="_blank" class="inline-block px-4 py-2 bg-gray-900 text-white rounded-lg">View on GitHub →</a></div>
-<div class="mt-8 pt-8 border-t"><a href="/journey.html#chapter-1" class="text-indigo-600">← Back</a></div></div></main></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Monitoring | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <span class="text-5xl">🛰️</span>
+                <h1 class="text-4xl font-bold mt-4">AgriAI Field Monitoring</h1>
+                <p class="text-gray-500 mt-2 text-lg">2024 — Full-Stack Agricultural Platform</p>
+            </div>
+
+            <!-- About -->
+            <div class="prose max-w-none mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    A complete field monitoring web application that empowers farmers with satellite-based insights. 
+                    Built with <strong>Streamlit</strong> and integrated with <strong>Sentinel Hub</strong>, it provides 
+                    real-time NDVI analysis, field management tools, and user authentication — all in a responsive interface.
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed mt-4">
+                    This project evolved from the AgriAI concept into a production-ready application with user accounts, 
+                    persistent field storage, and a clean UI for non-technical users.
+                </p>
+            </div>
+
+            <!-- Key Features -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Features</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-5 rounded-xl shadow-sm">
+                        <div class="text-2xl mb-2">🔐</div>
+                        <h3 class="font-semibold mb-1">User Authentication</h3>
+                        <p class="text-gray-600 text-sm">Secure signup/login system with per-user field storage. Each farmer sees only their own fields.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm">
+                        <div class="text-2xl mb-2">🗺️</div>
+                        <h3 class="font-semibold mb-1">Draw Fields on Map</h3>
+                        <p class="text-gray-600 text-sm">Interactive Folium maps with drawing tools — define field boundaries by clicking and dragging.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm">
+                        <div class="text-2xl mb-2">📊</div>
+                        <h3 class="font-semibold mb-1">NDVI Monitoring</h3>
+                        <p class="text-gray-600 text-sm">Normalized Difference Vegetation Index analysis from Sentinel-2 satellite imagery.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm">
+                        <div class="text-2xl mb-2">✏️</div>
+                        <h3 class="font-semibold mb-1">Field Management</h3>
+                        <p class="text-gray-600 text-sm">Add crop types, irrigation status, and custom properties to each field.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm">
+                        <div class="text-2xl mb-2">📍</div>
+                        <h3 class="font-semibold mb-1">Location Search</h3>
+                        <p class="text-gray-600 text-sm">Geopy integration for finding fields by place name — just type a location and the map navigates there.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-sm">
+                        <div class="text-2xl mb-2">📧</div>
+                        <h3 class="font-semibold mb-1">Contact Form</h3>
+                        <p class="text-gray-600 text-sm">Built-in contact page for user support and feedback collection.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Tech Stack</h2>
+                <div class="flex gap-2 flex-wrap">
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Python</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Streamlit</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Sentinel Hub API</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">GeoPandas</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Folium</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Plotly</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Parquet</span>
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">Geopy</span>
+                </div>
+            </div>
+
+            <!-- App Structure -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">App Structure</h2>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="grid md:grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="text-3xl mb-2">🏠</div>
+                            <h3 class="font-semibold">Landing Page</h3>
+                            <p class="text-gray-500 text-sm mt-1">Login/Signup with app description</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl mb-2">➕</div>
+                            <h3 class="font-semibold">Add & Manage</h3>
+                            <p class="text-gray-500 text-sm mt-1">Draw fields, set crop types, edit properties</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl mb-2">📈</div>
+                            <h3 class="font-semibold">Monitor</h3>
+                            <p class="text-gray-500 text-sm mt-1">View NDVI, select dates, analyze health</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What I Learned -->
+            <div class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">What I Learned</h2>
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Building full-stack web apps with Streamlit's component model</li>
+                        <li>• Working with geospatial data formats (GeoJSON, Parquet, Shapefiles)</li>
+                        <li>• Integrating external APIs (Sentinel Hub) with rate limiting and caching</li>
+                        <li>• Designing UX for non-technical users (farmers)</li>
+                        <li>• Deploying ML-adjacent apps to HuggingFace Spaces</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="flex gap-4 flex-wrap">
+                <a href="https://github.com/Asimawad/Field-Monitoring" target="_blank" 
+                   class="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    View on GitHub
+                </a>
+                <a href="https://huggingface.co/spaces/A-O98/Field-Monitoring" target="_blank" 
+                   class="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 rounded-lg hover:border-gray-400 transition">
+                    🤗 HuggingFace Demo
+                </a>
+            </div>
+
+            <!-- Back -->
+            <div class="mt-12 pt-8 border-t">
+                <a href="/journey.html#chapter-1" class="text-indigo-600 hover:text-indigo-700 font-medium">← Back to Journey</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
