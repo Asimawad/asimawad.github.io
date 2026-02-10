@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparing Uncertainty Methods | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+        .result-img {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">📊</span>
+                    <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">AIMS Coursework</span>
+                </div>
+                <h1 class="text-4xl font-bold">Comparing Uncertainty Methods</h1>
+                <p class="text-gray-500 mt-2 text-lg">Late 2024 — Deep Ensembles vs MC Dropout vs Deterministic</p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Deep Ensembles</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">MC Dropout</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">OoD Detection</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Rejection Curves</span>
+                </div>
+            </div>
+
+            <!-- About -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    A comprehensive comparison of uncertainty estimation methods using Bayesian neural networks (LeNet5 with dropout) 
+                    on Dirty-MNIST, MNIST, and Fashion-MNIST datasets. Covers <strong>classification with rejection</strong>, 
+                    <strong>out-of-distribution detection</strong>, and <strong>density-based uncertainty</strong>.
+                </p>
+                <a href="https://github.com/Asimawad/Comparing-Uncertainty-Methods-Active-Learning" target="_blank" 
+                   class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-700 font-medium">
+                    View on GitHub →
+                </a>
+            </section>
+
+            <!-- Methods Compared -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Methods Compared</h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-indigo-600">Deep Ensembles</h3>
+                        <p class="text-sm text-gray-600 mt-2">Multiple independently trained models averaged for predictions</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-green-600">MC Dropout</h3>
+                        <p class="text-sm text-gray-600 mt-2">Dropout at inference time for Bayesian approximation</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-gray-600">Deterministic</h3>
+                        <p class="text-sm text-gray-600 mt-2">Standard neural network (baseline)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 1: Training Results -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Model Training Results</h2>
+                <p class="text-gray-600 mb-4">
+                    Models trained on Dirty-MNIST, evaluated on MNIST test set.
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full bg-white rounded-lg border">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-sm font-semibold">Method</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold">Accuracy</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold">NLL</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y">
+                            <tr>
+                                <td class="px-4 py-3">Deep Ensembles</td>
+                                <td class="px-4 py-3 text-center font-mono text-indigo-600">98.9%</td>
+                                <td class="px-4 py-3 text-center font-mono">0.0367</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">MC Dropout</td>
+                                <td class="px-4 py-3 text-center font-mono text-green-600">99.0%</td>
+                                <td class="px-4 py-3 text-center font-mono">0.04</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">Deterministic</td>
+                                <td class="px-4 py-3 text-center font-mono">98.8%</td>
+                                <td class="px-4 py-3 text-center font-mono">0.067</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Task 2-3: Rejection Curves -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Classification with Rejection</h2>
+                <p class="text-gray-600 mb-4">
+                    Ranking predictions by uncertainty and rejecting the least confident ones. 
+                    Higher rejection rates → only confident predictions retained → higher accuracy.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Comparing-Uncertainty-Methods-Active-Learning/main/results/accuracy_vs_rejection_rate.png" 
+                             alt="Accuracy vs Rejection Rate" class="result-img w-full">
+                        <p class="text-sm text-gray-500 mt-2 text-center">Accuracy vs Rejection Rate</p>
+                    </div>
+                    <div>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Comparing-Uncertainty-Methods-Active-Learning/main/results/nll_vs_rejection.png" 
+                             alt="NLL vs Rejection Rate" class="result-img w-full">
+                        <p class="text-sm text-gray-500 mt-2 text-center">NLL vs Rejection Rate</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-medium mb-2">Observations:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>• <strong>Deep Ensemble</strong> achieves highest accuracy due to prediction diversity</li>
+                        <li>• <strong>MC Dropout</strong> leverages stochasticity but slightly trails Deep Ensemble</li>
+                        <li>• At high rejection rates (&gt;70%), all methods converge</li>
+                        <li>• Deep Ensemble shows best calibration (lowest NLL)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Task 4: OoD Detection -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Out-of-Distribution Detection</h2>
+                <p class="text-gray-600 mb-4">
+                    Detecting whether inputs come from the training distribution (Dirty-MNIST) or a different distribution (Fashion-MNIST).
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Deep Ensemble</h3>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Comparing-Uncertainty-Methods-Active-Learning/main/results/deep_ensemble_ood.png" 
+                             alt="Deep Ensemble OoD" class="result-img w-full mb-2">
+                        <div class="bg-gray-50 p-3 rounded text-sm">
+                            <p><strong>AUROC:</strong> BALD 0.89 | Pred. Entropy <span class="text-green-600 font-bold">0.97</span> | Cond. Entropy 0.95</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">MC Dropout</h3>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Comparing-Uncertainty-Methods-Active-Learning/main/results/mc_ood.png" 
+                             alt="MC Dropout OoD" class="result-img w-full mb-2">
+                        <div class="bg-gray-50 p-3 rounded text-sm">
+                            <p><strong>AUROC:</strong> BALD <span class="text-green-600 font-bold">0.93</span> | Pred. Entropy 0.96 | Cond. Entropy 0.95</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-green-50 border border-green-200 p-4 rounded-lg">
+                    <p class="text-green-800"><strong>Key Finding:</strong> Predictive Entropy achieves highest AUROC for OoD detection. MC Dropout captures epistemic uncertainty (BALD) more effectively than Deep Ensembles in this scenario.</p>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>✅ <strong>Deep Ensembles win</strong> for accuracy and calibration in rejection scenarios</li>
+                        <li>✅ <strong>Predictive Entropy</strong> is most reliable for OoD detection (AUROC 0.96-0.97)</li>
+                        <li>✅ <strong>MC Dropout</strong> is a practical alternative when training multiple models is expensive</li>
+                        <li>✅ <strong>Rejection-based classification</strong> useful for high-stakes applications (medical, autonomous)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <a href="https://github.com/Asimawad/Comparing-Uncertainty-Methods-Active-Learning" target="_blank" 
+                   class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
+</body>
+</html>

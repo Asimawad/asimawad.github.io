@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Learning & Saliency Maps | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+        .result-img {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">🔍</span>
+                    <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">AIMS Coursework</span>
+                </div>
+                <h1 class="text-4xl font-bold">Transfer Learning & Saliency Maps</h1>
+                <p class="text-gray-500 mt-2 text-lg">Late 2024 — VGG16, MobileNet, and Model Interpretability</p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Transfer Learning</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">MobileNetV3</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Saliency Maps</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Interpretability</span>
+                </div>
+            </div>
+
+            <!-- About -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Training CIFAR-10 classifiers using pre-trained models (VGG16, MobileNetV2, MobileNetV3-Large) 
+                    and investigating what the model "sees" using <strong>saliency maps</strong> generated through masked image techniques.
+                </p>
+                <a href="https://github.com/Asimawad/Computer-Vision-Transfer-Learning" target="_blank" 
+                   class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-700 font-medium">
+                    View on GitHub →
+                </a>
+            </section>
+
+            <!-- Part 1: Transfer Learning -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Transfer Learning Comparison</h2>
+                <p class="text-gray-600 mb-4">
+                    Pre-trained models on ImageNet (224×224) adapted for CIFAR-10 (32×32). 
+                    All convolutional layers frozen, only classifier replaced.
+                </p>
+
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full bg-white rounded-lg border">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-sm font-semibold">Model</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold">Test Accuracy</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold">Val Loss</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold">Training Time</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y">
+                            <tr>
+                                <td class="px-4 py-3">VGG16</td>
+                                <td class="px-4 py-3 text-center font-mono">67.60%</td>
+                                <td class="px-4 py-3 text-center font-mono">0.9409</td>
+                                <td class="px-4 py-3 text-center text-red-500 text-sm">Very slow</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">MobileNetV2</td>
+                                <td class="px-4 py-3 text-center font-mono">78.71%</td>
+                                <td class="px-4 py-3 text-center font-mono">0.6159</td>
+                                <td class="px-4 py-3 text-center font-mono text-sm">~1064s</td>
+                            </tr>
+                            <tr class="bg-green-50">
+                                <td class="px-4 py-3 font-semibold text-green-700">MobileNetV3-Large ⭐</td>
+                                <td class="px-4 py-3 text-center font-mono font-bold text-green-600">84.37%</td>
+                                <td class="px-4 py-3 text-center font-mono text-green-600">0.4642</td>
+                                <td class="px-4 py-3 text-center font-mono text-sm">~1019s</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Computer-Vision-Transfer-Learning/main/plots/mobilenet.png" 
+                             alt="MobileNetV2 Loss and Accuracy" class="result-img w-full">
+                        <p class="text-sm text-gray-500 mt-2 text-center">MobileNetV2 training curves</p>
+                    </div>
+                    <div>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Computer-Vision-Transfer-Learning/main/plots/mobilenet_large.png" 
+                             alt="MobileNetV3-Large Loss and Accuracy" class="result-img w-full">
+                        <p class="text-sm text-gray-500 mt-2 text-center">MobileNetV3-Large training curves</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Part 2: Saliency Maps -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Saliency Map Generation</h2>
+                <p class="text-gray-600 mb-4">
+                    Understanding what the model "sees" by sliding a black mask across the image and measuring 
+                    the drop in classification probability. Regions where masking causes the biggest probability drop 
+                    are most important to the model.
+                </p>
+
+                <div class="bg-white p-4 rounded-lg border mb-6">
+                    <h4 class="font-medium mb-2">Procedure:</h4>
+                    <ol class="list-decimal list-inside space-y-1 text-gray-600 text-sm">
+                        <li>Apply a 30×30 black mask sliding across the image (stride 20)</li>
+                        <li>Pass each masked image through the model</li>
+                        <li>Record classification probability for the correct class</li>
+                        <li>Reshape into 2D heatmap showing region importance</li>
+                    </ol>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Original Image</h3>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Computer-Vision-Transfer-Learning/main/plots/french_horn_original_pic.png" 
+                             alt="French Horn Original" class="result-img w-full">
+                        <p class="text-sm text-gray-500 mt-2">Input: French horn and musicians</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Saliency Map</h3>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Computer-Vision-Transfer-Learning/main/plots/sailancy_map.png" 
+                             alt="Saliency Map" class="result-img w-full">
+                        <p class="text-sm text-gray-500 mt-2">Model focuses on the French horn region</p>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 border border-amber-200 p-4 rounded-lg mt-6">
+                    <p class="text-amber-800"><strong>Insight:</strong> The saliency map clearly highlights the French horn as the critical region for classification. When the mask overlaps significant object regions, prediction probability drops significantly.</p>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
+                <div class="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>✅ <strong>MobileNetV3-Large wins</strong> — best accuracy (84.37%) with efficient training</li>
+                        <li>✅ <strong>Transfer learning works</strong> even with resolution mismatch (224×224 → 32×32)</li>
+                        <li>✅ <strong>Saliency maps</strong> provide intuitive model interpretability</li>
+                        <li>✅ <strong>Smaller efficient models</strong> (MobileNet) can outperform larger ones (VGG16)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <a href="https://github.com/Asimawad/Computer-Vision-Transfer-Learning" target="_blank" 
+                   class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommender System | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+        .result-img {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">🎬</span>
+                    <span class="text-xs bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-medium">AIMS Coursework</span>
+                </div>
+                <h1 class="text-4xl font-bold">Recommender System</h1>
+                <p class="text-gray-500 mt-2 text-lg">Late 2024 — Collaborative Filtering with ALS</p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Collaborative Filtering</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">ALS</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Latent Factors</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Matrix Factorization</span>
+                </div>
+            </div>
+
+            <!-- About -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Development of a collaborative filtering-based recommender system using 
+                    <strong>Alternating Least Squares (ALS)</strong>. The system learns latent factor embeddings 
+                    for both users and movies, along with their biases, to predict ratings and make recommendations.
+                </p>
+                <a href="https://github.com/Asimawad/Recommender-Sys-Engine-with-Collaborative-Filtering" target="_blank" 
+                   class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-700 font-medium">
+                    View on GitHub →
+                </a>
+            </section>
+
+            <!-- Method -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Methodology</h2>
+                
+                <div class="bg-white p-6 rounded-lg border mb-6">
+                    <h3 class="font-semibold text-indigo-600 mb-3">Matrix Factorization</h3>
+                    <p class="text-gray-600 mb-4">
+                        Decompose the user-item rating matrix R into two lower-rank matrices:
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded font-mono text-center">
+                        R ≈ U × V<sup>T</sup>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-3">
+                        Where U = user embeddings, V = item embeddings
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-green-600 mb-2">Alternating Least Squares</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Fix users, optimize items</li>
+                            <li>• Fix items, optimize users</li>
+                            <li>• Repeat until convergence</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-amber-600 mb-2">Model Components</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• User latent factors</li>
+                            <li>• Movie latent factors</li>
+                            <li>• User biases</li>
+                            <li>• Movie biases</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">How Collaborative Filtering Works</h2>
+                
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ol class="space-y-4 text-gray-700">
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">1</span>
+                            <div>
+                                <strong>Collect Ratings</strong>
+                                <p class="text-sm text-gray-600">Users rate movies (explicit feedback)</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">2</span>
+                            <div>
+                                <strong>Learn Embeddings</strong>
+                                <p class="text-sm text-gray-600">ALS finds latent factors that explain rating patterns</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">3</span>
+                            <div>
+                                <strong>Predict Ratings</strong>
+                                <p class="text-sm text-gray-600">Dot product of user and item embeddings + biases</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">4</span>
+                            <div>
+                                <strong>Recommend</strong>
+                                <p class="text-sm text-gray-600">Suggest items with highest predicted ratings</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
+                <div class="bg-gradient-to-r from-amber-50 to-yellow-50 p-6 rounded-xl">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>✅ <strong>Matrix factorization</strong> captures latent preferences</li>
+                        <li>✅ <strong>ALS</strong> is efficient for large sparse matrices</li>
+                        <li>✅ <strong>Biases</strong> capture user/item-specific tendencies (some users rate higher)</li>
+                        <li>✅ <strong>Collaborative filtering</strong> finds similar users/items without explicit features</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <a href="https://github.com/Asimawad/Recommender-Sys-Engine-with-Collaborative-Filtering" target="_blank" 
+                   class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
+</body>
+</html>

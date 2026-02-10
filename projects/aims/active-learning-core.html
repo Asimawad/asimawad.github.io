@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Learning Core Concepts | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+        .result-img {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">🎯</span>
+                    <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">AIMS Coursework</span>
+                </div>
+                <h1 class="text-4xl font-bold">Active Learning Core Concepts</h1>
+                <p class="text-gray-500 mt-2 text-lg">Late 2024 — Query Strategies on Forest Covertype Dataset</p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Uncertainty Sampling</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Query-by-Committee</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Entropy Sampling</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Margin Sampling</span>
+                </div>
+            </div>
+
+            <!-- About -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Why Active Learning?</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    In traditional ML, labeled data is a prerequisite — but obtaining labels is expensive, especially in domains like 
+                    healthcare or NLP. <strong>Active learning</strong> strategically selects the most informative data points for labeling, 
+                    significantly reducing the amount of labeled data needed while maintaining or improving model performance.
+                </p>
+                <a href="https://github.com/Asimawad/Active-Learning-Core-Concepts" target="_blank" 
+                   class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-700 font-medium">
+                    View on GitHub →
+                </a>
+            </section>
+
+            <!-- Dataset -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Dataset: Forest Covertype</h2>
+                <p class="text-gray-600 mb-4">
+                    The <a href="https://archive.ics.uci.edu/dataset/31/covertype" class="text-indigo-600 hover:underline">Forest Covertype Dataset</a> 
+                    contains cartographic features to predict forest cover types. Visualized in 2D using PCA.
+                </p>
+                
+                <img src="https://raw.githubusercontent.com/Asimawad/Active-Learning-Core-Concepts/main/Plots/data_analysis.png" 
+                     alt="Dataset Visualization" class="result-img w-full mb-4">
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-3 rounded-lg border text-center">
+                        <p class="text-2xl font-bold text-indigo-600">11,000</p>
+                        <p class="text-xs text-gray-500">Total samples</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border text-center">
+                        <p class="text-2xl font-bold text-gray-600">10,000</p>
+                        <p class="text-xs text-gray-500">Training</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border text-center">
+                        <p class="text-2xl font-bold text-green-600">35</p>
+                        <p class="text-xs text-gray-500">Initial labels</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border text-center">
+                        <p class="text-2xl font-bold text-amber-600">9,965</p>
+                        <p class="text-xs text-gray-500">Unlabeled pool</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Performance Gap -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">The Performance Gap</h2>
+                <p class="text-gray-600 mb-4">
+                    Comparing model performance with minimal labels (35 samples) vs. full training data (10,000 samples) 
+                    highlights the opportunity for active learning.
+                </p>
+                <img src="https://raw.githubusercontent.com/Asimawad/Active-Learning-Core-Concepts/main/Plots/gap_daata.png" 
+                     alt="Performance Gap" class="result-img w-full">
+            </section>
+
+            <!-- Query Strategies -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Query Strategies Compared</h2>
+                
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-indigo-600 mb-2">Uncertainty Sampling</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• <strong>Least Confident:</strong> Lowest max probability</li>
+                            <li>• <strong>Margin:</strong> Smallest gap between top-2 classes</li>
+                            <li>• <strong>Entropy:</strong> Highest information-theoretic uncertainty</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-green-600 mb-2">Query-by-Committee (QBC)</h3>
+                        <p class="text-sm text-gray-600">Measures disagreement among an ensemble of models trained on bootstrapped subsets.</p>
+                    </div>
+                </div>
+
+                <!-- Individual Strategy Results -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Query-by-Committee (QBC)</h3>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Active-Learning-Core-Concepts/main/Plots/qbc_conf_interval.png" 
+                             alt="QBC Confidence Interval" class="result-img w-full">
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Entropy Sampling</h3>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Active-Learning-Core-Concepts/main/Plots/entropy_conf_interval.png" 
+                             alt="Entropy Sampling" class="result-img w-full">
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Margin Sampling</h3>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Active-Learning-Core-Concepts/main/Plots/margin_conf_interval.png" 
+                             alt="Margin Sampling" class="result-img w-full">
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Random Sampling (Baseline)</h3>
+                        <img src="https://raw.githubusercontent.com/Asimawad/Active-Learning-Core-Concepts/main/Plots/random_sampling_conf_interval.png" 
+                             alt="Random Sampling" class="result-img w-full">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Combined Comparison -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">All Strategies Combined</h2>
+                <img src="https://raw.githubusercontent.com/Asimawad/Active-Learning-Core-Concepts/main/Plots/All_.png" 
+                     alt="All Strategies Combined" class="result-img w-full mb-4">
+                
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-medium mb-2">Observations:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>🥇 <strong>QBC & Entropy:</strong> Best early-stage performance, minimizing labeling cost</li>
+                        <li>🥈 <strong>Margin Sampling:</strong> Competitive but slightly less robust</li>
+                        <li>🥉 <strong>Random:</strong> Baseline, least improvement over time</li>
+                        <li>📊 <strong>Variance:</strong> QBC shows slightly more variance (committee-based approach)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>✅ <strong>Active learning works</strong> — reaches near-full-data performance with far fewer labels</li>
+                        <li>✅ <strong>QBC and Entropy</strong> are most effective in early stages</li>
+                        <li>✅ <strong>Confidence intervals</strong> help assess strategy robustness</li>
+                        <li>✅ <strong>Real-world impact:</strong> Reduces labeling costs in expensive domains</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <a href="https://github.com/Asimawad/Active-Learning-Core-Concepts" target="_blank" 
+                   class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
+</body>
+</html>

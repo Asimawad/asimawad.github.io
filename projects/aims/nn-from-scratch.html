@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network from Scratch | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+        .result-img {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">🧠</span>
+                    <span class="text-xs bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-medium">AIMS Coursework</span>
+                </div>
+                <h1 class="text-4xl font-bold">Neural Network from Scratch</h1>
+                <p class="text-gray-500 mt-2 text-lg">Late 2024 — Backpropagation, XOR Problem, Visualization</p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">From Scratch</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Backpropagation</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Gradient Descent</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">XOR</span>
+                </div>
+            </div>
+
+            <!-- About -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Step-by-step implementation of a neural network from scratch using only Python and NumPy. 
+                    Covers the theoretical background of <strong>backpropagation</strong>, core functions 
+                    (weighted sum, activation, cross-entropy loss), and training with gradient descent.
+                </p>
+                <a href="https://github.com/Asimawad/XOR-Neural-Network-from-Scratch" target="_blank" 
+                   class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-700 font-medium">
+                    View on GitHub →
+                </a>
+            </section>
+
+            <!-- Sections -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Implementation Sections</h2>
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-indigo-600 mb-2">1. Theory</h3>
+                        <p class="text-sm text-gray-600">Theoretical background of backpropagation</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-indigo-600 mb-2">2. Data Prep</h3>
+                        <p class="text-sm text-gray-600">Loading, splitting signal/background, NumPy conversion</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-green-600 mb-2">3. Core Functions</h3>
+                        <p class="text-sm text-gray-600">Weighted sum, activation, cross-entropy, derivatives</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-green-600 mb-2">4. Feedforward</h3>
+                        <p class="text-sm text-gray-600">Computing activations and predictions</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-amber-600 mb-2">5. Training</h3>
+                        <p class="text-sm text-gray-600">Gradient descent to minimize cost</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-amber-600 mb-2">6. Results</h3>
+                        <p class="text-sm text-gray-600">Cost evolution & decision boundary visualization</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Results</h2>
+
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold mb-3">Problem Setup</h3>
+                    <img src="https://raw.githubusercontent.com/Asimawad/XOR-Neural-Network-from-Scratch/main/plots/problem_setup.png" 
+                         alt="Problem Setup" class="result-img w-full">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Cost Evolution</h3>
+                        <img src="https://raw.githubusercontent.com/Asimawad/XOR-Neural-Network-from-Scratch/main/plots/loss.png" 
+                             alt="Cost Evolution" class="result-img w-full">
+                        <p class="text-sm text-gray-500 mt-2">Cost decreasing during training</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Decision Boundary</h3>
+                        <img src="https://raw.githubusercontent.com/Asimawad/XOR-Neural-Network-from-Scratch/main/plots/scatter.png" 
+                             alt="Decision Boundary" class="result-img w-full">
+                        <p class="text-sm text-gray-500 mt-2">Separation of positive/negative classes</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
+                <div class="bg-gradient-to-r from-amber-50 to-yellow-50 p-6 rounded-xl">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>✅ <strong>Understanding fundamentals</strong> — building from scratch reveals the math</li>
+                        <li>✅ <strong>Backpropagation</strong> is just chain rule applied to compute gradients</li>
+                        <li>✅ <strong>Gradient descent</strong> iteratively minimizes cost to find optimal weights</li>
+                        <li>✅ <strong>Visualization</strong> helps understand what the network learns</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <a href="https://github.com/Asimawad/XOR-Neural-Network-from-Scratch" target="_blank" 
+                   class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
+</body>
+</html>

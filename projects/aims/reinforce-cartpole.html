@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REINFORCE - CartPole | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+        .result-img {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">🎯</span>
+                    <span class="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">AIMS Coursework</span>
+                </div>
+                <h1 class="text-4xl font-bold">REINFORCE — CartPole</h1>
+                <p class="text-gray-500 mt-2 text-lg">Late 2024 — Policy Gradient Method</p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Policy Gradient</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">REINFORCE</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Monte Carlo</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">JAX/Haiku</span>
+                </div>
+            </div>
+
+            <!-- About -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Implementation of the REINFORCE algorithm — a Monte Carlo policy gradient method that 
+                    directly optimizes the policy by reinforcing actions that lead to higher returns. 
+                    Unlike DQN which learns value functions, REINFORCE learns a stochastic policy directly.
+                </p>
+                <a href="https://github.com/Asimawad/REINFORCE-Algorithm-CartPole" target="_blank" 
+                   class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-700 font-medium">
+                    View on GitHub →
+                </a>
+            </section>
+
+            <!-- Method -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Method: REINFORCE Algorithm</h2>
+                
+                <div class="bg-white p-4 rounded-lg border mb-6">
+                    <h3 class="font-semibold text-indigo-600 mb-3">Policy Gradient Objective</h3>
+                    <p class="text-gray-600 mb-2">Maximize expected cumulative reward:</p>
+                    <div class="bg-gray-50 p-3 rounded font-mono text-sm">
+                        J(π<sub>θ</sub>) = E<sub>τ~π</sub>[Ψ(τ)]
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg border mb-6">
+                    <h3 class="font-semibold text-green-600 mb-3">Gradient Computation</h3>
+                    <p class="text-gray-600 mb-2">Weight log-probabilities by returns:</p>
+                    <div class="bg-gray-50 p-3 rounded font-mono text-sm">
+                        ∇<sub>θ</sub>J = E[Σ<sub>t</sub> G<sub>t</sub> ∇<sub>θ</sub> log π<sub>θ</sub>(a<sub>t</sub>|s<sub>t</sub>)]
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-gray-700 mb-2">Neural Network Policy</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Input: 4-dim observation</li>
+                            <li>• 2 hidden layers × 20 units</li>
+                            <li>• Output: action logits → softmax</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-gray-700 mb-2">Training Details</h3>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Episodes: 2,500</li>
+                            <li>• Learning rate: 1e-3</li>
+                            <li>• Discount γ: 0.99</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DQN vs REINFORCE -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">DQN vs REINFORCE</h2>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full bg-white rounded-lg border">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-sm font-semibold">Aspect</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold">DQN</th>
+                                <th class="px-4 py-3 text-center text-sm font-semibold">REINFORCE</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y">
+                            <tr>
+                                <td class="px-4 py-3 text-sm">Learns</td>
+                                <td class="px-4 py-3 text-center text-sm">Value function Q(s,a)</td>
+                                <td class="px-4 py-3 text-center text-sm">Policy π(a|s) directly</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-sm">Policy type</td>
+                                <td class="px-4 py-3 text-center text-sm">Deterministic (argmax)</td>
+                                <td class="px-4 py-3 text-center text-sm">Stochastic (sampling)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-sm">Update</td>
+                                <td class="px-4 py-3 text-center text-sm">Every step (TD)</td>
+                                <td class="px-4 py-3 text-center text-sm">End of episode (MC)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-sm">Replay buffer</td>
+                                <td class="px-4 py-3 text-center text-sm">✅ Yes</td>
+                                <td class="px-4 py-3 text-center text-sm">❌ No (on-policy)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Results -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Results</h2>
+
+                <div class="bg-green-50 border border-green-200 p-4 rounded-lg mb-6">
+                    <p class="text-green-800 text-lg"><strong>✅ Solved!</strong> Agent reliably reaches max reward (500) after training</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg border">
+                    <h4 class="font-medium mb-2">Performance Metrics:</h4>
+                    <ul class="space-y-1 text-gray-600 text-sm">
+                        <li>• <strong>Initial:</strong> Episode returns close to 0</li>
+                        <li>• <strong>Final:</strong> Episode returns reliably reaching 500</li>
+                        <li>• <strong>Training:</strong> 2,500 episodes, 2 learning steps per episode</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
+                <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>✅ <strong>Policy gradients</strong> can solve CartPole without learning Q-values</li>
+                        <li>✅ <strong>Stochastic policy</strong> provides natural exploration</li>
+                        <li>✅ <strong>Monte Carlo returns</strong> require full episodes (no bootstrapping)</li>
+                        <li>✅ <strong>Simpler implementation</strong> than DQN (no replay buffer, target network)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <a href="https://github.com/Asimawad/REINFORCE-Algorithm-CartPole" target="_blank" 
+                   class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
+</body>
+</html>

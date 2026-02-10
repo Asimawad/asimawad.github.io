@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayesian Deep Active Learning | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+        .result-img {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">🧠</span>
+                    <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">AIMS Coursework</span>
+                </div>
+                <h1 class="text-4xl font-bold">Bayesian Deep Active Learning</h1>
+                <p class="text-gray-500 mt-2 text-lg">Late 2024 — Active Learning with Uncertainty Quantification</p>
+                <div class="flex gap-3 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">BNNs</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">MC Dropout</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">BALD</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Margin Sampling</span>
+                </div>
+            </div>
+
+            <!-- About -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Implementations and analyses of active learning experiments using Bayesian neural networks (BNNs) with MC Dropout. 
+                    The experiments span MNIST and Dirty-MNIST datasets, investigating different acquisition strategies including 
+                    <strong>Random Sampling</strong>, <strong>Margin Sampling</strong>, and <strong>BALD</strong> (Bayesian Active Learning by Disagreement).
+                </p>
+                <a href="https://github.com/Asimawad/Bayesian-Deep-Active-Learning" target="_blank" 
+                   class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-700 font-medium">
+                    View on GitHub →
+                </a>
+            </section>
+
+            <!-- Part 1: MNIST Experiments -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">MNIST Experiments</h2>
+
+                <!-- Setup -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-3">1. Setup: Training a BNN with MC Dropout</h3>
+                    <p class="text-gray-600 mb-4">
+                        First step was training a Bayesian Neural Network on the full MNIST training dataset, 
+                        evaluating test accuracy and Negative Log-Likelihood (NLL).
+                    </p>
+                    <div class="bg-white p-4 rounded-lg border mb-4">
+                        <h4 class="font-medium mb-2">Final Results (Epoch 10/10):</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="text-2xl font-bold text-indigo-600">97.25%</p>
+                                <p class="text-xs text-gray-500">Train Accuracy</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="text-2xl font-bold text-green-600">98.74%</p>
+                                <p class="text-xs text-gray-500">Test Accuracy</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="text-2xl font-bold text-gray-600">0.0943</p>
+                                <p class="text-xs text-gray-500">Train NLL</p>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <p class="text-2xl font-bold text-gray-600">0.0667</p>
+                                <p class="text-xs text-gray-500">Test NLL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/Asimawad/Bayesian-Deep-Active-Learning/main/results/BDAL_setup_acc_and_nll.png" 
+                         alt="Training vs Test Accuracy and NLL" class="result-img w-full mb-2">
+                    <p class="text-sm text-gray-500 italic">Training and test curves for NLL and accuracy over 10 epochs</p>
+                </div>
+
+                <!-- Random Acquisition -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-3">2. Baseline: Random Acquisition</h3>
+                    <p class="text-gray-600 mb-4">
+                        Active learning with random acquisition starting with <strong>2 labeled examples per class</strong> (20 total), 
+                        acquiring batches of K=10 samples until reaching 1020 total labeled examples. Averaged over 10 trials.
+                    </p>
+                    <img src="https://raw.githubusercontent.com/Asimawad/Bayesian-Deep-Active-Learning/main/results/random_aq_k10.png" 
+                         alt="Random Acquisition Learning Curve" class="result-img w-full mb-2">
+                    <p class="text-sm text-gray-500 italic">Learning curve with confidence intervals — accuracy improves rapidly initially</p>
+                </div>
+
+                <!-- Scaling Behavior -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-3">3. Scaling Behavior: Epochs vs. Labeled Data</h3>
+                    <p class="text-gray-600 mb-4">
+                        Exploring trade-offs between training longer (more epochs) vs. acquiring more labeled data.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <img src="https://raw.githubusercontent.com/Asimawad/Bayesian-Deep-Active-Learning/main/results/5_labelled_ex_with_varying_no_of_epochs.png" 
+                                 alt="Varying Epochs" class="result-img w-full mb-2">
+                            <p class="text-sm text-gray-500">Fixed 5 labels/class, varying epochs (1→2048)</p>
+                        </div>
+                        <div>
+                            <img src="https://raw.githubusercontent.com/Asimawad/Bayesian-Deep-Active-Learning/main/results/10_epochs_with_increasing_labeled_examples.png" 
+                                 alt="Varying Labels" class="result-img w-full mb-2">
+                            <p class="text-sm text-gray-500">Fixed 10 epochs, varying labels (2→512/class)</p>
+                        </div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-200 p-4 rounded-lg">
+                        <p class="text-amber-800"><strong>Key Insight:</strong> More labeled examples generally outperform longer training epochs for improving accuracy and reducing NLL.</p>
+                    </div>
+                </div>
+
+                <!-- Margin Sampling -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-3">4. Margin Sampling</h3>
+                    <p class="text-gray-600 mb-4">
+                        Selects samples with the smallest difference between the two most probable predicted classes — 
+                        prioritizing where the model is most uncertain.
+                    </p>
+                    <img src="https://raw.githubusercontent.com/Asimawad/Bayesian-Deep-Active-Learning/main/results/margin_sampling_acc.png" 
+                         alt="Margin Sampling" class="result-img w-full mb-2">
+                </div>
+
+                <!-- BALD -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-3">5. BALD (Bayesian Active Learning by Disagreement)</h3>
+                    <p class="text-gray-600 mb-4">
+                        Bayesian acquisition strategy that selects samples with high epistemic uncertainty — 
+                        quantifying disagreement among the ensemble of models.
+                    </p>
+                    <img src="https://raw.githubusercontent.com/Asimawad/Bayesian-Deep-Active-Learning/main/results/bald_acc.png" 
+                         alt="BALD Acquisition" class="result-img w-full mb-2">
+                </div>
+
+                <!-- Comparison -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-3">All Strategies Compared</h3>
+                    <img src="https://raw.githubusercontent.com/Asimawad/Bayesian-Deep-Active-Learning/main/results/all_acc.png" 
+                         alt="All Acquisition Strategies" class="result-img w-full mb-4">
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h4 class="font-medium mb-2">Results Summary:</h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>🥇 <strong>Margin Sampling:</strong> Best accuracy, convergence speed, and stability</li>
+                            <li>🥈 <strong>Random Acquisition:</strong> Reasonable baseline performance</li>
+                            <li>🥉 <strong>BALD:</strong> Slower convergence but valuable for understanding uncertainty</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- K Trade-offs -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-3">6. Top-K Trade-Offs for BALD</h3>
+                    <p class="text-gray-600 mb-4">
+                        Comparing individual sample acquisition (K=1) vs batch acquisition (K=10) in BALD.
+                    </p>
+                    <img src="https://raw.githubusercontent.com/Asimawad/Bayesian-Deep-Active-Learning/main/results/k_1_k_10_bald.png" 
+                         alt="K=1 vs K=10 BALD" class="result-img w-full mb-2">
+                    <p class="text-sm text-gray-500 italic">K=10 shows more stable learning with faster convergence</p>
+                </div>
+            </section>
+
+            <!-- Part 2: Dirty-MNIST -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Dirty-MNIST Experiments</h2>
+                <p class="text-gray-600 mb-4">
+                    Evaluating acquisition strategies on the noisy Dirty-MNIST dataset — testing robustness to noise.
+                </p>
+                <img src="https://raw.githubusercontent.com/Asimawad/Bayesian-Deep-Active-Learning/main/results/dirty_mnist_all_compared.png" 
+                     alt="Dirty-MNIST Comparison" class="result-img w-full mb-4">
+                <div class="bg-green-50 border border-green-200 p-4 rounded-lg">
+                    <p class="text-green-800"><strong>Key Finding:</strong> Margin Sampling is most robust to noise, outperforming BALD and Entropy-based acquisition on noisy data.</p>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>✅ <strong>Margin Sampling wins</strong> — most effective for both clean and noisy datasets</li>
+                        <li>✅ <strong>More data beats more epochs</strong> — acquiring labels is more valuable than training longer</li>
+                        <li>✅ <strong>Batch acquisition (K=10)</strong> is more practical than single-sample (K=1)</li>
+                        <li>✅ <strong>BALD provides uncertainty insights</strong> but has computational overhead</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <a href="https://github.com/Asimawad/Bayesian-Deep-Active-Learning" target="_blank" 
+                   class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
+</body>
+</html>
