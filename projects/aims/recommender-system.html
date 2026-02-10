@@ -7,6 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
     <style>
         body { font-family: 'Inter', sans-serif; }
         .gradient-text {
@@ -19,6 +22,24 @@
             border: 1px solid #e5e7eb;
             border-radius: 8px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .figure-container {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .figure-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .figure-caption {
+            font-size: 0.875rem;
+            color: #6b7280;
+            text-align: center;
+            margin-top: 0.5rem;
         }
     </style>
 </head>
@@ -39,102 +60,261 @@
                     <span class="text-xs bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-medium">AIMS Coursework</span>
                 </div>
                 <h1 class="text-4xl font-bold">Recommender System</h1>
-                <p class="text-gray-500 mt-2 text-lg">Late 2024 — Collaborative Filtering with ALS</p>
+                <p class="text-gray-500 mt-2 text-lg">Late 2024 — Collaborative Filtering with Alternating Least Squares</p>
                 <div class="flex flex-wrap gap-3 mt-4">
                     <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Collaborative Filtering</span>
                     <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">ALS</span>
-                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Latent Factors</span>
                     <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Matrix Factorization</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">MovieLens 32M</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Numba JIT</span>
                 </div>
             </div>
 
-            <!-- About -->
-            <section class="mb-10">
-                <h2 class="text-xl font-semibold mb-4">About</h2>
-                <p class="text-gray-600 text-lg leading-relaxed">
-                    Development of a collaborative filtering-based recommender system using 
-                    <strong>Alternating Least Squares (ALS)</strong>. The system learns latent factor embeddings 
-                    for both users and movies, along with their biases, to predict ratings and make recommendations.
-                </p>
+            <!-- Quick Links -->
+            <div class="flex gap-4 mb-8">
                 <a href="https://github.com/Asimawad/Recommender-Sys-Engine-with-Collaborative-Filtering" target="_blank" 
-                   class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-700 font-medium">
-                    View on GitHub →
+                   class="inline-flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    View Code
                 </a>
+                <a href="/assets/recommender-system/AMLAS_Recommender_System_Report.pdf" target="_blank" 
+                   class="inline-flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Full Report (PDF)
+                </a>
+            </div>
+
+            <!-- Abstract -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Abstract</h2>
+                <div class="bg-white p-6 rounded-xl border border-gray-200">
+                    <p class="text-gray-600 leading-relaxed">
+                        This project presents the development of a collaborative filtering-based recommender system using 
+                        <strong>Alternating Least Squares (ALS)</strong>, with latent factor embeddings for users and movies 
+                        alongside their biases. We address the <em>cold start problem</em> and improve recommendation accuracy 
+                        by incorporating feature embeddings for movie genres. The implementation uses an efficient algorithm 
+                        optimized with <strong>Numba JIT compilation</strong>, reducing training time from 15 minutes to 
+                        <strong>13 seconds per epoch</strong> on the 32M dataset. The final model achieves 
+                        <strong>0.77 RMSE</strong> on MovieLens-32M.
+                    </p>
+                </div>
             </section>
 
-            <!-- Method -->
+            <!-- Problem Statement -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Problem Statement</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    In streaming and digital content, movie-viewing patterns follow a <strong>power law distribution</strong>. 
+                    A handful of popular movies attract the majority of views, while lesser-known films receive minimal 
+                    engagement. Without personalized recommendations, users face limited diversity—primarily seeing widely 
+                    viewed content rather than films suited to their specific tastes.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    The goal is to develop a system that models user-movie interactions and provides recommendations 
+                    tailored to individual preferences, giving more exposure to long-tail content.
+                </p>
+            </section>
+
+            <!-- Dataset Analysis -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Dataset Analysis</h2>
+                <p class="text-gray-600 mb-6">
+                    Experiments used <strong>MovieLens datasets</strong>: 100K for development, and 25M/32M for final training. 
+                    The 32M dataset contains 32,000,204 ratings across 87,585 movies.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="figure-container">
+                        <img src="/assets/recommender-system/fig2_loglog_distributions.png" alt="Log-log distributions">
+                        <p class="figure-caption">Power law distribution in user activity and movie popularity (log-log scale)</p>
+                    </div>
+                    <div class="figure-container">
+                        <img src="/assets/recommender-system/fig3_rating_distribution.png" alt="Rating distribution">
+                        <p class="figure-caption">Rating distribution showing bias toward higher ratings (4-5 stars)</p>
+                    </div>
+                </div>
+                
+                <div class="bg-amber-50 p-4 rounded-lg border border-amber-200">
+                    <p class="text-amber-800 text-sm">
+                        <strong>Key Insight:</strong> The power law distribution motivates collaborative filtering—we need 
+                        to provide recommendations for the "long tail" of less popular items that users might enjoy.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Methodology -->
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Methodology</h2>
                 
                 <div class="bg-white p-6 rounded-lg border mb-6">
-                    <h3 class="font-semibold text-indigo-600 mb-3">Matrix Factorization</h3>
+                    <h3 class="font-semibold text-indigo-600 mb-3">Matrix Factorization with ALS</h3>
                     <p class="text-gray-600 mb-4">
-                        Decompose the user-item rating matrix R into two lower-rank matrices:
+                        The core idea is to decompose the sparse user-item rating matrix into lower-dimensional latent factors:
                     </p>
-                    <div class="bg-gray-50 p-4 rounded font-mono text-center">
-                        R ≈ U × V<sup>T</sup>
+                    <div class="bg-gray-50 p-4 rounded font-mono text-center text-lg mb-4">
+                        R ≈ U × V<sup>T</sup> + b<sub>u</sub> + b<sub>i</sub>
                     </div>
-                    <p class="text-sm text-gray-500 mt-3">
-                        Where U = user embeddings, V = item embeddings
+                    <p class="text-gray-600 text-sm">
+                        Where <strong>U</strong> = user embeddings, <strong>V</strong> = item embeddings, 
+                        <strong>b<sub>u</sub></strong> = user biases, <strong>b<sub>i</sub></strong> = item biases
                     </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg border mb-6">
+                    <h3 class="font-semibold text-green-600 mb-3">Objective Function</h3>
+                    <p class="text-gray-600 mb-4">
+                        The regularized ALS objective minimizes reconstruction error while preventing overfitting:
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded overflow-x-auto">
+                        <p class="font-mono text-sm text-center">
+                            L(U,V) = (λ/2) Σ<sub>m,n</sub> (r<sub>mn</sub> - u<sub>m</sub><sup>T</sup>v<sub>n</sub>)² + (τ/2)(Σ||u<sub>m</sub>||² + Σ||v<sub>n</sub>||²)
+                        </p>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold mb-4">Three Models Implemented</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-white p-4 rounded-lg border">
+                        <div class="text-2xl mb-2">1️⃣</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Bias-Only ALS</h4>
+                        <p class="text-sm text-gray-600">
+                            Captures global trends using only user and item biases. Converges in 2-3 epochs.
+                        </p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <div class="text-2xl mb-2">2️⃣</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Latent Factors + Bias</h4>
+                        <p class="text-sm text-gray-600">
+                            Adds user/movie embeddings (dim=30). Achieves <strong>0.77 RMSE</strong> on 32M.
+                        </p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <div class="text-2xl mb-2">3️⃣</div>
+                        <h4 class="font-semibold text-gray-800 mb-2">+ Genre Features</h4>
+                        <p class="text-sm text-gray-600">
+                            Incorporates genre embeddings to address cold start for new movies.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Implementation -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Implementation Highlights</h2>
+                
+                <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl mb-6">
+                    <h3 class="font-semibold text-green-700 mb-3">⚡ Performance Optimization</h3>
+                    <p class="text-gray-700 mb-4">
+                        Using <strong>Numba JIT compilation</strong> with optimized NumPy operations:
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-red-500">15 min</div>
+                            <div class="text-sm text-gray-500">Before (naive loops)</div>
+                        </div>
+                        <div class="text-2xl">→</div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-500">13 sec</div>
+                            <div class="text-sm text-gray-500">After (Numba JIT)</div>
+                        </div>
+                        <div class="text-sm text-gray-600 ml-4">
+                            <strong>~70x speedup</strong> per epoch on 32M dataset
+                        </div>
+                    </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-4">
                     <div class="bg-white p-4 rounded-lg border">
-                        <h3 class="font-semibold text-green-600 mb-2">Alternating Least Squares</h3>
+                        <h4 class="font-semibold text-indigo-600 mb-2">Data Structures</h4>
                         <ul class="text-sm text-gray-600 space-y-1">
-                            <li>• Fix users, optimize items</li>
-                            <li>• Fix items, optimize users</li>
-                            <li>• Repeat until convergence</li>
+                            <li>• User-indexed arrays for efficient factor updates</li>
+                            <li>• Movie-indexed arrays for item factor updates</li>
+                            <li>• ID-to-index dictionaries for O(1) lookup</li>
+                            <li>• NumPy object arrays for variable-length data</li>
                         </ul>
                     </div>
                     <div class="bg-white p-4 rounded-lg border">
-                        <h3 class="font-semibold text-amber-600 mb-2">Model Components</h3>
+                        <h4 class="font-semibold text-amber-600 mb-2">Hyperparameters (32M)</h4>
                         <ul class="text-sm text-gray-600 space-y-1">
-                            <li>• User latent factors</li>
-                            <li>• Movie latent factors</li>
-                            <li>• User biases</li>
-                            <li>• Movie biases</li>
+                            <li>• Latent dimensions: <strong>30</strong></li>
+                            <li>• λ (regularization): <strong>1.0</strong></li>
+                            <li>• γ (learning rate): <strong>0.001</strong></li>
+                            <li>• τ (factor regularization): <strong>10</strong></li>
+                            <li>• Epochs: <strong>100</strong></li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- How It Works -->
+            <!-- Results -->
             <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">How Collaborative Filtering Works</h2>
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Results</h2>
                 
-                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
-                    <ol class="space-y-4 text-gray-700">
-                        <li class="flex gap-3">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">1</span>
-                            <div>
-                                <strong>Collect Ratings</strong>
-                                <p class="text-sm text-gray-600">Users rate movies (explicit feedback)</p>
-                            </div>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">2</span>
-                            <div>
-                                <strong>Learn Embeddings</strong>
-                                <p class="text-sm text-gray-600">ALS finds latent factors that explain rating patterns</p>
-                            </div>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">3</span>
-                            <div>
-                                <strong>Predict Ratings</strong>
-                                <p class="text-sm text-gray-600">Dot product of user and item embeddings + biases</p>
-                            </div>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">4</span>
-                            <div>
-                                <strong>Recommend</strong>
-                                <p class="text-sm text-gray-600">Suggest items with highest predicted ratings</p>
-                            </div>
-                        </li>
-                    </ol>
+                <div class="bg-indigo-50 p-6 rounded-xl mb-6">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-indigo-600 mb-2">0.77</div>
+                        <div class="text-gray-600">RMSE on MovieLens-32M</div>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold mb-4">Training Curves</h3>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="figure-container">
+                        <img src="/assets/recommender-system/fig8_32m_nll.png" alt="32M Model Loss">
+                        <p class="figure-caption">Negative log-likelihood decreasing during training (32M dataset)</p>
+                    </div>
+                    <div class="figure-container">
+                        <img src="/assets/recommender-system/fig9_32m_rmse.png" alt="32M Model RMSE">
+                        <p class="figure-caption">RMSE convergence on training and validation sets</p>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold mb-4">Bias-Only Model (Baseline)</h3>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="figure-container">
+                        <img src="/assets/recommender-system/fig5_bias_nll_32m.png" alt="Bias-only NLL">
+                        <p class="figure-caption">Bias-only model converges in 2-3 epochs</p>
+                    </div>
+                    <div class="figure-container">
+                        <img src="/assets/recommender-system/fig7_rmse_32m.png" alt="Bias-only RMSE">
+                        <p class="figure-caption">RMSE plateau around 0.85 (bias-only baseline)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Qualitative Results -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Qualitative Evaluation</h2>
+                <p class="text-gray-600 mb-6">
+                    To validate the model qualitatively, I created dummy users who rated only one movie and examined 
+                    the top recommendations:
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg border">
+                        <h4 class="font-semibold text-indigo-600 mb-3">🎬 User liked "Toy Story"</h4>
+                        <p class="text-sm text-gray-500 mb-3">Top 5 Recommendations:</p>
+                        <ol class="text-sm text-gray-700 space-y-2">
+                            <li><strong>1.</strong> Toy Story 2 (1999)</li>
+                            <li><strong>2.</strong> Monsters, Inc. (2001)</li>
+                            <li><strong>3.</strong> Finding Nemo (2003)</li>
+                            <li><strong>4.</strong> Toy Story 3 (2010)</li>
+                            <li><strong>5.</strong> The Incredibles (2004)</li>
+                        </ol>
+                        <p class="text-xs text-green-600 mt-3">✓ All animated family films — makes sense!</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border">
+                        <h4 class="font-semibold text-red-600 mb-3">🔪 User liked "Saw"</h4>
+                        <p class="text-sm text-gray-500 mb-3">Top 5 Recommendations:</p>
+                        <ol class="text-sm text-gray-700 space-y-2">
+                            <li><strong>1.</strong> Saw II (2005)</li>
+                            <li><strong>2.</strong> Saw III (2006)</li>
+                            <li><strong>3.</strong> The Ring (2002)</li>
+                            <li><strong>4.</strong> Saw IV (2007)</li>
+                            <li><strong>5.</strong> Scream (1996)</li>
+                        </ol>
+                        <p class="text-xs text-green-600 mt-3">✓ All horror/thriller films — captures the genre well!</p>
+                    </div>
                 </div>
             </section>
 
@@ -143,10 +323,12 @@
                 <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
                 <div class="bg-gradient-to-r from-amber-50 to-yellow-50 p-6 rounded-xl">
                     <ul class="space-y-3 text-gray-700">
-                        <li>✅ <strong>Matrix factorization</strong> captures latent preferences</li>
-                        <li>✅ <strong>ALS</strong> is efficient for large sparse matrices</li>
-                        <li>✅ <strong>Biases</strong> capture user/item-specific tendencies (some users rate higher)</li>
-                        <li>✅ <strong>Collaborative filtering</strong> finds similar users/items without explicit features</li>
+                        <li>✅ <strong>Matrix factorization</strong> effectively captures latent user preferences</li>
+                        <li>✅ <strong>ALS</strong> is efficient for large sparse matrices with closed-form updates</li>
+                        <li>✅ <strong>Biases</strong> capture systematic tendencies (some users rate higher, some movies are universally liked)</li>
+                        <li>✅ <strong>Numba JIT</strong> provides massive speedups for iterative algorithms</li>
+                        <li>✅ <strong>Genre features</strong> help address the cold start problem for new items</li>
+                        <li>✅ <strong>Latent dimensions of 25-30</strong> balance expressiveness vs. overfitting</li>
                     </ul>
                 </div>
             </section>
@@ -154,10 +336,16 @@
             <!-- Footer Links -->
             <div class="flex justify-between items-center pt-6 border-t">
                 <a href="/journey.html#chapter-2" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
-                <a href="https://github.com/Asimawad/Recommender-Sys-Engine-with-Collaborative-Filtering" target="_blank" 
-                   class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
-                    View on GitHub
-                </a>
+                <div class="flex gap-3">
+                    <a href="/assets/recommender-system/AMLAS_Recommender_System_Report.pdf" target="_blank" 
+                       class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                        Download Report
+                    </a>
+                    <a href="https://github.com/Asimawad/Recommender-Sys-Engine-with-Collaborative-Filtering" target="_blank" 
+                       class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                        View on GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </main>
@@ -167,5 +355,18 @@
             © 2025 Asim Osman
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof renderMathInElement !== 'undefined') {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '$', right: '$', display: false}
+                    ]
+                });
+            }
+        });
+    </script>
 </body>
 </html>
