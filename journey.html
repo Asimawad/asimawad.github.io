@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 1.5rem;
+            top: 3rem;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+        .card-hover {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <div class="flex gap-8 text-sm font-medium text-gray-600">
+                <a href="/" class="hover:text-gray-900 transition">← Back Home</a>
+                <a href="#chapter-1" class="hover:text-gray-900 transition">2022</a>
+                <a href="#chapter-2" class="hover:text-gray-900 transition">2023</a>
+                <a href="#chapter-3" class="hover:text-gray-900 transition">2024</a>
+                <a href="#chapter-4" class="hover:text-gray-900 transition">2025</a>
+                <a href="#chapter-5" class="hover:text-gray-900 transition">2026</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                My <span class="gradient-text">Journey</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                From first lines of code to multi-agent reinforcement learning research. 
+                Every project taught me something new.
+            </p>
+        </div>
+    </section>
+
+    <!-- Journey Timeline -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            
+            <!-- Chapter 1: 2022 -->
+            <div id="chapter-1" class="mb-20 scroll-mt-24">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                        1
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold">The Beginning</h2>
+                        <p class="text-gray-500">2022 — First steps into ML & Data Science</p>
+                    </div>
+                </div>
+                
+                <div class="ml-6 pl-10 border-l-2 border-indigo-200 space-y-6">
+                    <p class="text-gray-600 italic">
+                        "Every expert was once a beginner. This is where my story started — 
+                        with curiosity, classic datasets, and a lot of Stack Overflow."
+                    </p>
+                    
+                    <!-- Project cards will go here -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">My-Progress</h3>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Private</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            My first steps into data science. Classic ML projects including Titanic, 
+                            exploratory data analysis, and learning the fundamentals of Python for ML.
+                        </p>
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Pandas</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Scikit-learn</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">Arabic-to-Swahili Machine Translation</h3>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">Graduation Project</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            My graduation project — building a neural machine translation system for 
+                            a challenging low-resource language pair. This project taught me about 
+                            sequence-to-sequence models, attention mechanisms, and the unique challenges 
+                            of low-resource NLP.
+                        </p>
+                        <div class="flex gap-2 mb-3">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">NLP</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Seq2Seq</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">PyTorch</span>
+                        </div>
+                        <a href="https://github.com/Asimawad/Arabic-to-Swahili-Machine-Translation" target="_blank" 
+                           class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
+                            View on GitHub →
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">IndabaX 2022</h3>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Workshop</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Content from the introductory sessions at IndabaX — Africa's premier 
+                            machine learning conference. My first exposure to the broader ML community.
+                        </p>
+                        <a href="https://github.com/Asimawad/IndabaX-2022" target="_blank" 
+                           class="text-indigo-600 hover:text-indigo-700 text-sm font-medium">
+                            View on GitHub →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 2: 2023 -->
+            <div id="chapter-2" class="mb-20 scroll-mt-24">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                        2
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold">Building Foundations</h2>
+                        <p class="text-gray-500">2023 — Expanding skills, exploring new domains</p>
+                    </div>
+                </div>
+                
+                <div class="ml-6 pl-10 border-l-2 border-indigo-200 space-y-6">
+                    <p class="text-gray-600 italic">
+                        "A year of exploration — from web development to neural networks, 
+                        building a broader foundation in computer science."
+                    </p>
+                    
+                    <!-- Projects to be added -->
+                    <div class="bg-gray-100 p-6 rounded-xl border-2 border-dashed border-gray-300 text-center text-gray-500">
+                        Projects from 2023 coming soon...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 3: 2024 -->
+            <div id="chapter-3" class="mb-20 scroll-mt-24">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                        3
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold">The Deep Dive</h2>
+                        <p class="text-gray-500">2024 — RL, Computer Vision, Bayesian Learning & more</p>
+                    </div>
+                </div>
+                
+                <div class="ml-6 pl-10 border-l-2 border-indigo-200 space-y-6">
+                    <p class="text-gray-600 italic">
+                        "This was the year everything clicked. From AgriTech to reinforcement learning, 
+                        I dove deep into the areas that would define my research direction."
+                    </p>
+                    
+                    <!-- Projects to be added -->
+                    <div class="bg-gray-100 p-6 rounded-xl border-2 border-dashed border-gray-300 text-center text-gray-500">
+                        Projects from 2024 coming soon...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 4: 2025 -->
+            <div id="chapter-4" class="mb-20 scroll-mt-24">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                        4
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold">Research Mode</h2>
+                        <p class="text-gray-500">2025 — AIMS, InstaDeep, and cutting-edge MARL</p>
+                    </div>
+                </div>
+                
+                <div class="ml-6 pl-10 border-l-2 border-indigo-200 space-y-6">
+                    <p class="text-gray-600 italic">
+                        "From student to researcher. AIMS South Africa, joining InstaDeep, 
+                        and working on problems at the frontier of multi-agent RL."
+                    </p>
+                    
+                    <!-- Projects to be added -->
+                    <div class="bg-gray-100 p-6 rounded-xl border-2 border-dashed border-gray-300 text-center text-gray-500">
+                        Projects from 2025 coming soon...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 5: 2026 -->
+            <div id="chapter-5" class="mb-20 scroll-mt-24">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                        5
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold">The Present</h2>
+                        <p class="text-gray-500">2026 — Current work and what's next</p>
+                    </div>
+                </div>
+                
+                <div class="ml-6 pl-10 border-l-2 border-indigo-200 space-y-6">
+                    <p class="text-gray-600 italic">
+                        "The journey continues. Working on challenging problems, 
+                        learning every day, building towards what's next."
+                    </p>
+                    
+                    <!-- Projects to be added -->
+                    <div class="bg-gray-100 p-6 rounded-xl border-2 border-dashed border-gray-300 text-center text-gray-500">
+                        Current projects coming soon...
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            <a href="/" class="text-gray-400 hover:text-white transition">← Back to Home</a>
+            <p class="mt-4">© 2025 Asim Osman</p>
+        </div>
+    </footer>
+</body>
+</html>
