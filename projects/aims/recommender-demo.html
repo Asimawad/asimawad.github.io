@@ -168,11 +168,12 @@
 
     <script>
         // ========== CONFIG ==========
-        // Update this URL with your Railway deployment URL
         const API_URL = 'https://web-production-bf50f.up.railway.app';
+        const OMDB_API_KEY = '4a3b711b';  // Free tier for posters
         
         let demoData = {};
         let searchTimeout = null;
+        let posterCache = {};
 
         // ========== INITIALIZATION ==========
         async function loadDemoData() {
@@ -260,10 +261,41 @@
             });
         });
 
-        // ========== PRE-SAVED DATA ==========
+        // ========== POSTER FETCHING ==========
         function getPosterUrl(movie) {
             return movie.posterUrl || null;
         }
+
+        async function fetchPosterFromOMDb(imdbId) {
+            if (!imdbId || posterCache[imdbId]) return posterCache[imdbId] || null;
+            try {
+                const resp = await fetch(`https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${imdbId}`);
+                const data = await resp.json();
+                if (data.Poster && data.Poster !== 'N/A') {
+                    posterCache[imdbId] = data.Poster;
+                    return data.Poster;
+                }
+            } catch (e) {}
+            return null;
+        }
+
+        async function loadPostersForCards(recommendations) {
+            // Load posters async for live API results
+            for (let i = 0; i < recommendations.length; i++) {
+                const rec = recommendations[i];
+                if (!rec.posterUrl && rec.imdbId) {
+                    const poster = await fetchPosterFromOMDb(rec.imdbId);
+                    if (poster) {
+                        const card = document.querySelector(`#rec-${i} .aspect-\\[2\\/3\\]`);
+                        if (card) {
+                            card.innerHTML = `<img src="${poster}" alt="${rec.title}" class="w-full h-full object-cover" loading="lazy">`;
+                        }
+                    }
+                }
+            }
+        }
+
+        // ========== PRE-SAVED DATA ==========
 
         function renderSeedMovies() {
             const container = document.getElementById('seedMovies');
@@ -304,7 +336,9 @@
         }
 
         // ========== DISPLAY ==========
-        function showMovie(movie, recommendations, source) {
+        async function showMovie(movie, recommendations, source) {
+            const isLiveAPI = source === 'live API';
+            
             // Show selected section
             document.getElementById('selectedSection').classList.remove('hidden');
             document.getElementById('selectedTitle').textContent = movie.title;
@@ -319,7 +353,13 @@
 
             // Load poster
             const posterEl = document.getElementById('selectedPoster');
-            const posterUrl = getPosterUrl(movie);
+            let posterUrl = getPosterUrl(movie);
+            
+            if (!posterUrl && isLiveAPI && movie.imdbId) {
+                posterEl.innerHTML = '<span class="text-6xl animate-pulse">🎬</span>';
+                posterUrl = await fetchPosterFromOMDb(movie.imdbId);
+            }
+            
             if (posterUrl) {
                 posterEl.innerHTML = `<img src="${posterUrl}" alt="${movie.title}" class="w-full h-full object-cover">`;
             } else {
@@ -328,24 +368,25 @@
 
             // Show recommendations
             document.getElementById('recommendationsSection').classList.remove('hidden');
-            renderRecommendations(recommendations);
+            renderRecommendations(recommendations, isLiveAPI);
             
             // Scroll
             document.getElementById('selectedSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function renderRecommendations(recommendations) {
+        function renderRecommendations(recommendations, loadPosters = false) {
             const container = document.getElementById('recommendations');
             
             container.innerHTML = recommendations.map((rec, i) => {
                 const posterUrl = getPosterUrl(rec);
                 const posterContent = posterUrl 
                     ? `<img src="${posterUrl}" alt="${rec.title}" class="w-full h-full object-cover" loading="lazy">`
-                    : '<span class="text-4xl">🎬</span>';
+                    : '<span class="text-4xl animate-pulse">🎬</span>';
                 
                 return `
                     <a href="${rec.imdbId ? `https://www.imdb.com/title/${rec.imdbId}/` : '#'}" 
                        target="_blank"
+                       id="rec-${i}"
                        class="movie-card bg-gray-800 rounded-xl overflow-hidden block">
                         <div class="aspect-[2/3] poster-placeholder flex items-center justify-center">
                             ${posterContent}
@@ -357,6 +398,11 @@
                     </a>
                 `;
             }).join('');
+
+            // Load posters async for live API results
+            if (loadPosters) {
+                loadPostersForCards(recommendations);
+            }
         }
 
         // Initialize
