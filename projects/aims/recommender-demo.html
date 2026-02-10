@@ -138,10 +138,7 @@
     </footer>
 
     <script>
-        const TMDB_IMG_BASE = 'https://image.tmdb.org/t/p/w300';
-        
         let demoData = {};
-        let posterCache = {};
 
         async function loadDemoData() {
             try {
@@ -153,23 +150,9 @@
             }
         }
 
-        async function fetchPoster(tmdbId) {
-            if (!tmdbId) return null;
-            if (posterCache[tmdbId]) return posterCache[tmdbId];
-            
-            try {
-                // Use TMDB's image directly via tmdbId
-                const url = `https://api.themoviedb.org/3/movie/${tmdbId}?api_key=2a52f2627578ae8fc90522ef88ab6a07`;
-                const response = await fetch(url);
-                if (!response.ok) return null;
-                const data = await response.json();
-                const posterUrl = data.poster_path ? TMDB_IMG_BASE + data.poster_path : null;
-                posterCache[tmdbId] = posterUrl;
-                return posterUrl;
-            } catch (e) {
-                console.error('Poster fetch error:', e);
-                return null;
-            }
+        function getPosterUrl(movie) {
+            // Use pre-fetched poster URL from JSON (OMDb/Amazon)
+            return movie.posterUrl || null;
         }
 
         function renderSeedMovies() {
@@ -195,7 +178,7 @@
             });
         }
 
-        async function selectMovie(title) {
+        function selectMovie(title) {
             const movie = demoData[title];
             if (!movie) return;
 
@@ -215,64 +198,46 @@
                 document.getElementById('selectedImdb').classList.remove('hidden');
             }
 
-            // Load poster
+            // Load poster (pre-fetched)
             const posterEl = document.getElementById('selectedPoster');
-            posterEl.innerHTML = '<span class="text-6xl animate-pulse">🎬</span>';
-            
-            const posterUrl = await fetchPoster(movie.tmdbId);
+            const posterUrl = getPosterUrl(movie);
             if (posterUrl) {
-                const img = document.createElement('img');
-                img.src = posterUrl;
-                img.alt = title;
-                img.className = 'w-full h-full object-cover poster-img';
-                img.onload = () => img.classList.add('loaded');
-                posterEl.innerHTML = '';
-                posterEl.appendChild(img);
+                posterEl.innerHTML = `<img src="${posterUrl}" alt="${title}" class="w-full h-full object-cover">`;
             } else {
                 posterEl.innerHTML = '<span class="text-6xl">🎬</span>';
             }
 
             // Show recommendations
             document.getElementById('recommendationsSection').classList.remove('hidden');
-            await renderRecommendations(movie.recommendations);
+            renderRecommendations(movie.recommendations);
             
             // Scroll to recommendations
             document.getElementById('selectedSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        async function renderRecommendations(recommendations) {
+        function renderRecommendations(recommendations) {
             const container = document.getElementById('recommendations');
             
-            container.innerHTML = recommendations.map((rec, i) => `
-                <a href="${rec.imdbId ? `https://www.imdb.com/title/${rec.imdbId}/` : '#'}" 
-                   target="_blank"
-                   class="movie-card bg-gray-800 rounded-xl overflow-hidden block" id="rec-${i}">
-                    <div class="aspect-[2/3] poster-placeholder flex items-center justify-center text-4xl">
-                        🎬
-                    </div>
-                    <div class="p-3">
-                        <h4 class="font-medium text-sm truncate" title="${rec.title}">${rec.title.replace(/\s*\([^)]*\)\s*$/, '')}</h4>
-                        <p class="text-xs text-gray-500 truncate">${rec.genres.split('|').slice(0, 2).join(', ')}</p>
-                    </div>
-                </a>
-            `).join('');
-
-            // Load posters async
-            for (let i = 0; i < recommendations.length; i++) {
-                const rec = recommendations[i];
-                const posterUrl = await fetchPoster(rec.tmdbId);
-                const card = document.getElementById(`rec-${i}`);
-                if (card && posterUrl) {
-                    const posterDiv = card.querySelector('.aspect-\\[2\\/3\\]');
-                    const img = document.createElement('img');
-                    img.src = posterUrl;
-                    img.alt = rec.title;
-                    img.className = 'w-full h-full object-cover poster-img';
-                    img.onload = () => img.classList.add('loaded');
-                    posterDiv.innerHTML = '';
-                    posterDiv.appendChild(img);
-                }
-            }
+            container.innerHTML = recommendations.map((rec, i) => {
+                const posterUrl = getPosterUrl(rec);
+                const posterContent = posterUrl 
+                    ? `<img src="${posterUrl}" alt="${rec.title}" class="w-full h-full object-cover" loading="lazy">`
+                    : '<span class="text-4xl">🎬</span>';
+                
+                return `
+                    <a href="${rec.imdbId ? `https://www.imdb.com/title/${rec.imdbId}/` : '#'}" 
+                       target="_blank"
+                       class="movie-card bg-gray-800 rounded-xl overflow-hidden block">
+                        <div class="aspect-[2/3] poster-placeholder flex items-center justify-center">
+                            ${posterContent}
+                        </div>
+                        <div class="p-3">
+                            <h4 class="font-medium text-sm truncate" title="${rec.title}">${rec.title.replace(/\s*\([^)]*\)\s*$/, '')}</h4>
+                            <p class="text-xs text-gray-500 truncate">${rec.genres.split('|').slice(0, 2).join(', ')}</p>
+                        </div>
+                    </a>
+                `;
+            }).join('');
         }
 
         // Initialize
