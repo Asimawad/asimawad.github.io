@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VinePPO - CAL-GRPO | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html#chapter-4" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">🍇</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full font-medium">Research</span>
+                </div>
+                <h1 class="text-4xl font-bold">VinePPO / CAL-GRPO</h1>
+                <p class="text-gray-500 mt-2 text-lg">2025 — Fine-Grained Credit Assignment for RL Training</p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">RLHF</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Credit Assignment</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">JAX/Tunix</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">TPU</span>
+                </div>
+            </div>
+
+            <!-- About -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Implementation of <strong>Fine-Grained Credit Assignment (CAL)</strong> for RL training on Google's Tunix framework. 
+                    Instead of coarse sequence-level rewards, CAL applies negative rewards surgically to only the tokens that caused errors — 
+                    reducing variance and achieving faster, more stable training.
+                </p>
+                <a href="https://github.com/Asimawad/VinePPO" target="_blank" 
+                   class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-700 font-medium">
+                    View on GitHub →
+                </a>
+            </section>
+
+            <!-- The Problem -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">The Core Problem</h2>
+                
+                <div class="bg-red-50 border border-red-200 p-4 rounded-lg mb-4">
+                    <h3 class="font-semibold text-red-700 mb-2">Standard RLHF (PPO, GRPO)</h3>
+                    <ul class="text-sm text-red-600 space-y-1">
+                        <li>• Entire response gets a single "good" or "bad" score</li>
+                        <li>• A mostly-correct answer with one error is penalized uniformly</li>
+                        <li>• Model can't learn which specific tokens caused the error</li>
+                        <li>• High variance, training instability</li>
+                    </ul>
+                </div>
+
+                <div class="bg-green-50 border border-green-200 p-4 rounded-lg">
+                    <h3 class="font-semibold text-green-700 mb-2">CAL Approach</h3>
+                    <ul class="text-sm text-green-600 space-y-1">
+                        <li>• Token-level credit assignment using LLM oracles (GPT-4, Gemini)</li>
+                        <li>• Only error-causing tokens receive negative feedback</li>
+                        <li>• Low variance — precise learning signal</li>
+                        <li>• Stable KL divergence (train_kl < 0.01 vs > 100 in standard PPO)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- How It Works -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">The CAL Pipeline</h2>
+                
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ol class="space-y-4 text-gray-700">
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">1</span>
+                            <div>
+                                <strong>Generation</strong>
+                                <p class="text-sm text-gray-600">Model generates responses to prompts</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">2</span>
+                            <div>
+                                <strong>Error Detection</strong>
+                                <p class="text-sm text-gray-600">CAL Oracle (GPT-4/Gemini) identifies where errors occur</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">3</span>
+                            <div>
+                                <strong>Token Mapping</strong>
+                                <p class="text-sm text-gray-600">Error text spans mapped to specific token positions</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">4</span>
+                            <div>
+                                <strong>Sparse Rewards</strong>
+                                <p class="text-sm text-gray-600">Only error-causing tokens receive negative rewards</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">5</span>
+                            <div>
+                                <strong>Advantage Calculation</strong>
+                                <p class="text-sm text-gray-600">Fine-grained advantages for GRPO policy updates</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Results -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Expected Results (GSM8K)</h2>
+                
+                <div class="bg-white p-4 rounded-lg border mb-4">
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div>
+                            <p class="text-sm text-gray-500">Baseline</p>
+                            <p class="text-2xl font-bold">38.5%</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">CAL-GRPO</p>
+                            <p class="text-2xl font-bold text-green-600">42.3%</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Improvement</p>
+                            <p class="text-2xl font-bold text-indigo-600">+3.8%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
+                    <p class="text-gray-400 text-sm mb-2"># Run experiments</p>
+                    <pre class="text-sm"><code>./run_experiments.sh 100 4    # Proof of concept
+python compare_results.py     # Compare baseline vs CAL</code></pre>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>✅ <strong>Token-level credit assignment</strong> beats sequence-level rewards</li>
+                        <li>✅ <strong>Lower variance</strong> — only incorrect tokens receive feedback</li>
+                        <li>✅ <strong>Stable training</strong> — KL divergence stays controlled</li>
+                        <li>✅ <strong>JAX/Tunix</strong> — native TPU support with optimized performance</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html#chapter-4" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <a href="https://github.com/Asimawad/VinePPO" target="_blank" 
+                   class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
+</body>
+</html>

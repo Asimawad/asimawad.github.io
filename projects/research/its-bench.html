@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITS-Bench | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html#chapter-4" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">📊</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full font-medium">Research</span>
+                </div>
+                <h1 class="text-4xl font-bold">ITS-Bench</h1>
+                <p class="text-gray-500 mt-2 text-lg">2025 — Benchmarking Inference Time Scaling on MLE-bench</p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Benchmarking</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">MLE-bench</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">AI Agents</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Kaggle</span>
+                </div>
+            </div>
+
+            <!-- About -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Benchmarking inference time scaling strategies on <strong>MLE-bench</strong> — a benchmark for measuring 
+                    how well AI agents perform at machine learning engineering. Based on 75 Kaggle competitions with 
+                    automated grading and standardized evaluation protocols.
+                </p>
+                <a href="https://github.com/Asimawad/ITS-bench" target="_blank" 
+                   class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-700 font-medium">
+                    View on GitHub →
+                </a>
+            </section>
+
+            <!-- Benchmark Setup -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Benchmark Setup</h2>
+                
+                <div class="bg-white p-4 rounded-lg border mb-4">
+                    <h3 class="font-semibold text-indigo-600 mb-2">Recommended Configuration</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• <strong>Runtime:</strong> 24 hours per competition</li>
+                        <li>• <strong>Compute:</strong> 36 vCPUs, 440GB RAM, one 24GB A10 GPU</li>
+                        <li>• <strong>Seeds:</strong> At least 3 per evaluation</li>
+                        <li>• <strong>Metric:</strong> Any Medal (%) — mean ± standard error</li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-3 rounded-lg border text-center">
+                        <p class="text-2xl font-bold text-indigo-600">75</p>
+                        <p class="text-xs text-gray-500">Competitions</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border text-center">
+                        <p class="text-2xl font-bold text-green-600">22</p>
+                        <p class="text-xs text-gray-500">Lite split</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border text-center">
+                        <p class="text-2xl font-bold text-amber-600">3.3TB</p>
+                        <p class="text-xs text-gray-500">Full dataset</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border text-center">
+                        <p class="text-2xl font-bold text-gray-600">158GB</p>
+                        <p class="text-xs text-gray-500">Lite dataset</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lite Dataset -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Lite Evaluation (22 competitions)</h2>
+                
+                <p class="text-gray-600 mb-4">
+                    For cost-effective evaluation, use the Low complexity split — 22 competitions covering diverse ML tasks.
+                </p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full bg-white rounded-lg border text-sm">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-3 py-2 text-left">Competition</th>
+                                <th class="px-3 py-2 text-left">Category</th>
+                                <th class="px-3 py-2 text-right">Size</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y">
+                            <tr><td class="px-3 py-2">aerial-cactus-identification</td><td class="px-3 py-2">Image Classification</td><td class="px-3 py-2 text-right">25MB</td></tr>
+                            <tr><td class="px-3 py-2">dog-breed-identification</td><td class="px-3 py-2">Image Classification</td><td class="px-3 py-2 text-right">750MB</td></tr>
+                            <tr><td class="px-3 py-2">spooky-author-identification</td><td class="px-3 py-2">Text Classification</td><td class="px-3 py-2 text-right">2MB</td></tr>
+                            <tr><td class="px-3 py-2">jigsaw-toxic-comment</td><td class="px-3 py-2">Text Classification</td><td class="px-3 py-2 text-right">60MB</td></tr>
+                            <tr><td class="px-3 py-2">nomad2018-predict-transparent</td><td class="px-3 py-2">Tabular</td><td class="px-3 py-2 text-right">6MB</td></tr>
+                            <tr><td class="px-3 py-2 text-gray-400" colspan="3">... and 17 more</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Usage -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Quick Start</h2>
+                
+                <div class="space-y-4">
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
+                        <p class="text-gray-400 text-sm mb-2"># Prepare lite dataset</p>
+                        <pre class="text-sm"><code>mlebench prepare --lite --data-dir lite_dataset</code></pre>
+                    </div>
+                    
+                    <div class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
+                        <p class="text-gray-400 text-sm mb-2"># Grade a submission</p>
+                        <pre class="text-sm"><code>mlebench grade-sample submission.csv spaceship-titanic</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>✅ <strong>Standardized benchmark</strong> for ML engineering agents</li>
+                        <li>✅ <strong>75 real Kaggle competitions</strong> with automated grading</li>
+                        <li>✅ <strong>Lite split (22 competitions)</strong> for cost-effective evaluation</li>
+                        <li>✅ <strong>Docker environment</strong> for reproducible agent evaluation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html#chapter-4" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <a href="https://github.com/Asimawad/ITS-bench" target="_blank" 
+                   class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
+</body>
+</html>

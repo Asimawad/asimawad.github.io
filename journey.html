@@ -454,7 +454,7 @@
                     <!-- ML Fundamentals Section -->
                     <div class="mb-6">
                         <div class="collapsible-header bg-gradient-to-r from-amber-50 to-yellow-50 p-4 rounded-lg">
-                            <span class="font-medium text-amber-800">📈 ML Fundamentals (4 projects)</span>
+                            <span class="font-medium text-amber-800">📈 ML Fundamentals (3 projects)</span>
                         </div>
                         <div class="collapsible-content space-y-4">
                             <a href="/projects/aims/nn-from-scratch.html" class="block bg-white p-6 rounded-xl shadow-sm card-hover">
@@ -484,15 +484,6 @@
                                 </div>
                                 <span class="text-indigo-600 text-sm font-medium">View details →</span>
                             </a>
-                            <a href="/projects/aims/recommender-system.html" class="block bg-white p-6 rounded-xl shadow-sm card-hover">
-                                <h3 class="text-lg font-semibold mb-2">Recommender System</h3>
-                                <p class="text-gray-600 text-sm mb-3">Collaborative filtering with Alternating Least Squares (ALS). User/movie latent factors + biases.</p>
-                                <div class="flex gap-2 mb-3">
-                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Matrix Factorization</span>
-                                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">ALS</span>
-                                </div>
-                                <span class="text-indigo-600 text-sm font-medium">View details →</span>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -505,7 +496,7 @@
                         4
                     </div>
                     <div>
-                        <h2 class="text-2xl font-bold">Research Mode</h2>
+                        <h2 class="text-2xl font-bold">Research</h2>
                         <p class="text-gray-500">2025 — AIMS, InstaDeep, and cutting-edge MARL</p>
                     </div>
                 </div>
@@ -531,10 +522,61 @@
                         <span class="text-indigo-600 text-sm font-medium mt-3 block">View details →</span>
                     </a>
                     
-                    <!-- More projects coming -->
-                    <div class="bg-gray-100 p-6 rounded-xl border-2 border-dashed border-gray-300 text-center text-gray-500">
-                        More 2025 projects coming soon...
-                    </div>
+                    <!-- Recommender System -->
+                    <a href="/projects/aims/recommender-system.html" class="block bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">🎬 Recommender System</h3>
+                            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">ML</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">Collaborative filtering with Alternating Least Squares (ALS). User/movie latent factor embeddings + biases.</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Matrix Factorization</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">ALS</span>
+                        </div>
+                        <span class="text-indigo-600 text-sm font-medium mt-3 block">View details →</span>
+                    </a>
+
+                    <!-- AIDE -->
+                    <a href="/projects/research/aide.html" class="block bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">🤖 AIDE: ML CodeGen Agent</h3>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">LLM Agent</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">LLM agent that generates ML solutions from natural language. Beats 50% of Kaggle participants using tree search optimization.</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">AutoML</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Tree Search</span>
+                        </div>
+                        <span class="text-indigo-600 text-sm font-medium mt-3 block">View details →</span>
+                    </a>
+
+                    <!-- ITS-Bench -->
+                    <a href="/projects/research/its-bench.html" class="block bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">📊 ITS-Bench</h3>
+                            <span class="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded">Benchmark</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">Benchmarking inference time scaling on MLE-bench — 75 Kaggle competitions for evaluating ML engineering agents.</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">MLE-bench</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">AI Agents</span>
+                        </div>
+                        <span class="text-indigo-600 text-sm font-medium mt-3 block">View details →</span>
+                    </a>
+
+                    <!-- VinePPO -->
+                    <a href="/projects/research/vineppo.html" class="block bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold">🍇 VinePPO / CAL-GRPO</h3>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">RLHF</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">Fine-grained credit assignment for RL training. Token-level rewards instead of sequence-level — lower variance, stable training.</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Credit Assignment</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">JAX/Tunix</span>
+                        </div>
+                        <span class="text-indigo-600 text-sm font-medium mt-3 block">View details →</span>
+                    </a>
                 </div>
             </div>
 

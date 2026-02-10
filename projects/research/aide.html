@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDE - ML CodeGen Agent | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        code, .mono { font-family: 'Fira Code', monospace; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <a href="/journey.html#chapter-4" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <!-- Header -->
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-4xl">🤖</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full font-medium">Research</span>
+                </div>
+                <h1 class="text-4xl font-bold">AIDE: ML CodeGen Agent</h1>
+                <p class="text-gray-500 mt-2 text-lg">2025 — LLM Agent for Automated Machine Learning</p>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">LLM Agent</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">AutoML</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Tree Search</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Kaggle</span>
+                </div>
+            </div>
+
+            <!-- About -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">About</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    AIDE is an LLM agent that generates solutions for machine learning tasks from natural language descriptions. 
+                    In a benchmark of 60+ Kaggle competitions, AIDE <strong>surpassed 50% of Kaggle participants on average</strong>. 
+                    The agent iteratively runs, debugs, evaluates, and improves ML code autonomously.
+                </p>
+                <a href="https://github.com/Asimawad/aide-ds" target="_blank" 
+                   class="inline-flex items-center gap-2 mt-4 text-indigo-600 hover:text-indigo-700 font-medium">
+                    View on GitHub →
+                </a>
+            </section>
+
+            <!-- Features -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Key Features</h2>
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-indigo-600 mb-2">🗣️ Natural Language Input</h3>
+                        <p class="text-sm text-gray-600">Describe your problem, requirements, and expert insights in plain language</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-green-600 mb-2">📜 Source Code Output</h3>
+                        <p class="text-sm text-gray-600">Get tested Python scripts — full transparency and reproducibility</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-amber-600 mb-2">🔄 Iterative Optimization</h3>
+                        <p class="text-sm text-gray-600">Runs, debugs, evaluates, and improves the ML code automatically</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <h3 class="font-semibold text-purple-600 mb-2">🌳 Tree Visualization</h3>
+                        <p class="text-sm text-gray-600">Visualize the solution tree to understand what works and what doesn't</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Algorithm -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Solution Space Tree Search</h2>
+                
+                <p class="text-gray-600 mb-4">
+                    AIDE's approach mirrors how human data scientists work — generate initial drafts, then iteratively refine based on feedback.
+                </p>
+
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl mb-6">
+                    <ol class="space-y-4 text-gray-700">
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">1</span>
+                            <div>
+                                <strong>Solution Generator</strong>
+                                <p class="text-sm text-gray-600">Creates new drafts or modifies existing solutions (bug fixes, improvements)</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">2</span>
+                            <div>
+                                <strong>Evaluator</strong>
+                                <p class="text-sm text-gray-600">Runs solutions and extracts evaluation metrics from logs</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">3</span>
+                            <div>
+                                <strong>Base Solution Selector</strong>
+                                <p class="text-sm text-gray-600">Picks the most promising solution as starting point for next iteration</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <img src="https://github.com/WecoAI/aideml/assets/8918572/2401529c-b97e-4029-aed2-c3f376f54c3c" 
+                     alt="Tree Search Visualization" class="w-full rounded-lg border">
+            </section>
+
+            <!-- Usage -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 pb-2 border-b">Usage Example</h2>
+                
+                <div class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
+                    <pre class="text-sm"><code>aide data_dir="example_tasks/house_prices" \
+     goal="Predict the sales price for each house" \
+     eval="Use the RMSE metric between the logarithm of the predicted and observed values." \
+     agent.code.model=deepseek-r1:latest</code></pre>
+                </div>
+            </section>
+
+            <!-- Key Takeaways -->
+            <section class="mb-10">
+                <h2 class="text-xl font-semibold mb-4">Key Takeaways</h2>
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl">
+                    <ul class="space-y-3 text-gray-700">
+                        <li>✅ <strong>Beats 50% of Kaggle participants</strong> on average across 60+ competitions</li>
+                        <li>✅ <strong>Tree search</strong> explores solution space systematically</li>
+                        <li>✅ <strong>Supports multiple models</strong> — GPT-4, DeepSeek-R1, etc.</li>
+                        <li>✅ <strong>Full transparency</strong> — outputs readable Python code</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer Links -->
+            <div class="flex justify-between items-center pt-6 border-t">
+                <a href="/journey.html#chapter-4" class="text-gray-600 hover:text-gray-900">← Back to Journey</a>
+                <a href="https://github.com/Asimawad/aide-ds" target="_blank" 
+                   class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
+            © 2025 Asim Osman
+        </div>
+    </footer>
+</body>
+</html>
