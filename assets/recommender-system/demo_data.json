@@ -1,2187 +1,261 @@
 {
   "Toy Story (1995)": {
-    "movieId": 1,
+    "title": "Toy Story (1995)",
     "genres": "Adventure|Animation|Children|Comedy|Fantasy",
     "imdbId": "tt0114709",
     "tmdbId": 862,
     "recommendations": [
       {
-        "title": "Ace Ventura: Pet Detective (1994)",
-        "genres": "Comedy",
-        "imdbId": "tt0109040",
-        "tmdbId": 3049
+        "title": "Toy Story 2 (1999)",
+        "genres": "Adventure|Animation|Children|Comedy|Fantasy",
+        "imdbId": "tt0120363",
+        "tmdbId": 863
       },
       {
-        "title": "My Favorite Season (1993)",
-        "genres": "Drama",
-        "imdbId": "tt0107471",
-        "tmdbId": 52873
+        "title": "Monsters, Inc. (2001)",
+        "genres": "Adventure|Animation|Children|Comedy|Fantasy",
+        "imdbId": "tt0198781",
+        "tmdbId": 585
       },
       {
-        "title": "Dangerous Minds (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0112792",
-        "tmdbId": 9909
+        "title": "Finding Nemo (2003)",
+        "genres": "Adventure|Animation|Children|Comedy",
+        "imdbId": "tt0266543",
+        "tmdbId": 12
       },
       {
-        "title": "Criminals (1996)",
-        "genres": "Documentary",
-        "imdbId": "tt0115978",
-        "tmdbId": 538286
+        "title": "Toy Story 3 (2010)",
+        "genres": "Adventure|Animation|Children|Comedy|Fantasy|IMAX",
+        "imdbId": "tt0435761",
+        "tmdbId": 10193
       },
       {
-        "title": "Beat the Devil (1953)",
-        "genres": "Adventure|Comedy|Crime|Drama|Romance",
-        "imdbId": "tt0046414",
-        "tmdbId": 22733
+        "title": "Incredibles, The (2004)",
+        "genres": "Action|Adventure|Animation|Children|Comedy",
+        "imdbId": "tt0317705",
+        "tmdbId": 9806
       },
       {
-        "title": "Small Wonders (1995)",
-        "genres": "Documentary",
-        "imdbId": "tt0117669",
-        "tmdbId": 124632
+        "title": "Bug's Life, A (1998)",
+        "genres": "Adventure|Animation|Children|Comedy",
+        "imdbId": "tt0120623",
+        "tmdbId": 9487
       },
       {
-        "title": "White Balloon, The (Badkonake sefid) (1995)",
-        "genres": "Children|Drama",
-        "imdbId": "tt0112445",
-        "tmdbId": 46785
+        "title": "Aladdin (1992)",
+        "genres": "Adventure|Animation|Children|Comedy|Musical",
+        "imdbId": "tt0103639",
+        "tmdbId": 812
       },
       {
-        "title": "Streetcar Named Desire, A (1951)",
-        "genres": "Drama",
-        "imdbId": "tt0044081",
-        "tmdbId": 702
+        "title": "Lion King, The (1994)",
+        "genres": "Adventure|Animation|Children|Drama|Musical|IMAX",
+        "imdbId": "tt0110357",
+        "tmdbId": 8587
       },
       {
-        "title": "Peacemaker, The (1997)",
-        "genres": "Action|Thriller|War",
-        "imdbId": "tt0119874",
-        "tmdbId": 6623
+        "title": "Shrek (2001)",
+        "genres": "Adventure|Animation|Children|Comedy|Fantasy|Romance",
+        "imdbId": "tt0126029",
+        "tmdbId": 808
       },
       {
-        "title": "Lamerica (1994)",
-        "genres": "Adventure|Drama",
-        "imdbId": "tt0110299",
-        "tmdbId": 49133
+        "title": "Up (2009)",
+        "genres": "Adventure|Animation|Children|Drama",
+        "imdbId": "tt1049413",
+        "tmdbId": 14160
       },
       {
-        "title": "Brothers McMullen, The (1995)",
-        "genres": "Comedy",
-        "imdbId": "tt0112585",
-        "tmdbId": 16388
+        "title": "WALL\u00b7E (2008)",
+        "genres": "Adventure|Animation|Children|Romance|Sci-Fi",
+        "imdbId": "tt0910970",
+        "tmdbId": 10681
       },
       {
-        "title": "First Knight (1995)",
-        "genres": "Action|Drama|Romance",
-        "imdbId": "tt0113071",
-        "tmdbId": 6520
+        "title": "Ratatouille (2007)",
+        "genres": "Animation|Children|Drama",
+        "imdbId": "tt0382932",
+        "tmdbId": 2062
       }
     ]
   },
-  "Jumanji (1995)": {
-    "movieId": 2,
-    "genres": "Adventure|Children|Fantasy",
-    "imdbId": "tt0113497",
-    "tmdbId": 8844,
+  "Saw (2004)": {
+    "title": "Saw (2004)",
+    "genres": "Horror|Mystery|Thriller",
+    "imdbId": "tt0387564",
+    "tmdbId": 176,
     "recommendations": [
       {
-        "title": "Prom Night II (1987)",
+        "title": "Saw II (2005)",
         "genres": "Horror|Thriller",
-        "imdbId": "tt0093176",
-        "tmdbId": 39929
+        "imdbId": "tt0432348",
+        "tmdbId": 215
       },
       {
-        "title": "Star Trek: Generations (1994)",
-        "genres": "Adventure|Drama|Sci-Fi",
-        "imdbId": "tt0111280",
-        "tmdbId": 193
+        "title": "Saw III (2006)",
+        "genres": "Crime|Horror|Thriller",
+        "imdbId": "tt0489270",
+        "tmdbId": 214
       },
       {
-        "title": "Romper Stomper (1992)",
-        "genres": "Action|Drama",
-        "imdbId": "tt0105275",
-        "tmdbId": 10412
+        "title": "Ring, The (2002)",
+        "genres": "Horror|Mystery|Thriller",
+        "imdbId": "tt0298130",
+        "tmdbId": 565
       },
       {
-        "title": "Boys Life (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0112570",
-        "tmdbId": 39953
+        "title": "Scream (1996)",
+        "genres": "Comedy|Horror|Mystery|Thriller",
+        "imdbId": "tt0117571",
+        "tmdbId": 4232
       },
       {
-        "title": "What's Eating Gilbert Grape (1993)",
-        "genres": "Drama",
-        "imdbId": "tt0108550",
-        "tmdbId": 1587
+        "title": "Seven (a.k.a. Se7en) (1995)",
+        "genres": "Mystery|Thriller",
+        "imdbId": "tt0114369",
+        "tmdbId": 807
       },
       {
-        "title": "Tough and Deadly (1995)",
-        "genres": "Action|Drama|Thriller",
-        "imdbId": "tt0114706",
-        "tmdbId": 80350
+        "title": "Silence of the Lambs, The (1991)",
+        "genres": "Crime|Horror|Thriller",
+        "imdbId": "tt0102926",
+        "tmdbId": 274
       },
       {
-        "title": "Once Were Warriors (1994)",
-        "genres": "Crime|Drama",
-        "imdbId": "tt0110729",
-        "tmdbId": 527
+        "title": "Halloween (1978)",
+        "genres": "Horror",
+        "imdbId": "tt0077651",
+        "tmdbId": 948
       },
       {
-        "title": "All Things Fair (Lust och f\u00e4gring stor) (1995)",
-        "genres": "Drama|Romance|War",
-        "imdbId": "tt0113720",
-        "tmdbId": 27098
+        "title": "Nightmare on Elm Street, A (1984)",
+        "genres": "Horror|Thriller",
+        "imdbId": "tt0087800",
+        "tmdbId": 377
       },
       {
-        "title": "Nell (1994)",
-        "genres": "Drama",
-        "imdbId": "tt0110638",
-        "tmdbId": 1945
+        "title": "Hostel (2005)",
+        "genres": "Horror",
+        "imdbId": "tt0450278",
+        "tmdbId": 1690
       },
       {
-        "title": "Daytrippers, The (1996)",
-        "genres": "Comedy|Drama|Mystery|Romance",
-        "imdbId": "tt0116041",
-        "tmdbId": 49806
+        "title": "Final Destination (2000)",
+        "genres": "Drama|Thriller",
+        "imdbId": "tt0195714",
+        "tmdbId": 9532
       },
       {
-        "title": "Jack (1996)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0116669",
-        "tmdbId": 7095
-      },
-      {
-        "title": "Quiet Room, The (1996)",
-        "genres": "Drama",
-        "imdbId": "tt0117422",
-        "tmdbId": 88423
+        "title": "Conjuring, The (2013)",
+        "genres": "Horror|Thriller",
+        "imdbId": "tt1457767",
+        "tmdbId": 138843
       }
     ]
   },
-  "Heat (1995)": {
-    "movieId": 6,
-    "genres": "Action|Crime|Thriller",
-    "imdbId": "tt0113277",
-    "tmdbId": 949,
+  "Matrix, The (1999)": {
+    "title": "Matrix, The (1999)",
+    "genres": "Action|Sci-Fi|Thriller",
+    "imdbId": "tt0133093",
+    "tmdbId": 603,
     "recommendations": [
       {
-        "title": "Amos & Andrew (1993)",
-        "genres": "Comedy",
-        "imdbId": "tt0106266",
-        "tmdbId": 31000
+        "title": "Matrix Reloaded, The (2003)",
+        "genres": "Action|Adventure|Sci-Fi|Thriller|IMAX",
+        "imdbId": "tt0234215",
+        "tmdbId": 604
       },
       {
-        "title": "Blob, The (1958)",
-        "genres": "Horror|Sci-Fi",
-        "imdbId": "tt0051418",
-        "tmdbId": 8851
+        "title": "Matrix Revolutions, The (2003)",
+        "genres": "Action|Adventure|Sci-Fi|Thriller|IMAX",
+        "imdbId": "tt0242653",
+        "tmdbId": 605
       },
       {
-        "title": "Nenette and Boni (N\u00e9nette et Boni) (1996)",
-        "genres": "Drama",
-        "imdbId": "tt0117221",
-        "tmdbId": 99002
+        "title": "Terminator 2: Judgment Day (1991)",
+        "genres": "Action|Sci-Fi",
+        "imdbId": "tt0103064",
+        "tmdbId": 280
       },
       {
-        "title": "Platoon (1986)",
-        "genres": "Drama|War",
-        "imdbId": "tt0091763",
-        "tmdbId": 792
+        "title": "Blade Runner (1982)",
+        "genres": "Action|Sci-Fi|Thriller",
+        "imdbId": "tt0083658",
+        "tmdbId": 78
       },
       {
-        "title": "Star Trek VI: The Undiscovered Country (1991)",
-        "genres": "Action|Mystery|Sci-Fi",
-        "imdbId": "tt0102975",
-        "tmdbId": 174
+        "title": "Minority Report (2002)",
+        "genres": "Action|Crime|Mystery|Sci-Fi|Thriller",
+        "imdbId": "tt0181689",
+        "tmdbId": 180
       },
       {
-        "title": "Amityville: A New Generation (1993)",
-        "genres": "Horror",
-        "imdbId": "tt0106262",
-        "tmdbId": 33519
-      },
-      {
-        "title": "Pope of Greenwich Village, The (1984)",
-        "genres": "Drama",
-        "imdbId": "tt0087932",
-        "tmdbId": 32081
-      },
-      {
-        "title": "Mute Witness (1994)",
-        "genres": "Comedy|Horror|Thriller",
-        "imdbId": "tt0110604",
-        "tmdbId": 48787
-      },
-      {
-        "title": "Lady Vanishes, The (1938)",
-        "genres": "Drama|Mystery|Thriller",
-        "imdbId": "tt0030341",
-        "tmdbId": 940
-      },
-      {
-        "title": "When the Cat's Away (Chacun cherche son chat) (1996)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0115856",
-        "tmdbId": 11956
-      },
-      {
-        "title": "Swan Princess, The (1994)",
-        "genres": "Animation|Children",
-        "imdbId": "tt0111333",
-        "tmdbId": 22586
-      },
-      {
-        "title": "American Werewolf in London, An (1981)",
-        "genres": "Comedy|Horror|Thriller",
-        "imdbId": "tt0082010",
-        "tmdbId": 814
-      }
-    ]
-  },
-  "Twelve Monkeys (a.k.a. 12 Monkeys) (1995)": {
-    "movieId": 32,
-    "genres": "Mystery|Sci-Fi|Thriller",
-    "imdbId": "tt0114746",
-    "tmdbId": 63,
-    "recommendations": [
-      {
-        "title": "Across the Sea of Time (1995)",
-        "genres": "Documentary|IMAX",
-        "imdbId": "tt0112286",
-        "tmdbId": 139405
-      },
-      {
-        "title": "Babe (1995)",
-        "genres": "Children|Drama",
-        "imdbId": "tt0112431",
-        "tmdbId": 9598
-      },
-      {
-        "title": "Amityville 1992: It's About Time (1992)",
-        "genres": "Horror",
-        "imdbId": "tt0103678",
-        "tmdbId": 41671
-      },
-      {
-        "title": "Amityville 3-D (1983)",
-        "genres": "Horror",
-        "imdbId": "tt0085159",
-        "tmdbId": 27214
-      },
-      {
-        "title": "For Love or Money (1993)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0106941",
-        "tmdbId": 9024
-      },
-      {
-        "title": "Man Who Knew Too Little, The (1997)",
-        "genres": "Comedy|Crime|Thriller",
-        "imdbId": "tt0120483",
-        "tmdbId": 9414
-      },
-      {
-        "title": "Henry V (1989)",
-        "genres": "Action|Drama|Romance|War",
-        "imdbId": "tt0097499",
-        "tmdbId": 10705
-      },
-      {
-        "title": "Endless Summer 2, The (1994)",
-        "genres": "Adventure|Documentary",
-        "imdbId": "tt0109729",
-        "tmdbId": 24257
-      },
-      {
-        "title": "Getaway, The (1994)",
-        "genres": "Action|Adventure|Crime|Drama|Romance|Thriller",
-        "imdbId": "tt0109890",
-        "tmdbId": 2087
-      },
-      {
-        "title": "Even Cowgirls Get the Blues (1993)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0106834",
-        "tmdbId": 34444
-      },
-      {
-        "title": "Circle of Friends (1995)",
-        "genres": "Drama|Romance",
-        "imdbId": "tt0112679",
-        "tmdbId": 22625
+        "title": "Total Recall (1990)",
+        "genres": "Action|Adventure|Sci-Fi|Thriller",
+        "imdbId": "tt0100802",
+        "tmdbId": 861
       },
       {
         "title": "Dark City (1998)",
         "genres": "Adventure|Film-Noir|Sci-Fi|Thriller",
         "imdbId": "tt0118929",
         "tmdbId": 2666
-      }
-    ]
-  },
-  "Braveheart (1995)": {
-    "movieId": 110,
-    "genres": "Action|Drama|War",
-    "imdbId": "tt0112573",
-    "tmdbId": 197,
-    "recommendations": [
-      {
-        "title": "Airheads (1994)",
-        "genres": "Comedy",
-        "imdbId": "tt0109068",
-        "tmdbId": 13595
       },
       {
-        "title": "It Could Happen to You (1994)",
-        "genres": "Comedy|Drama|Romance",
-        "imdbId": "tt0110167",
-        "tmdbId": 10660
+        "title": "Equilibrium (2002)",
+        "genres": "Action|Sci-Fi|Thriller",
+        "imdbId": "tt0238380",
+        "tmdbId": 7299
       },
       {
-        "title": "Swan Princess, The (1994)",
-        "genres": "Animation|Children",
-        "imdbId": "tt0111333",
-        "tmdbId": 22586
+        "title": "Inception (2010)",
+        "genres": "Action|Crime|Drama|Mystery|Sci-Fi|Thriller|IMAX",
+        "imdbId": "tt1375666",
+        "tmdbId": 27205
       },
       {
-        "title": "Raging Bull (1980)",
-        "genres": "Drama",
-        "imdbId": "tt0081398",
-        "tmdbId": 1578
+        "title": "I, Robot (2004)",
+        "genres": "Action|Adventure|Sci-Fi|Thriller",
+        "imdbId": "tt0343818",
+        "tmdbId": 2048
       },
       {
-        "title": "Manchurian Candidate, The (1962)",
-        "genres": "Crime|Thriller|War",
-        "imdbId": "tt0056218",
-        "tmdbId": 982
+        "title": "Fifth Element, The (1997)",
+        "genres": "Action|Adventure|Comedy|Sci-Fi",
+        "imdbId": "tt0119116",
+        "tmdbId": 18
       },
       {
-        "title": "Tank Girl (1995)",
-        "genres": "Action|Comedy|Sci-Fi",
-        "imdbId": "tt0114614",
-        "tmdbId": 9067
-      },
-      {
-        "title": "RoboCop 3 (1993)",
-        "genres": "Action|Crime|Drama|Sci-Fi|Thriller",
-        "imdbId": "tt0107978",
-        "tmdbId": 5550
-      },
-      {
-        "title": "Wild Bunch, The (1969)",
-        "genres": "Adventure|Western",
-        "imdbId": "tt0065214",
-        "tmdbId": 576
-      },
-      {
-        "title": "Father of the Bride Part II (1995)",
-        "genres": "Comedy",
-        "imdbId": "tt0113041",
-        "tmdbId": 11862
-      },
-      {
-        "title": "Home for the Holidays (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0113321",
-        "tmdbId": 9089
-      },
-      {
-        "title": "About Last Night... (1986)",
-        "genres": "Comedy|Drama|Romance",
-        "imdbId": "tt0090583",
-        "tmdbId": 18169
-      },
-      {
-        "title": "Modern Affair, A (1995)",
-        "genres": "Romance",
-        "imdbId": "tt0113839",
-        "tmdbId": 123505
-      }
-    ]
-  },
-  "Apollo 13 (1995)": {
-    "movieId": 150,
-    "genres": "Adventure|Drama|IMAX",
-    "imdbId": "tt0112384",
-    "tmdbId": 568,
-    "recommendations": [
-      {
-        "title": "Silent Fall (1994)",
-        "genres": "Drama|Thriller",
-        "imdbId": "tt0111187",
-        "tmdbId": 39473
-      },
-      {
-        "title": "Boomerang (1992)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0103859",
-        "tmdbId": 11066
-      },
-      {
-        "title": "To Wong Foo, Thanks for Everything! Julie Newmar (1995)",
-        "genres": "Comedy",
-        "imdbId": "tt0114682",
-        "tmdbId": 9090
-      },
-      {
-        "title": "Angela (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0112364",
-        "tmdbId": 32622
-      },
-      {
-        "title": "Total Eclipse (1995)",
-        "genres": "Drama|Romance",
-        "imdbId": "tt0114702",
-        "tmdbId": 36834
-      },
-      {
-        "title": "Devil in a Blue Dress (1995)",
-        "genres": "Crime|Film-Noir|Mystery|Thriller",
-        "imdbId": "tt0112857",
-        "tmdbId": 8512
-      },
-      {
-        "title": "Mallrats (1995)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0113749",
-        "tmdbId": 2293
-      },
-      {
-        "title": "U.S. Marshals (1998)",
-        "genres": "Action|Crime|Thriller",
-        "imdbId": "tt0120873",
-        "tmdbId": 11808
-      },
-      {
-        "title": "Awfully Big Adventure, An (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0112427",
-        "tmdbId": 22279
-      },
-      {
-        "title": "Wings of the Dove, The (1997)",
-        "genres": "Drama|Romance",
-        "imdbId": "tt0120520",
-        "tmdbId": 45609
-      },
-      {
-        "title": "Rambling Rose (1991)",
-        "genres": "Drama",
-        "imdbId": "tt0102753",
-        "tmdbId": 32221
-      },
-      {
-        "title": "Boogie Nights (1997)",
-        "genres": "Drama",
-        "imdbId": "tt0118749",
-        "tmdbId": 4995
-      }
-    ]
-  },
-  "Pulp Fiction (1994)": {
-    "movieId": 296,
-    "genres": "Comedy|Crime|Drama|Thriller",
-    "imdbId": "tt0110912",
-    "tmdbId": 680,
-    "recommendations": [
-      {
-        "title": "Captives (1994)",
-        "genres": "Crime|Drama|Romance|Thriller",
-        "imdbId": "tt0109374",
-        "tmdbId": 37667
-      },
-      {
-        "title": "Ashes of Time (Dung che sai duk) (1994)",
-        "genres": "Drama",
-        "imdbId": "tt0109688",
-        "tmdbId": 40751
-      },
-      {
-        "title": "My Favorite Season (1993)",
-        "genres": "Drama",
-        "imdbId": "tt0107471",
-        "tmdbId": 52873
-      },
-      {
-        "title": "Criminals (1996)",
-        "genres": "Documentary",
-        "imdbId": "tt0115978",
-        "tmdbId": 538286
-      },
-      {
-        "title": "Ace Ventura: Pet Detective (1994)",
-        "genres": "Comedy",
-        "imdbId": "tt0109040",
-        "tmdbId": 3049
-      },
-      {
-        "title": "Island of Dr. Moreau, The (1996)",
-        "genres": "Sci-Fi|Thriller",
-        "imdbId": "tt0116654",
-        "tmdbId": 9306
-      },
-      {
-        "title": "Jack and Sarah (1995)",
-        "genres": "Romance",
-        "imdbId": "tt0113448",
-        "tmdbId": 2021
-      },
-      {
-        "title": "Gumby: The Movie (1995)",
-        "genres": "Animation|Children",
-        "imdbId": "tt0113234",
-        "tmdbId": 43475
-      },
-      {
-        "title": "Promise, The (Versprechen, Das) (1995)",
-        "genres": "Drama|Romance",
-        "imdbId": "tt0111613",
-        "tmdbId": 105045
-      },
-      {
-        "title": "Once Were Warriors (1994)",
-        "genres": "Crime|Drama",
-        "imdbId": "tt0110729",
-        "tmdbId": 527
-      },
-      {
-        "title": "Apartment, The (1960)",
-        "genres": "Comedy|Drama|Romance",
-        "imdbId": "tt0053604",
-        "tmdbId": 284
-      },
-      {
-        "title": "Nell (1994)",
-        "genres": "Drama",
-        "imdbId": "tt0110638",
-        "tmdbId": 1945
-      }
-    ]
-  },
-  "Forrest Gump (1994)": {
-    "movieId": 356,
-    "genres": "Comedy|Drama|Romance|War",
-    "imdbId": "tt0109830",
-    "tmdbId": 13,
-    "recommendations": [
-      {
-        "title": "Die Hard: With a Vengeance (1995)",
-        "genres": "Action|Crime|Thriller",
-        "imdbId": "tt0112864",
-        "tmdbId": 1572
-      },
-      {
-        "title": "Lady Vanishes, The (1938)",
-        "genres": "Drama|Mystery|Thriller",
-        "imdbId": "tt0030341",
-        "tmdbId": 940
-      },
-      {
-        "title": "Mute Witness (1994)",
-        "genres": "Comedy|Horror|Thriller",
-        "imdbId": "tt0110604",
-        "tmdbId": 48787
-      },
-      {
-        "title": "Secrets & Lies (1996)",
-        "genres": "Drama",
-        "imdbId": "tt0117589",
-        "tmdbId": 11159
-      },
-      {
-        "title": "Tom & Viv (1994)",
-        "genres": "Drama",
-        "imdbId": "tt0111454",
-        "tmdbId": 46797
-      },
-      {
-        "title": "Clear and Present Danger (1994)",
-        "genres": "Action|Crime|Drama|Thriller",
-        "imdbId": "tt0109444",
-        "tmdbId": 9331
-      },
-      {
-        "title": "Bronx Tale, A (1993)",
-        "genres": "Drama",
-        "imdbId": "tt0106489",
-        "tmdbId": 1607
-      },
-      {
-        "title": "Hudsucker Proxy, The (1994)",
-        "genres": "Comedy",
-        "imdbId": "tt0110074",
-        "tmdbId": 11934
-      },
-      {
-        "title": "Waterworld (1995)",
-        "genres": "Action|Adventure|Sci-Fi",
-        "imdbId": "tt0114898",
-        "tmdbId": 9804
-      },
-      {
-        "title": "Heaven & Earth (1993)",
-        "genres": "Action|Drama|War",
-        "imdbId": "tt0107096",
-        "tmdbId": 31642
-      },
-      {
-        "title": "Rent-a-Kid (1995)",
-        "genres": "Comedy",
-        "imdbId": "tt0114268",
-        "tmdbId": 36357
-      },
-      {
-        "title": "Beyond Rangoon (1995)",
-        "genres": "Adventure|Drama|War",
-        "imdbId": "tt0112495",
-        "tmdbId": 1873
-      }
-    ]
-  },
-  "Lion King, The (1994)": {
-    "movieId": 364,
-    "genres": "Adventure|Animation|Children|Drama|Musical|IMAX",
-    "imdbId": "tt0110357",
-    "tmdbId": 8587,
-    "recommendations": [
-      {
-        "title": "It Could Happen to You (1994)",
-        "genres": "Comedy|Drama|Romance",
-        "imdbId": "tt0110167",
-        "tmdbId": 10660
-      },
-      {
-        "title": "Maverick (1994)",
-        "genres": "Adventure|Comedy|Western",
-        "imdbId": "tt0110478",
-        "tmdbId": 9359
-      },
-      {
-        "title": "Father of the Bride Part II (1995)",
-        "genres": "Comedy",
-        "imdbId": "tt0113041",
-        "tmdbId": 11862
-      },
-      {
-        "title": "Safe Passage (1994)",
-        "genres": "Drama",
-        "imdbId": "tt0111054",
-        "tmdbId": 49803
-      },
-      {
-        "title": "RoboCop 3 (1993)",
-        "genres": "Action|Crime|Drama|Sci-Fi|Thriller",
-        "imdbId": "tt0107978",
-        "tmdbId": 5550
-      },
-      {
-        "title": "Private Parts (1997)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0119951",
-        "tmdbId": 9403
-      },
-      {
-        "title": "Heavyweights (Heavy Weights) (1995)",
-        "genres": "Children|Comedy",
-        "imdbId": "tt0110006",
-        "tmdbId": 14819
-      },
-      {
-        "title": "Speechless (1994)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0111256",
-        "tmdbId": 15128
-      },
-      {
-        "title": "Richie Rich (1994)",
-        "genres": "Children|Comedy",
-        "imdbId": "tt0110989",
-        "tmdbId": 11011
-      },
-      {
-        "title": "Tank Girl (1995)",
-        "genres": "Action|Comedy|Sci-Fi",
-        "imdbId": "tt0114614",
-        "tmdbId": 9067
-      },
-      {
-        "title": "War Stories (1995)",
-        "genres": "Documentary",
-        "imdbId": "tt0114894",
-        "tmdbId": 365371
-      },
-      {
-        "title": "Target (1995)",
-        "genres": "Action|Drama",
-        "imdbId": "tt0114618",
-        "tmdbId": 124639
+        "title": "Ghost in the Shell (K\u00f4kaku kid\u00f4tai) (1995)",
+        "genres": "Animation|Sci-Fi",
+        "imdbId": "tt0113568",
+        "tmdbId": 9323
       }
     ]
   },
   "Shawshank Redemption, The (1994)": {
-    "movieId": 318,
+    "title": "Shawshank Redemption, The (1994)",
     "genres": "Crime|Drama",
     "imdbId": "tt0111161",
     "tmdbId": 278,
     "recommendations": [
       {
-        "title": "Smoke (1995)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0114478",
-        "tmdbId": 10149
-      },
-      {
-        "title": "Last Action Hero (1993)",
-        "genres": "Action|Adventure|Comedy|Fantasy",
-        "imdbId": "tt0107362",
-        "tmdbId": 9593
-      },
-      {
-        "title": "Billy Madison (1995)",
-        "genres": "Comedy",
-        "imdbId": "tt0112508",
-        "tmdbId": 11017
-      },
-      {
-        "title": "War, The (1994)",
-        "genres": "Adventure|Drama|War",
-        "imdbId": "tt0111667",
-        "tmdbId": 19855
-      },
-      {
-        "title": "Selena (1997)",
-        "genres": "Drama|Musical",
-        "imdbId": "tt0120094",
-        "tmdbId": 16052
-      },
-      {
-        "title": "Great Day in Harlem, A (1994)",
-        "genres": "Documentary",
-        "imdbId": "tt0109934",
-        "tmdbId": 124472
-      },
-      {
-        "title": "Disclosure (1994)",
-        "genres": "Drama|Thriller",
-        "imdbId": "tt0109635",
-        "tmdbId": 8984
-      },
-      {
-        "title": "Farinelli: il castrato (1994)",
-        "genres": "Drama|Musical",
-        "imdbId": "tt0109771",
-        "tmdbId": 10954
-      },
-      {
-        "title": "Little Women (1994)",
-        "genres": "Drama",
-        "imdbId": "tt0110367",
-        "tmdbId": 9587
-      },
-      {
-        "title": "Killer (Bulletproof Heart) (1994)",
-        "genres": "Drama|Thriller",
-        "imdbId": "tt0110259",
-        "tmdbId": 85247
-      },
-      {
-        "title": "Hunted, The (1995)",
-        "genres": "Action",
-        "imdbId": "tt0113360",
-        "tmdbId": 32631
-      }
-    ]
-  },
-  "Silence of the Lambs, The (1991)": {
-    "movieId": 593,
-    "genres": "Crime|Horror|Thriller",
-    "imdbId": "tt0102926",
-    "tmdbId": 274,
-    "recommendations": [
-      {
-        "title": "Umbrellas of Cherbourg, The (Parapluies de Cherbourg, Les) (1964)",
-        "genres": "Drama|Musical|Romance",
-        "imdbId": "tt0058450",
-        "tmdbId": 5967
-      },
-      {
-        "title": "Sleepless in Seattle (1993)",
-        "genres": "Comedy|Drama|Romance",
-        "imdbId": "tt0108160",
-        "tmdbId": 858
-      },
-      {
-        "title": "Dave (1993)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0106673",
-        "tmdbId": 11566
-      },
-      {
-        "title": "What's Eating Gilbert Grape (1993)",
-        "genres": "Drama",
-        "imdbId": "tt0108550",
-        "tmdbId": 1587
-      },
-      {
-        "title": "Hero (1992)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0104412",
-        "tmdbId": 10699
-      },
-      {
-        "title": "Demolition Man (1993)",
-        "genres": "Action|Adventure|Sci-Fi",
-        "imdbId": "tt0106697",
-        "tmdbId": 9739
-      },
-      {
-        "title": "Horse Soldiers, The (1959)",
-        "genres": "Adventure|War|Western",
-        "imdbId": "tt0052902",
-        "tmdbId": 17664
-      },
-      {
-        "title": "Relative Fear (1994)",
-        "genres": "Horror|Thriller",
-        "imdbId": "tt0110965",
-        "tmdbId": 92769
-      },
-      {
-        "title": "Dragonheart (1996)",
-        "genres": "Action|Adventure|Fantasy",
-        "imdbId": "tt0116136",
-        "tmdbId": 8840
-      },
-      {
-        "title": "Edge, The (1997)",
-        "genres": "Adventure|Drama",
-        "imdbId": "tt0119051",
-        "tmdbId": 9433
-      },
-      {
-        "title": "Good Man in Africa, A (1994)",
-        "genres": "Action|Adventure",
-        "imdbId": "tt0109920",
-        "tmdbId": 41006
-      },
-      {
-        "title": "Pecker (1998)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0126604",
-        "tmdbId": 11855
-      }
-    ]
-  },
-  "Matrix, The (1999)": {
-    "movieId": 2571,
-    "genres": "Action|Sci-Fi|Thriller",
-    "imdbId": "tt0133093",
-    "tmdbId": 603,
-    "recommendations": [
-      {
-        "title": "Muriel's Wedding (1994)",
-        "genres": "Comedy",
-        "imdbId": "tt0110598",
-        "tmdbId": 236
-      },
-      {
-        "title": "Nick of Time (1995)",
-        "genres": "Action|Thriller",
-        "imdbId": "tt0113972",
-        "tmdbId": 2086
-      },
-      {
-        "title": "Bad Boys (1995)",
-        "genres": "Action|Comedy|Crime|Drama|Thriller",
-        "imdbId": "tt0112442",
-        "tmdbId": 9737
-      },
-      {
-        "title": "Ed Wood (1994)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0109707",
-        "tmdbId": 522
-      },
-      {
-        "title": "Angela (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0112364",
-        "tmdbId": 32622
-      },
-      {
-        "title": "Basketball Diaries, The (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0112461",
-        "tmdbId": 10474
-      },
-      {
-        "title": "Swimming with Sharks (1995)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0114594",
-        "tmdbId": 20306
-      },
-      {
-        "title": "Joy Luck Club, The (1993)",
-        "genres": "Drama|Romance",
-        "imdbId": "tt0107282",
-        "tmdbId": 19931
-      },
-      {
-        "title": "Safe (1995)",
-        "genres": "Thriller",
-        "imdbId": "tt0114323",
-        "tmdbId": 32646
-      },
-      {
-        "title": "Cabinet of Dr. Ramirez, The (1991)",
-        "genres": "Comedy",
-        "imdbId": "tt0101530",
-        "tmdbId": 77314
-      },
-      {
-        "title": "Maximum Risk (1996)",
-        "genres": "Action|Adventure|Thriller",
-        "imdbId": "tt0117011",
-        "tmdbId": 10861
-      },
-      {
-        "title": "The Show (1995)",
-        "genres": "Documentary",
-        "imdbId": "tt0114435",
-        "tmdbId": 56088
-      }
-    ]
-  },
-  "Gladiator (2000)": {
-    "movieId": 3578,
-    "genres": "Action|Adventure|Drama",
-    "imdbId": "tt0172495",
-    "tmdbId": 98,
-    "recommendations": [
-      {
-        "title": "Amadeus (1984)",
-        "genres": "Drama",
-        "imdbId": "tt0086879",
-        "tmdbId": 279
-      },
-      {
-        "title": "Pie in the Sky (1996)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0114131",
-        "tmdbId": 110972
-      },
-      {
-        "title": "Coogan's Bluff (1968)",
-        "genres": "Crime",
-        "imdbId": "tt0062824",
-        "tmdbId": 26170
-      },
-      {
-        "title": "Meatballs Part II (1984)",
-        "genres": "Comedy",
-        "imdbId": "tt0087700",
-        "tmdbId": 40771
-      },
-      {
-        "title": "Kids of the Round Table (1995)",
-        "genres": "Adventure|Children|Comedy|Fantasy",
-        "imdbId": "tt0113541",
-        "tmdbId": 124057
-      },
-      {
-        "title": "Puppet Master 5: The Final Chapter (1994)",
-        "genres": "Horror|Sci-Fi|Thriller",
-        "imdbId": "tt0110916",
-        "tmdbId": 26958
-      },
-      {
-        "title": "Newton Boys, The (1998)",
+        "title": "Green Mile, The (1999)",
         "genres": "Crime|Drama",
-        "imdbId": "tt0120769",
-        "tmdbId": 42807
+        "imdbId": "tt0120689",
+        "tmdbId": 497
       },
       {
-        "title": "Emma (1996)",
-        "genres": "Comedy|Drama|Romance",
-        "imdbId": "tt0116191",
-        "tmdbId": 3573
+        "title": "Forrest Gump (1994)",
+        "genres": "Comedy|Drama|Romance|War",
+        "imdbId": "tt0109830",
+        "tmdbId": 13
       },
       {
-        "title": "Six Days Seven Nights (1998)",
-        "genres": "Adventure|Comedy|Romance",
-        "imdbId": "tt0120828",
-        "tmdbId": 6068
-      },
-      {
-        "title": "M\u00e9tisse (Caf\u00e9 au Lait) (1993)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0107642",
-        "tmdbId": 47507
-      },
-      {
-        "title": "Bulworth (1998)",
-        "genres": "Comedy|Drama|Romance",
-        "imdbId": "tt0118798",
-        "tmdbId": 9452
-      }
-    ]
-  },
-  "Memento (2000)": {
-    "movieId": 4226,
-    "genres": "Mystery|Thriller",
-    "imdbId": "tt0209144",
-    "tmdbId": 77,
-    "recommendations": [
-      {
-        "title": "Beyond Rangoon (1995)",
-        "genres": "Adventure|Drama|War",
-        "imdbId": "tt0112495",
-        "tmdbId": 1873
-      },
-      {
-        "title": "Cure, The (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0112757",
-        "tmdbId": 6715
-      },
-      {
-        "title": "Rembrandt (1936)",
-        "genres": "Drama",
-        "imdbId": "tt0028167",
-        "tmdbId": 50031
-      },
-      {
-        "title": "Dazed and Confused (1993)",
-        "genres": "Comedy",
-        "imdbId": "tt0106677",
-        "tmdbId": 9571
-      },
-      {
-        "title": "Accidental Tourist, The (1988)",
-        "genres": "Comedy|Drama|Romance",
-        "imdbId": "tt0094606",
-        "tmdbId": 31052
-      },
-      {
-        "title": "Halloween H20: 20 Years Later (Halloween 7: The Revenge of Laurie Strode) (1998)",
-        "genres": "Horror|Thriller",
-        "imdbId": "tt0120694",
-        "tmdbId": 11675
-      },
-      {
-        "title": "Celtic Pride (1996)",
-        "genres": "Comedy",
-        "imdbId": "tt0115851",
-        "tmdbId": 23449
-      },
-      {
-        "title": "Trial by Jury (1994)",
-        "genres": "Crime|Drama|Thriller",
-        "imdbId": "tt0111488",
-        "tmdbId": 41590
-      },
-      {
-        "title": "Platoon (1986)",
+        "title": "Schindler's List (1993)",
         "genres": "Drama|War",
-        "imdbId": "tt0091763",
-        "tmdbId": 792
-      },
-      {
-        "title": "Amos & Andrew (1993)",
-        "genres": "Comedy",
-        "imdbId": "tt0106266",
-        "tmdbId": 31000
-      },
-      {
-        "title": "Say It Isn't So (2001)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0239949",
-        "tmdbId": 20309
-      },
-      {
-        "title": "Manhattan (1979)",
-        "genres": "Comedy|Drama|Romance",
-        "imdbId": "tt0079522",
-        "tmdbId": 696
-      }
-    ]
-  },
-  "Lord of the Rings: The Fellowship of the Ring, The (2001)": {
-    "movieId": 4993,
-    "genres": "Adventure|Fantasy",
-    "imdbId": "tt0120737",
-    "tmdbId": 120,
-    "recommendations": [
-      {
-        "title": "Reluctant Debutante, The (1958)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0052126",
-        "tmdbId": 64382
-      },
-      {
-        "title": "For Whom the Bell Tolls (1943)",
-        "genres": "Adventure|Drama|Romance|War",
-        "imdbId": "tt0035896",
-        "tmdbId": 27854
-      },
-      {
-        "title": "Network (1976)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0074958",
-        "tmdbId": 10774
-      },
-      {
-        "title": "S.F.W. (1994)",
-        "genres": "Drama",
-        "imdbId": "tt0111048",
-        "tmdbId": 29444
-      },
-      {
-        "title": "Lotto Land (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0113695",
-        "tmdbId": 124619
-      },
-      {
-        "title": "Red Rock West (1992)",
-        "genres": "Thriller",
-        "imdbId": "tt0105226",
-        "tmdbId": 10427
-      },
-      {
-        "title": "Mask, The (1994)",
-        "genres": "Action|Comedy|Crime|Fantasy",
-        "imdbId": "tt0110475",
-        "tmdbId": 854
-      },
-      {
-        "title": "Albino Alligator (1996)",
-        "genres": "Crime|Thriller",
-        "imdbId": "tt0115495",
-        "tmdbId": 8744
-      },
-      {
-        "title": "Born American (1986)",
-        "genres": "Action|Drama|Thriller",
-        "imdbId": "tt0091313",
-        "tmdbId": 103960
-      },
-      {
-        "title": "Rembrandt (1936)",
-        "genres": "Drama",
-        "imdbId": "tt0028167",
-        "tmdbId": 50031
-      },
-      {
-        "title": "Presidio, The (1988)",
-        "genres": "Action|Crime|Romance|Thriller",
-        "imdbId": "tt0095897",
-        "tmdbId": 11851
-      },
-      {
-        "title": "Home for the Holidays (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0113321",
-        "tmdbId": 9089
-      }
-    ]
-  },
-  "Harry Potter and the Sorcerer's Stone (a.k.a. Harry Potter and the Philosopher's Stone) (2001)": {
-    "movieId": 4896,
-    "genres": "Adventure|Children|Fantasy",
-    "imdbId": "tt0241527",
-    "tmdbId": 671,
-    "recommendations": [
-      {
-        "title": "Mariachi, El (1992)",
-        "genres": "Action|Crime|Thriller|Western",
-        "imdbId": "tt0104815",
-        "tmdbId": 9367
-      },
-      {
-        "title": "Jakob the Liar (1999)",
-        "genres": "Drama",
-        "imdbId": "tt0120716",
-        "tmdbId": 2290
-      },
-      {
-        "title": "Kestrel's Eye (Falkens \u00f6ga) (1998)",
-        "genres": "Documentary",
-        "imdbId": "tt0183065",
-        "tmdbId": 121738
-      },
-      {
-        "title": "Mummy's Curse, The (1944)",
-        "genres": "Horror",
-        "imdbId": "tt0037098",
-        "tmdbId": 29242
-      },
-      {
-        "title": "Maverick (1994)",
-        "genres": "Adventure|Comedy|Western",
-        "imdbId": "tt0110478",
-        "tmdbId": 9359
-      },
-      {
-        "title": "Any Given Sunday (1999)",
-        "genres": "Drama",
-        "imdbId": "tt0146838",
-        "tmdbId": 9563
-      },
-      {
-        "title": "Escape from L.A. (1996)",
-        "genres": "Action|Adventure|Sci-Fi|Thriller",
-        "imdbId": "tt0116225",
-        "tmdbId": 10061
-      },
-      {
-        "title": "General, The (1926)",
-        "genres": "Comedy|War",
-        "imdbId": "tt0017925",
-        "tmdbId": 961
-      },
-      {
-        "title": "Phenomenon (1996)",
-        "genres": "Drama|Romance",
-        "imdbId": "tt0117333",
-        "tmdbId": 9294
-      },
-      {
-        "title": "Short Circuit (1986)",
-        "genres": "Comedy|Sci-Fi",
-        "imdbId": "tt0091949",
-        "tmdbId": 2605
-      },
-      {
-        "title": "Perfect Storm, The (2000)",
-        "genres": "Drama|Thriller",
-        "imdbId": "tt0177971",
-        "tmdbId": 2133
-      },
-      {
-        "title": "Goodbye, 20th Century (1998)",
-        "genres": "Drama|Sci-Fi",
-        "imdbId": "tt0179196",
-        "tmdbId": 90762
-      }
-    ]
-  },
-  "Spider-Man (2002)": {
-    "movieId": 5349,
-    "genres": "Action|Adventure|Sci-Fi|Thriller",
-    "imdbId": "tt0145487",
-    "tmdbId": 557,
-    "recommendations": [
-      {
-        "title": "War Room, The (1993)",
-        "genres": "Documentary",
-        "imdbId": "tt0108515",
-        "tmdbId": 26408
-      },
-      {
-        "title": "Ciao, Professore! (Io speriamo che me la cavo) (1992)",
-        "genres": "Drama",
-        "imdbId": "tt0107225",
-        "tmdbId": 23637
-      },
-      {
-        "title": "Rent-a-Kid (1995)",
-        "genres": "Comedy",
-        "imdbId": "tt0114268",
-        "tmdbId": 36357
-      },
-      {
-        "title": "American Wedding (American Pie 3) (2003)",
-        "genres": "Comedy",
-        "imdbId": "tt0328828",
-        "tmdbId": 8273
-      },
-      {
-        "title": "Snow White and the Seven Dwarfs (1937)",
-        "genres": "Animation|Children|Drama|Fantasy|Musical",
-        "imdbId": "tt0029583",
-        "tmdbId": 408
-      },
-      {
-        "title": "Halloween H20: 20 Years Later (Halloween 7: The Revenge of Laurie Strode) (1998)",
-        "genres": "Horror|Thriller",
-        "imdbId": "tt0120694",
-        "tmdbId": 11675
-      },
-      {
-        "title": "Spawn (1997)",
-        "genres": "Action|Adventure|Sci-Fi|Thriller",
-        "imdbId": "tt0120177",
-        "tmdbId": 10336
-      },
-      {
-        "title": "Boricua's Bond (2000)",
-        "genres": "Drama",
-        "imdbId": "tt0217287",
-        "tmdbId": 207731
-      },
-      {
-        "title": "Melody Time (1948)",
-        "genres": "Animation|Children|Musical",
-        "imdbId": "tt0040580",
-        "tmdbId": 13757
-      },
-      {
-        "title": "Two Much (1995)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0118001",
-        "tmdbId": 46029
-      },
-      {
-        "title": "Star Trek: Generations (1994)",
-        "genres": "Adventure|Drama|Sci-Fi",
-        "imdbId": "tt0111280",
-        "tmdbId": 193
-      },
-      {
-        "title": "Cops and Robbersons (1994)",
-        "genres": "Comedy",
-        "imdbId": "tt0109480",
-        "tmdbId": 26261
-      }
-    ]
-  },
-  "Finding Nemo (2003)": {
-    "movieId": 6377,
-    "genres": "Adventure|Animation|Children|Comedy",
-    "imdbId": "tt0266543",
-    "tmdbId": 12,
-    "recommendations": [
-      {
-        "title": "Tough and Deadly (1995)",
-        "genres": "Action|Drama|Thriller",
-        "imdbId": "tt0114706",
-        "tmdbId": 80350
-      },
-      {
-        "title": "What's Eating Gilbert Grape (1993)",
-        "genres": "Drama",
-        "imdbId": "tt0108550",
-        "tmdbId": 1587
-      },
-      {
-        "title": "All Things Fair (Lust och f\u00e4gring stor) (1995)",
-        "genres": "Drama|Romance|War",
-        "imdbId": "tt0113720",
-        "tmdbId": 27098
-      },
-      {
-        "title": "Jakob the Liar (1999)",
-        "genres": "Drama",
-        "imdbId": "tt0120716",
-        "tmdbId": 2290
-      },
-      {
-        "title": "Asphalt Jungle, The (1950)",
-        "genres": "Crime|Film-Noir",
-        "imdbId": "tt0042208",
-        "tmdbId": 16958
-      },
-      {
-        "title": "Mummy's Curse, The (1944)",
-        "genres": "Horror",
-        "imdbId": "tt0037098",
-        "tmdbId": 29242
-      },
-      {
-        "title": "Adventures of Robin Hood, The (1938)",
-        "genres": "Action|Adventure|Romance",
-        "imdbId": "tt0029843",
-        "tmdbId": 10907
-      },
-      {
-        "title": "3 Strikes (2000)",
-        "genres": "Comedy",
-        "imdbId": "tt0199290",
-        "tmdbId": 47816
-      },
-      {
-        "title": "Far and Away (1992)",
-        "genres": "Adventure|Drama|Romance",
-        "imdbId": "tt0104231",
-        "tmdbId": 11259
-      },
-      {
-        "title": "Last of the Mohicans, The (1992)",
-        "genres": "Action|Romance|War|Western",
-        "imdbId": "tt0104691",
-        "tmdbId": 9361
-      },
-      {
-        "title": "Truth About Cats & Dogs, The (1996)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0117979",
-        "tmdbId": 8866
-      },
-      {
-        "title": "Chocolat (2000)",
-        "genres": "Drama|Romance",
-        "imdbId": "tt0241303",
-        "tmdbId": 392
-      }
-    ]
-  },
-  "Pirates of the Caribbean: The Curse of the Black Pearl (2003)": {
-    "movieId": 6539,
-    "genres": "Action|Adventure|Comedy|Fantasy",
-    "imdbId": "tt0325980",
-    "tmdbId": 22,
-    "recommendations": [
-      {
-        "title": "Man Who Would Be King, The (1975)",
-        "genres": "Adventure|Drama",
-        "imdbId": "tt0073341",
-        "tmdbId": 983
-      },
-      {
-        "title": "Trippin' (1999)",
-        "genres": "Comedy",
-        "imdbId": "tt0160298",
-        "tmdbId": 53862
-      },
-      {
-        "title": "Prophecy, The (1995)",
-        "genres": "Fantasy|Horror|Mystery",
-        "imdbId": "tt0114194",
-        "tmdbId": 11980
-      },
-      {
-        "title": "Lawn Dogs (1997)",
-        "genres": "Drama",
-        "imdbId": "tt0119506",
-        "tmdbId": 35796
-      },
-      {
-        "title": "Before Sunrise (1995)",
-        "genres": "Drama|Romance",
-        "imdbId": "tt0112471",
-        "tmdbId": 76
-      },
-      {
-        "title": "Midnight in the Garden of Good and Evil (1997)",
-        "genres": "Crime|Drama|Mystery",
-        "imdbId": "tt0119668",
-        "tmdbId": 8197
-      },
-      {
-        "title": "Man Facing Southeast (1986)",
-        "genres": "Drama|Sci-Fi",
-        "imdbId": "tt0091214",
-        "tmdbId": 48797
-      },
-      {
-        "title": "Stand by Me (1986)",
-        "genres": "Adventure|Drama",
-        "imdbId": "tt0092005",
-        "tmdbId": 235
-      },
-      {
-        "title": "Honey, I Shrunk the Kids (1989)",
-        "genres": "Adventure|Children|Comedy|Fantasy|Sci-Fi",
-        "imdbId": "tt0097523",
-        "tmdbId": 9354
-      },
-      {
-        "title": "Scream 2 (1997)",
-        "genres": "Comedy|Horror|Mystery|Thriller",
-        "imdbId": "tt0120082",
-        "tmdbId": 4233
-      },
-      {
-        "title": "Alien\u00b3 (a.k.a. Alien 3) (1992)",
-        "genres": "Action|Horror|Sci-Fi|Thriller",
-        "imdbId": "tt0103644",
-        "tmdbId": 8077
-      },
-      {
-        "title": "Jackal, The (1997)",
-        "genres": "Action|Thriller",
-        "imdbId": "tt0119395",
-        "tmdbId": 4824
-      }
-    ]
-  },
-  "Shrek 2 (2004)": {
-    "movieId": 8360,
-    "genres": "Adventure|Animation|Children|Comedy|Musical|Romance",
-    "imdbId": "tt0298148",
-    "tmdbId": 809,
-    "recommendations": [
-      {
-        "title": "Red Sorghum (Hong gao liang) (1987)",
-        "genres": "Drama|War",
-        "imdbId": "tt0093206",
-        "tmdbId": 42006
-      },
-      {
-        "title": "Jakob the Liar (1999)",
-        "genres": "Drama",
-        "imdbId": "tt0120716",
-        "tmdbId": 2290
-      },
-      {
-        "title": "Mummy's Curse, The (1944)",
-        "genres": "Horror",
-        "imdbId": "tt0037098",
-        "tmdbId": 29242
-      },
-      {
-        "title": "Purple Rose of Cairo, The (1985)",
-        "genres": "Comedy|Drama|Fantasy|Romance",
-        "imdbId": "tt0089853",
-        "tmdbId": 10849
-      },
-      {
-        "title": "General, The (1926)",
-        "genres": "Comedy|War",
-        "imdbId": "tt0017925",
-        "tmdbId": 961
-      },
-      {
-        "title": "Star Trek: Generations (1994)",
-        "genres": "Adventure|Drama|Sci-Fi",
-        "imdbId": "tt0111280",
-        "tmdbId": 193
-      },
-      {
-        "title": "Sister Street Fighter (Onna hissatsu ken) (1974)",
-        "genres": "Action|Drama",
-        "imdbId": "tt0073714",
-        "tmdbId": 47313
-      },
-      {
-        "title": "Kestrel's Eye (Falkens \u00f6ga) (1998)",
-        "genres": "Documentary",
-        "imdbId": "tt0183065",
-        "tmdbId": 121738
-      },
-      {
-        "title": "Goodbye, 20th Century (1998)",
-        "genres": "Drama|Sci-Fi",
-        "imdbId": "tt0179196",
-        "tmdbId": 90762
-      },
-      {
-        "title": "Birdy (1984)",
-        "genres": "Drama|War",
-        "imdbId": "tt0086969",
-        "tmdbId": 11296
-      },
-      {
-        "title": "Get Shorty (1995)",
-        "genres": "Comedy|Crime|Thriller",
-        "imdbId": "tt0113161",
-        "tmdbId": 8012
-      },
-      {
-        "title": "Gone Fishin' (1997)",
-        "genres": "Comedy",
-        "imdbId": "tt0119214",
-        "tmdbId": 9054
-      }
-    ]
-  },
-  "Howl's Moving Castle (Hauru no ugoku shiro) (2004)": {
-    "movieId": 31658,
-    "genres": "Adventure|Animation|Fantasy|Romance",
-    "imdbId": "tt0347149",
-    "tmdbId": 4935,
-    "recommendations": [
-      {
-        "title": "Beauty of the Day (Belle de jour) (1967)",
-        "genres": "Drama",
-        "imdbId": "tt0061395",
-        "tmdbId": 649
-      },
-      {
-        "title": "7th Voyage of Sinbad, The (1958)",
-        "genres": "Action|Adventure|Fantasy",
-        "imdbId": "tt0051337",
-        "tmdbId": 15515
-      },
-      {
-        "title": "Airheads (1994)",
-        "genres": "Comedy",
-        "imdbId": "tt0109068",
-        "tmdbId": 13595
-      },
-      {
-        "title": "American Dream (1990)",
-        "genres": "Documentary",
-        "imdbId": "tt0099028",
-        "tmdbId": 41326
-      },
-      {
-        "title": "Driving Miss Daisy (1989)",
-        "genres": "Drama",
-        "imdbId": "tt0097239",
-        "tmdbId": 403
-      },
-      {
-        "title": "Silent Fall (1994)",
-        "genres": "Drama|Thriller",
-        "imdbId": "tt0111187",
-        "tmdbId": 39473
-      },
-      {
-        "title": "Basic Instinct (1992)",
-        "genres": "Crime|Mystery|Thriller",
-        "imdbId": "tt0103772",
-        "tmdbId": 402
-      },
-      {
-        "title": "To Catch a Thief (1955)",
-        "genres": "Crime|Mystery|Romance|Thriller",
-        "imdbId": "tt0048728",
-        "tmdbId": 381
-      },
-      {
-        "title": "Nick of Time (1995)",
-        "genres": "Action|Thriller",
-        "imdbId": "tt0113972",
-        "tmdbId": 2086
-      },
-      {
-        "title": "8 1/2 (8\u00bd) (1963)",
-        "genres": "Drama|Fantasy",
-        "imdbId": "tt0056801",
-        "tmdbId": 422
-      },
-      {
-        "title": "Tin Cup (1996)",
-        "genres": "Comedy|Drama|Romance",
-        "imdbId": "tt0117918",
-        "tmdbId": 10478
-      },
-      {
-        "title": "Magnum Force (1973)",
-        "genres": "Action|Crime|Drama|Thriller",
-        "imdbId": "tt0070355",
-        "tmdbId": 10648
-      }
-    ]
-  },
-  "Dark Knight, The (2008)": {
-    "movieId": 58559,
-    "genres": "Action|Crime|Drama|IMAX",
-    "imdbId": "tt0468569",
-    "tmdbId": 155,
-    "recommendations": [
-      {
-        "title": "Ace Ventura: Pet Detective (1994)",
-        "genres": "Comedy",
-        "imdbId": "tt0109040",
-        "tmdbId": 3049
-      },
-      {
-        "title": "My Favorite Season (1993)",
-        "genres": "Drama",
-        "imdbId": "tt0107471",
-        "tmdbId": 52873
-      },
-      {
-        "title": "Great White Hype, The (1996)",
-        "genres": "Comedy",
-        "imdbId": "tt0116448",
-        "tmdbId": 20759
-      },
-      {
-        "title": "Widows' Peak (1994)",
-        "genres": "Drama",
-        "imdbId": "tt0111712",
-        "tmdbId": 25440
-      },
-      {
-        "title": "Big Green, The (1995)",
-        "genres": "Children|Comedy",
-        "imdbId": "tt0112499",
-        "tmdbId": 26441
-      },
-      {
-        "title": "Criminals (1996)",
-        "genres": "Documentary",
-        "imdbId": "tt0115978",
-        "tmdbId": 538286
-      },
-      {
-        "title": "Casino (1995)",
-        "genres": "Crime|Drama",
-        "imdbId": "tt0112641",
-        "tmdbId": 524
-      },
-      {
-        "title": "Assassins (1995)",
-        "genres": "Action|Crime|Thriller",
-        "imdbId": "tt0112401",
-        "tmdbId": 9691
-      },
-      {
-        "title": "Home for the Holidays (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0113321",
-        "tmdbId": 9089
-      },
-      {
-        "title": "Red Sorghum (Hong gao liang) (1987)",
-        "genres": "Drama|War",
-        "imdbId": "tt0093206",
-        "tmdbId": 42006
-      },
-      {
-        "title": "Othello (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0114057",
-        "tmdbId": 16420
-      },
-      {
-        "title": "McCullochs, The (1975)",
-        "genres": "Drama",
-        "imdbId": "tt0073902",
-        "tmdbId": 291861
-      }
-    ]
-  },
-  "WALL\u00b7E (2008)": {
-    "movieId": 60069,
-    "genres": "Adventure|Animation|Children|Romance|Sci-Fi",
-    "imdbId": "tt0910970",
-    "tmdbId": 10681,
-    "recommendations": [
-      {
-        "title": "What's Eating Gilbert Grape (1993)",
-        "genres": "Drama",
-        "imdbId": "tt0108550",
-        "tmdbId": 1587
-      },
-      {
-        "title": "Tough and Deadly (1995)",
-        "genres": "Action|Drama|Thriller",
-        "imdbId": "tt0114706",
-        "tmdbId": 80350
-      },
-      {
-        "title": "Eye for an Eye (1996)",
-        "genres": "Drama|Thriller",
-        "imdbId": "tt0116260",
-        "tmdbId": 17182
-      },
-      {
-        "title": "All Things Fair (Lust och f\u00e4gring stor) (1995)",
-        "genres": "Drama|Romance|War",
-        "imdbId": "tt0113720",
-        "tmdbId": 27098
-      },
-      {
-        "title": "Casino (1995)",
-        "genres": "Crime|Drama",
-        "imdbId": "tt0112641",
-        "tmdbId": 524
-      },
-      {
-        "title": "Big Green, The (1995)",
-        "genres": "Children|Comedy",
-        "imdbId": "tt0112499",
-        "tmdbId": 26441
-      },
-      {
-        "title": "Othello (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0114057",
-        "tmdbId": 16420
-      },
-      {
-        "title": "Copycat (1995)",
-        "genres": "Crime|Drama|Horror|Mystery|Thriller",
-        "imdbId": "tt0112722",
-        "tmdbId": 1710
-      },
-      {
-        "title": "Three Colors: Red (Trois couleurs: Rouge) (1994)",
-        "genres": "Drama",
-        "imdbId": "tt0111495",
-        "tmdbId": 110
-      },
-      {
-        "title": "Amazing Panda Adventure, The (1995)",
-        "genres": "Adventure|Children",
-        "imdbId": "tt0112342",
-        "tmdbId": 30765
-      },
-      {
-        "title": "Desperado (1995)",
-        "genres": "Action|Romance|Western",
-        "imdbId": "tt0112851",
-        "tmdbId": 8068
-      },
-      {
-        "title": "Man of the House (1995)",
-        "genres": "Comedy",
-        "imdbId": "tt0113755",
-        "tmdbId": 40490
-      }
-    ]
-  },
-  "Inception (2010)": {
-    "movieId": 79132,
-    "genres": "Action|Crime|Drama|Mystery|Sci-Fi|Thriller|IMAX",
-    "imdbId": "tt1375666",
-    "tmdbId": 27205,
-    "recommendations": [
-      {
-        "title": "Newton Boys, The (1998)",
-        "genres": "Crime|Drama",
-        "imdbId": "tt0120769",
-        "tmdbId": 42807
-      },
-      {
-        "title": "M\u00e9tisse (Caf\u00e9 au Lait) (1993)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0107642",
-        "tmdbId": 47507
-      },
-      {
-        "title": "Ace Ventura: When Nature Calls (1995)",
-        "genres": "Comedy",
-        "imdbId": "tt0112281",
-        "tmdbId": 9273
-      },
-      {
-        "title": "Hook (1991)",
-        "genres": "Adventure|Comedy|Fantasy",
-        "imdbId": "tt0102057",
-        "tmdbId": 879
-      },
-      {
-        "title": "Martin Lawrence: You So Crazy (1994)",
-        "genres": "Comedy|Documentary",
-        "imdbId": "tt0111804",
-        "tmdbId": 38129
-      },
-      {
-        "title": "For Love of the Game (1999)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0126916",
-        "tmdbId": 10390
-      },
-      {
-        "title": "Seconds (1966)",
-        "genres": "Mystery|Sci-Fi|Thriller",
-        "imdbId": "tt0060955",
-        "tmdbId": 20620
-      },
-      {
-        "title": "Four Rooms (1995)",
-        "genres": "Comedy",
-        "imdbId": "tt0113101",
-        "tmdbId": 5
-      },
-      {
-        "title": "Star Trek: Generations (1994)",
-        "genres": "Adventure|Drama|Sci-Fi",
-        "imdbId": "tt0111280",
-        "tmdbId": 193
-      },
-      {
-        "title": "Mrs. Parker and the Vicious Circle (1994)",
-        "genres": "Drama",
-        "imdbId": "tt0110588",
-        "tmdbId": 23333
-      },
-      {
-        "title": "8 1/2 (8\u00bd) (1963)",
-        "genres": "Drama|Fantasy",
-        "imdbId": "tt0056801",
-        "tmdbId": 422
-      }
-    ]
-  },
-  "Interstellar (2014)": {
-    "movieId": 109487,
-    "genres": "Sci-Fi|IMAX",
-    "imdbId": "tt0816692",
-    "tmdbId": 157336,
-    "recommendations": [
-      {
-        "title": "The Portuguese Nun (2009)",
-        "genres": "Drama",
-        "imdbId": "tt1483735",
-        "tmdbId": 84016
-      },
-      {
-        "title": "When Hari Got Married (2013)",
-        "genres": "Documentary",
-        "imdbId": "tt2271771",
-        "tmdbId": 362092
-      },
-      {
-        "title": "The Motive (2017)",
-        "genres": "Drama|Thriller",
-        "imdbId": "tt5451244",
-        "tmdbId": 437036
-      },
-      {
-        "title": "Operation Valkyrie (2004)",
-        "genres": "Drama",
-        "imdbId": "tt0388437",
-        "tmdbId": 10417
-      },
-      {
-        "title": "Kim Possible Movie: So the Drama (2005)",
-        "genres": "Action|Adventure|Animation|Children|Drama",
-        "imdbId": "tt0446724",
-        "tmdbId": 20771
-      },
-      {
-        "title": "Mee-Shee: The Water Giant (2005)",
-        "genres": "Adventure|Children|Fantasy",
-        "imdbId": "tt0243462",
-        "tmdbId": 60596
-      },
-      {
-        "title": "War-Time Romance (1983)",
-        "genres": "(no genres listed)",
-        "imdbId": "tt0086561",
-        "tmdbId": 197366
-      },
-      {
-        "title": "Man of the Year (2002)",
-        "genres": "Action|Comedy|Drama|Romance",
-        "imdbId": "tt0319803",
-        "tmdbId": 54707
-      }
-    ]
-  },
-  "Spider-Man 2 (2004)": {
-    "movieId": 8636,
-    "genres": "Action|Adventure|Sci-Fi|IMAX",
-    "imdbId": "tt0316654",
-    "tmdbId": 558,
-    "recommendations": [
-      {
-        "title": "Jakob the Liar (1999)",
-        "genres": "Drama",
-        "imdbId": "tt0120716",
-        "tmdbId": 2290
-      },
-      {
-        "title": "Sabrina (1995)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0114319",
-        "tmdbId": 11860
-      },
-      {
-        "title": "Mummy's Curse, The (1944)",
-        "genres": "Horror",
-        "imdbId": "tt0037098",
-        "tmdbId": 29242
-      },
-      {
-        "title": "Clean Slate (1994)",
-        "genres": "Comedy",
-        "imdbId": "tt0109443",
-        "tmdbId": 18658
-      },
-      {
-        "title": "Purple Rose of Cairo, The (1985)",
-        "genres": "Comedy|Drama|Fantasy|Romance",
-        "imdbId": "tt0089853",
-        "tmdbId": 10849
-      },
-      {
-        "title": "Nobody Loves Me (Keiner liebt mich) (1994)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0110251",
-        "tmdbId": 11907
-      },
-      {
-        "title": "Red Sorghum (Hong gao liang) (1987)",
-        "genres": "Drama|War",
-        "imdbId": "tt0093206",
-        "tmdbId": 42006
-      },
-      {
-        "title": "Crow, The (1994)",
-        "genres": "Action|Crime|Fantasy|Thriller",
-        "imdbId": "tt0109506",
-        "tmdbId": 9495
-      },
-      {
-        "title": "General, The (1926)",
-        "genres": "Comedy|War",
-        "imdbId": "tt0017925",
-        "tmdbId": 961
-      },
-      {
-        "title": "Something for Everyone (1970)",
-        "genres": "Comedy|Crime",
-        "imdbId": "tt0066392",
-        "tmdbId": 150043
-      },
-      {
-        "title": "For a Few Dollars More (Per qualche dollaro in pi\u00f9) (1965)",
-        "genres": "Action|Drama|Thriller|Western",
-        "imdbId": "tt0059578",
-        "tmdbId": 938
-      },
-      {
-        "title": "Caveman (1981)",
-        "genres": "Comedy",
-        "imdbId": "tt0082146",
-        "tmdbId": 18905
-      }
-    ]
-  },
-  "Avengers, The (2012)": {
-    "movieId": 89745,
-    "genres": "Action|Adventure|Sci-Fi|IMAX",
-    "imdbId": "tt0848228",
-    "tmdbId": 24428,
-    "recommendations": [
-      {
-        "title": "Beauty of the Day (Belle de jour) (1967)",
-        "genres": "Drama",
-        "imdbId": "tt0061395",
-        "tmdbId": 649
-      },
-      {
-        "title": "Million Dollar Duck, The (a.k.a. $1,000,000 Duck) (1971)",
-        "genres": "Children|Comedy",
-        "imdbId": "tt0066728",
-        "tmdbId": 22777
-      },
-      {
-        "title": "School Daze (1988)",
-        "genres": "Drama",
-        "imdbId": "tt0096054",
-        "tmdbId": 36739
-      },
-      {
-        "title": "Kissing a Fool (1998)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0120723",
-        "tmdbId": 15513
-      },
-      {
-        "title": "Fear of a Black Hat (1994)",
-        "genres": "Comedy",
-        "imdbId": "tt0106880",
-        "tmdbId": 20239
-      },
-      {
-        "title": "Anaconda (1997)",
-        "genres": "Action|Adventure|Thriller",
-        "imdbId": "tt0118615",
-        "tmdbId": 9360
-      },
-      {
-        "title": "Something to Talk About (1995)",
-        "genres": "Comedy|Drama|Romance",
-        "imdbId": "tt0114496",
-        "tmdbId": 18402
-      },
-      {
-        "title": "Amateur (1994)",
-        "genres": "Crime|Drama|Thriller",
-        "imdbId": "tt0109093",
-        "tmdbId": 30157
-      },
-      {
-        "title": "Jury Duty (1995)",
-        "genres": "Comedy",
-        "imdbId": "tt0113500",
-        "tmdbId": 19326
-      },
-      {
-        "title": "Doctor Zhivago (1965)",
-        "genres": "Drama|Romance|War",
-        "imdbId": "tt0059113",
-        "tmdbId": 907
-      },
-      {
-        "title": "Associate, The (Associ\u00e9, L') (1979)",
-        "genres": "Comedy",
-        "imdbId": "tt0083587",
-        "tmdbId": 25739
-      },
-      {
-        "title": "Roommates (1995)",
-        "genres": "Comedy|Drama",
-        "imdbId": "tt0114296",
-        "tmdbId": 161495
-      }
-    ]
-  },
-  "Pacific Rim (2013)": {
-    "movieId": 103228,
-    "genres": "Action|Adventure|Sci-Fi|IMAX",
-    "imdbId": "tt1663662",
-    "tmdbId": 68726,
-    "recommendations": [
-      {
-        "title": "Independence Day (a.k.a. ID4) (1996)",
-        "genres": "Action|Adventure|Sci-Fi|Thriller",
-        "imdbId": "tt0116629",
-        "tmdbId": 602
-      },
-      {
-        "title": "Flashdance (1983)",
-        "genres": "Drama|Romance",
-        "imdbId": "tt0085549",
-        "tmdbId": 535
-      },
-      {
-        "title": "Regular Guys (Echte Kerle) (1996)",
-        "genres": "Comedy|Romance",
-        "imdbId": "tt0116164",
-        "tmdbId": 9098
-      },
-      {
-        "title": "Get on the Bus (1996)",
-        "genres": "Drama",
-        "imdbId": "tt0116404",
-        "tmdbId": 49471
-      },
-      {
-        "title": "Saving Private Ryan (1998)",
-        "genres": "Action|Drama|War",
-        "imdbId": "tt0120815",
-        "tmdbId": 857
-      },
-      {
-        "title": "Five Wives, Three Secretaries and Me (1998)",
-        "genres": "Documentary",
-        "imdbId": "tt0150574",
-        "tmdbId": 288772
-      },
-      {
-        "title": "2001: A Space Odyssey (1968)",
-        "genres": "Adventure|Drama|Sci-Fi",
-        "imdbId": "tt0062622",
-        "tmdbId": 62
-      },
-      {
-        "title": "Fallen (1998)",
-        "genres": "Crime|Drama|Fantasy|Thriller",
-        "imdbId": "tt0119099",
-        "tmdbId": 9411
-      },
-      {
-        "title": "Georgia (1995)",
-        "genres": "Drama",
-        "imdbId": "tt0113158",
-        "tmdbId": 97406
-      },
-      {
-        "title": "I Am Cuba (Soy Cuba/Ya Kuba) (1964)",
-        "genres": "Drama",
-        "imdbId": "tt0058604",
-        "tmdbId": 32015
+        "imdbId": "tt0108052",
+        "tmdbId": 424
       },
       {
         "title": "Godfather, The (1972)",
@@ -2190,10 +264,680 @@
         "tmdbId": 238
       },
       {
-        "title": "Doors, The (1991)",
+        "title": "Goodfellas (1990)",
+        "genres": "Crime|Drama",
+        "imdbId": "tt0099685",
+        "tmdbId": 769
+      },
+      {
+        "title": "Pulp Fiction (1994)",
+        "genres": "Comedy|Crime|Drama|Thriller",
+        "imdbId": "tt0110912",
+        "tmdbId": 680
+      },
+      {
+        "title": "Fight Club (1999)",
+        "genres": "Action|Crime|Drama|Thriller",
+        "imdbId": "tt0137523",
+        "tmdbId": 550
+      },
+      {
+        "title": "American History X (1998)",
+        "genres": "Crime|Drama",
+        "imdbId": "tt0120586",
+        "tmdbId": 73
+      },
+      {
+        "title": "One Flew Over the Cuckoo's Nest (1975)",
         "genres": "Drama",
-        "imdbId": "tt0101761",
-        "tmdbId": 10537
+        "imdbId": "tt0073486",
+        "tmdbId": 510
+      },
+      {
+        "title": "Departed, The (2006)",
+        "genres": "Crime|Drama|Thriller",
+        "imdbId": "tt0407887",
+        "tmdbId": 1422
+      },
+      {
+        "title": "Usual Suspects, The (1995)",
+        "genres": "Crime|Mystery|Thriller",
+        "imdbId": "tt0114814",
+        "tmdbId": 629
+      },
+      {
+        "title": "Prestige, The (2006)",
+        "genres": "Drama|Mystery|Sci-Fi|Thriller",
+        "imdbId": "tt0482571",
+        "tmdbId": 1124
+      }
+    ]
+  },
+  "Dark Knight, The (2008)": {
+    "title": "Dark Knight, The (2008)",
+    "genres": "Action|Crime|Drama|IMAX",
+    "imdbId": "tt0468569",
+    "tmdbId": 155,
+    "recommendations": [
+      {
+        "title": "Batman Begins (2005)",
+        "genres": "Action|Crime|IMAX",
+        "imdbId": "tt0372784",
+        "tmdbId": 272
+      },
+      {
+        "title": "Dark Knight Rises, The (2012)",
+        "genres": "Action|Adventure|Crime|IMAX",
+        "imdbId": "tt1345836",
+        "tmdbId": 49026
+      },
+      {
+        "title": "Iron Man (2008)",
+        "genres": "Action|Adventure|Sci-Fi",
+        "imdbId": "tt0371746",
+        "tmdbId": 1726
+      },
+      {
+        "title": "Avengers, The (2012)",
+        "genres": "Action|Adventure|Sci-Fi|IMAX",
+        "imdbId": "tt0848228",
+        "tmdbId": 24428
+      },
+      {
+        "title": "Spider-Man (2002)",
+        "genres": "Action|Adventure|Sci-Fi|Thriller",
+        "imdbId": "tt0145487",
+        "tmdbId": 557
+      },
+      {
+        "title": "X-Men (2000)",
+        "genres": "Action|Adventure|Sci-Fi",
+        "imdbId": "tt0120903",
+        "tmdbId": 36657
+      },
+      {
+        "title": "Watchmen (2009)",
+        "genres": "Action|Drama|Mystery|Sci-Fi|Thriller|IMAX",
+        "imdbId": "tt0409459",
+        "tmdbId": 13183
+      },
+      {
+        "title": "V for Vendetta (2006)",
+        "genres": "Action|Sci-Fi|Thriller|IMAX",
+        "imdbId": "tt0434409",
+        "tmdbId": 752
+      },
+      {
+        "title": "Inception (2010)",
+        "genres": "Action|Crime|Drama|Mystery|Sci-Fi|Thriller|IMAX",
+        "imdbId": "tt1375666",
+        "tmdbId": 27205
+      },
+      {
+        "title": "Captain America: The Winter Soldier (2014)",
+        "genres": "Action|Adventure|Sci-Fi|IMAX",
+        "imdbId": "tt1843866",
+        "tmdbId": 100402
+      },
+      {
+        "title": "Guardians of the Galaxy (2014)",
+        "genres": "Action|Adventure|Sci-Fi",
+        "imdbId": "tt2015381",
+        "tmdbId": 118340
+      },
+      {
+        "title": "Logan (2017)",
+        "genres": "Action|Sci-Fi",
+        "imdbId": "tt3315342",
+        "tmdbId": 263115
+      }
+    ]
+  },
+  "Inception (2010)": {
+    "title": "Inception (2010)",
+    "genres": "Action|Crime|Drama|Mystery|Sci-Fi|Thriller|IMAX",
+    "imdbId": "tt1375666",
+    "tmdbId": 27205,
+    "recommendations": [
+      {
+        "title": "Interstellar (2014)",
+        "genres": "Sci-Fi|IMAX",
+        "imdbId": "tt0816692",
+        "tmdbId": 157336
+      },
+      {
+        "title": "Prestige, The (2006)",
+        "genres": "Drama|Mystery|Sci-Fi|Thriller",
+        "imdbId": "tt0482571",
+        "tmdbId": 1124
+      },
+      {
+        "title": "Memento (2000)",
+        "genres": "Mystery|Thriller",
+        "imdbId": "tt0209144",
+        "tmdbId": 77
+      },
+      {
+        "title": "Shutter Island (2010)",
+        "genres": "Drama|Mystery|Thriller",
+        "imdbId": "tt1130884",
+        "tmdbId": 11324
+      },
+      {
+        "title": "Matrix, The (1999)",
+        "genres": "Action|Sci-Fi|Thriller",
+        "imdbId": "tt0133093",
+        "tmdbId": 603
+      },
+      {
+        "title": "Dark Knight, The (2008)",
+        "genres": "Action|Crime|Drama|IMAX",
+        "imdbId": "tt0468569",
+        "tmdbId": 155
+      },
+      {
+        "title": "Fight Club (1999)",
+        "genres": "Action|Crime|Drama|Thriller",
+        "imdbId": "tt0137523",
+        "tmdbId": 550
+      },
+      {
+        "title": "Eternal Sunshine of the Spotless Mind (2004)",
+        "genres": "Drama|Romance|Sci-Fi",
+        "imdbId": "tt0338013",
+        "tmdbId": 38
+      },
+      {
+        "title": "Donnie Darko (2001)",
+        "genres": "Drama|Mystery|Sci-Fi|Thriller",
+        "imdbId": "tt0246578",
+        "tmdbId": 141
+      },
+      {
+        "title": "Source Code (2011)",
+        "genres": "Action|Drama|Mystery|Sci-Fi|Thriller",
+        "imdbId": "tt0945513",
+        "tmdbId": 45612
+      },
+      {
+        "title": "Moon (2009)",
+        "genres": "Drama|Mystery|Sci-Fi|Thriller",
+        "imdbId": "tt1182345",
+        "tmdbId": 17431
+      },
+      {
+        "title": "Arrival (2016)",
+        "genres": "Sci-Fi",
+        "imdbId": "tt2543164",
+        "tmdbId": 329865
+      }
+    ]
+  },
+  "Lord of the Rings: The Fellowship of the Ring, The (2001)": {
+    "title": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+    "genres": "Adventure|Fantasy",
+    "imdbId": "tt0120737",
+    "tmdbId": 120,
+    "recommendations": [
+      {
+        "title": "Lord of the Rings: The Two Towers, The (2002)",
+        "genres": "Adventure|Fantasy",
+        "imdbId": "tt0167261",
+        "tmdbId": 121
+      },
+      {
+        "title": "Lord of the Rings: The Return of the King, The (2003)",
+        "genres": "Action|Adventure|Drama|Fantasy",
+        "imdbId": "tt0167260",
+        "tmdbId": 122
+      },
+      {
+        "title": "Hobbit: An Unexpected Journey, The (2012)",
+        "genres": "Adventure|Fantasy|IMAX",
+        "imdbId": "tt0903624",
+        "tmdbId": 49051
+      },
+      {
+        "title": "Harry Potter and the Sorcerer's Stone (a.k.a. Harry Potter and the Philosopher's Stone) (2001)",
+        "genres": "Adventure|Children|Fantasy",
+        "imdbId": "tt0241527",
+        "tmdbId": 671
+      },
+      {
+        "title": "Harry Potter and the Chamber of Secrets (2002)",
+        "genres": "Adventure|Fantasy",
+        "imdbId": "tt0295297",
+        "tmdbId": 672
+      },
+      {
+        "title": "Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005)",
+        "genres": "Adventure|Children|Fantasy",
+        "imdbId": "tt0363771",
+        "tmdbId": 411
+      },
+      {
+        "title": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+        "genres": "Action|Adventure|Comedy|Fantasy",
+        "imdbId": "tt0325980",
+        "tmdbId": 22
+      },
+      {
+        "title": "Gladiator (2000)",
+        "genres": "Action|Adventure|Drama",
+        "imdbId": "tt0172495",
+        "tmdbId": 98
+      },
+      {
+        "title": "Braveheart (1995)",
+        "genres": "Action|Drama|War",
+        "imdbId": "tt0112573",
+        "tmdbId": 197
+      },
+      {
+        "title": "Star Wars: Episode IV - A New Hope (1977)",
+        "genres": "Action|Adventure|Sci-Fi",
+        "imdbId": "tt0076759",
+        "tmdbId": 11
+      },
+      {
+        "title": "Avatar (2009)",
+        "genres": "Action|Adventure|Sci-Fi|IMAX",
+        "imdbId": "tt0499549",
+        "tmdbId": 19995
+      },
+      {
+        "title": "300 (2007)",
+        "genres": "Action|Fantasy|War|IMAX",
+        "imdbId": "tt0416449",
+        "tmdbId": 1271
+      }
+    ]
+  },
+  "Harry Potter and the Sorcerer's Stone (a.k.a. Harry Potter and the Philosopher's Stone) (2001)": {
+    "title": "Harry Potter and the Sorcerer's Stone (a.k.a. Harry Potter and the Philosopher's Stone) (2001)",
+    "genres": "Adventure|Children|Fantasy",
+    "imdbId": "tt0241527",
+    "tmdbId": 671,
+    "recommendations": [
+      {
+        "title": "Harry Potter and the Chamber of Secrets (2002)",
+        "genres": "Adventure|Fantasy",
+        "imdbId": "tt0295297",
+        "tmdbId": 672
+      },
+      {
+        "title": "Harry Potter and the Prisoner of Azkaban (2004)",
+        "genres": "Adventure|Fantasy|IMAX",
+        "imdbId": "tt0304141",
+        "tmdbId": 673
+      },
+      {
+        "title": "Harry Potter and the Goblet of Fire (2005)",
+        "genres": "Adventure|Fantasy|Thriller|IMAX",
+        "imdbId": "tt0330373",
+        "tmdbId": 674
+      },
+      {
+        "title": "Harry Potter and the Order of the Phoenix (2007)",
+        "genres": "Adventure|Drama|Fantasy|IMAX",
+        "imdbId": "tt0373889",
+        "tmdbId": 675
+      },
+      {
+        "title": "Harry Potter and the Half-Blood Prince (2009)",
+        "genres": "Adventure|Fantasy|Mystery|Romance|IMAX",
+        "imdbId": "tt0417741",
+        "tmdbId": 767
+      },
+      {
+        "title": "Lord of the Rings: The Fellowship of the Ring, The (2001)",
+        "genres": "Adventure|Fantasy",
+        "imdbId": "tt0120737",
+        "tmdbId": 120
+      },
+      {
+        "title": "Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005)",
+        "genres": "Adventure|Children|Fantasy",
+        "imdbId": "tt0363771",
+        "tmdbId": 411
+      },
+      {
+        "title": "Spider-Man (2002)",
+        "genres": "Action|Adventure|Sci-Fi|Thriller",
+        "imdbId": "tt0145487",
+        "tmdbId": 557
+      },
+      {
+        "title": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+        "genres": "Action|Adventure|Comedy|Fantasy",
+        "imdbId": "tt0325980",
+        "tmdbId": 22
+      },
+      {
+        "title": "Fantastic Beasts and Where to Find Them (2016)",
+        "genres": "Fantasy",
+        "imdbId": "tt3183660",
+        "tmdbId": 259316
+      },
+      {
+        "title": "Percy Jackson & the Olympians: The Lightning Thief (2010)",
+        "genres": "Adventure|Fantasy",
+        "imdbId": "tt0814255",
+        "tmdbId": 32657
+      }
+    ]
+  },
+  "Pulp Fiction (1994)": {
+    "title": "Pulp Fiction (1994)",
+    "genres": "Comedy|Crime|Drama|Thriller",
+    "imdbId": "tt0110912",
+    "tmdbId": 680,
+    "recommendations": [
+      {
+        "title": "Reservoir Dogs (1992)",
+        "genres": "Crime|Mystery|Thriller",
+        "imdbId": "tt0105236",
+        "tmdbId": 500
+      },
+      {
+        "title": "Kill Bill: Vol. 1 (2003)",
+        "genres": "Action|Crime|Thriller",
+        "imdbId": "tt0266697",
+        "tmdbId": 24
+      },
+      {
+        "title": "Kill Bill: Vol. 2 (2004)",
+        "genres": "Action|Drama|Thriller",
+        "imdbId": "tt0378194",
+        "tmdbId": 393
+      },
+      {
+        "title": "Inglourious Basterds (2009)",
+        "genres": "Action|Drama|War",
+        "imdbId": "tt0361748",
+        "tmdbId": 16869
+      },
+      {
+        "title": "Django Unchained (2012)",
+        "genres": "Action|Drama|Western",
+        "imdbId": "tt1853728",
+        "tmdbId": 68718
+      },
+      {
+        "title": "Goodfellas (1990)",
+        "genres": "Crime|Drama",
+        "imdbId": "tt0099685",
+        "tmdbId": 769
+      },
+      {
+        "title": "Fight Club (1999)",
+        "genres": "Action|Crime|Drama|Thriller",
+        "imdbId": "tt0137523",
+        "tmdbId": 550
+      },
+      {
+        "title": "Snatch (2000)",
+        "genres": "Comedy|Crime|Thriller",
+        "imdbId": "tt0208092",
+        "tmdbId": 107
+      },
+      {
+        "title": "Lock, Stock & Two Smoking Barrels (1998)",
+        "genres": "Comedy|Crime|Thriller",
+        "imdbId": "tt0120735",
+        "tmdbId": 100
+      },
+      {
+        "title": "Fargo (1996)",
+        "genres": "Comedy|Crime|Drama|Thriller",
+        "imdbId": "tt0116282",
+        "tmdbId": 275
+      },
+      {
+        "title": "No Country for Old Men (2007)",
+        "genres": "Crime|Drama",
+        "imdbId": "tt0477348",
+        "tmdbId": 6977
+      },
+      {
+        "title": "Big Lebowski, The (1998)",
+        "genres": "Comedy|Crime",
+        "imdbId": "tt0118715",
+        "tmdbId": 115
+      }
+    ]
+  },
+  "Interstellar (2014)": {
+    "title": "Interstellar (2014)",
+    "genres": "Sci-Fi|IMAX",
+    "imdbId": "tt0816692",
+    "tmdbId": 157336,
+    "recommendations": [
+      {
+        "title": "Inception (2010)",
+        "genres": "Action|Crime|Drama|Mystery|Sci-Fi|Thriller|IMAX",
+        "imdbId": "tt1375666",
+        "tmdbId": 27205
+      },
+      {
+        "title": "Gravity (2013)",
+        "genres": "Action|Sci-Fi|IMAX",
+        "imdbId": "tt1454468",
+        "tmdbId": 49047
+      },
+      {
+        "title": "Arrival (2016)",
+        "genres": "Sci-Fi",
+        "imdbId": "tt2543164",
+        "tmdbId": 329865
+      },
+      {
+        "title": "2001: A Space Odyssey (1968)",
+        "genres": "Adventure|Drama|Sci-Fi",
+        "imdbId": "tt0062622",
+        "tmdbId": 62
+      },
+      {
+        "title": "Moon (2009)",
+        "genres": "Drama|Mystery|Sci-Fi|Thriller",
+        "imdbId": "tt1182345",
+        "tmdbId": 17431
+      },
+      {
+        "title": "Contact (1997)",
+        "genres": "Drama|Sci-Fi",
+        "imdbId": "tt0118884",
+        "tmdbId": 686
+      },
+      {
+        "title": "Prestige, The (2006)",
+        "genres": "Drama|Mystery|Sci-Fi|Thriller",
+        "imdbId": "tt0482571",
+        "tmdbId": 1124
+      },
+      {
+        "title": "Dark Knight, The (2008)",
+        "genres": "Action|Crime|Drama|IMAX",
+        "imdbId": "tt0468569",
+        "tmdbId": 155
+      },
+      {
+        "title": "Ex Machina (2015)",
+        "genres": "Drama|Sci-Fi|Thriller",
+        "imdbId": "tt0470752",
+        "tmdbId": 264660
+      },
+      {
+        "title": "Edge of Tomorrow (2014)",
+        "genres": "Action|Sci-Fi|IMAX",
+        "imdbId": "tt1631867",
+        "tmdbId": 137113
+      },
+      {
+        "title": "Blade Runner 2049 (2017)",
+        "genres": "Sci-Fi",
+        "imdbId": "tt1856101",
+        "tmdbId": 335984
+      }
+    ]
+  },
+  "Forrest Gump (1994)": {
+    "title": "Forrest Gump (1994)",
+    "genres": "Comedy|Drama|Romance|War",
+    "imdbId": "tt0109830",
+    "tmdbId": 13,
+    "recommendations": [
+      {
+        "title": "Shawshank Redemption, The (1994)",
+        "genres": "Crime|Drama",
+        "imdbId": "tt0111161",
+        "tmdbId": 278
+      },
+      {
+        "title": "Green Mile, The (1999)",
+        "genres": "Crime|Drama",
+        "imdbId": "tt0120689",
+        "tmdbId": 497
+      },
+      {
+        "title": "Cast Away (2000)",
+        "genres": "Drama",
+        "imdbId": "tt0162222",
+        "tmdbId": 8358
+      },
+      {
+        "title": "Big (1988)",
+        "genres": "Comedy|Drama|Fantasy|Romance",
+        "imdbId": "tt0094737",
+        "tmdbId": 2280
+      },
+      {
+        "title": "Saving Private Ryan (1998)",
+        "genres": "Action|Drama|War",
+        "imdbId": "tt0120815",
+        "tmdbId": 857
+      },
+      {
+        "title": "Schindler's List (1993)",
+        "genres": "Drama|War",
+        "imdbId": "tt0108052",
+        "tmdbId": 424
+      },
+      {
+        "title": "Good Will Hunting (1997)",
+        "genres": "Drama|Romance",
+        "imdbId": "tt0119217",
+        "tmdbId": 489
+      },
+      {
+        "title": "Rain Man (1988)",
+        "genres": "Drama",
+        "imdbId": "tt0095953",
+        "tmdbId": 380
+      },
+      {
+        "title": "Philadelphia (1993)",
+        "genres": "Drama",
+        "imdbId": "tt0107818",
+        "tmdbId": 9800
+      },
+      {
+        "title": "Pursuit of Happyness, The (2006)",
+        "genres": "Drama",
+        "imdbId": "tt0454921",
+        "tmdbId": 1402
+      },
+      {
+        "title": "Life Is Beautiful (La Vita \u00e8 bella) (1997)",
+        "genres": "Comedy|Drama|Romance|War",
+        "imdbId": "tt0118799",
+        "tmdbId": 637
+      },
+      {
+        "title": "Curious Case of Benjamin Button, The (2008)",
+        "genres": "Drama|Fantasy|Mystery|Romance",
+        "imdbId": "tt0421715",
+        "tmdbId": 4922
+      }
+    ]
+  },
+  "Lion King, The (1994)": {
+    "title": "Lion King, The (1994)",
+    "genres": "Adventure|Animation|Children|Drama|Musical|IMAX",
+    "imdbId": "tt0110357",
+    "tmdbId": 8587,
+    "recommendations": [
+      {
+        "title": "Aladdin (1992)",
+        "genres": "Adventure|Animation|Children|Comedy|Musical",
+        "imdbId": "tt0103639",
+        "tmdbId": 812
+      },
+      {
+        "title": "Beauty and the Beast (1991)",
+        "genres": "Animation|Children|Fantasy|Musical|Romance|IMAX",
+        "imdbId": "tt0101414",
+        "tmdbId": 10020
+      },
+      {
+        "title": "Little Mermaid, The (1989)",
+        "genres": "Animation|Children|Comedy|Musical|Romance",
+        "imdbId": "tt0097757",
+        "tmdbId": 10144
+      },
+      {
+        "title": "Toy Story (1995)",
+        "genres": "Adventure|Animation|Children|Comedy|Fantasy",
+        "imdbId": "tt0114709",
+        "tmdbId": 862
+      },
+      {
+        "title": "Finding Nemo (2003)",
+        "genres": "Adventure|Animation|Children|Comedy",
+        "imdbId": "tt0266543",
+        "tmdbId": 12
+      },
+      {
+        "title": "Tarzan (1999)",
+        "genres": "Adventure|Animation|Children|Drama",
+        "imdbId": "tt0120855",
+        "tmdbId": 37135
+      },
+      {
+        "title": "Mulan (1998)",
+        "genres": "Adventure|Animation|Children|Comedy|Drama|Musical|Romance",
+        "imdbId": "tt0120762",
+        "tmdbId": 10674
+      },
+      {
+        "title": "Pocahontas (1995)",
+        "genres": "Animation|Children|Drama|Musical|Romance",
+        "imdbId": "tt0114148",
+        "tmdbId": 10530
+      },
+      {
+        "title": "Jungle Book, The (1967)",
+        "genres": "Animation|Children|Comedy|Musical",
+        "imdbId": "tt0061852",
+        "tmdbId": 9325
+      },
+      {
+        "title": "Hercules (1997)",
+        "genres": "Adventure|Animation|Children|Comedy|Musical",
+        "imdbId": "tt0119282",
+        "tmdbId": 11970
+      },
+      {
+        "title": "Frozen (2013)",
+        "genres": "Adventure|Animation|Comedy|Fantasy|Musical|Romance",
+        "imdbId": "tt2294629",
+        "tmdbId": 109445
+      },
+      {
+        "title": "Moana (2016)",
+        "genres": "Adventure|Animation|Children|Comedy|Fantasy",
+        "imdbId": "tt3521164",
+        "tmdbId": 277834
       }
     ]
   }
