@@ -64,7 +64,7 @@
             </h1>
             <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
                 ML Research Engineer specializing in Multi-Agent Reinforcement Learning, 
-                Goal-Conditioned RL, and Curriculum Learning
+                LLM Agents &amp; Engineering, and Goal-Conditioned RL
             </p>
             <div class="flex gap-4 justify-center">
                 <a href="#projects" class="px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition">
@@ -95,10 +95,12 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                        I'm a Machine Learning Research Engineer passionate about advancing 
-                        the field of <strong>Multi-Agent Reinforcement Learning</strong>. My work focuses on 
-                        developing algorithms that enable agents to learn complex behaviors 
-                        through goal-conditioned learning and curriculum strategies.
+                        I'm a Machine Learning Research Engineer with experience spanning 
+                        <strong>Multi-Agent Reinforcement Learning</strong> and <strong>LLM Agents &amp; Engineering</strong>. 
+                        At InstaDeep, I develop MARL algorithms using contrastive learning and curriculum strategies. 
+                        During my Master's, I built autonomous LLM agents for ML engineering, 
+                        designed inference-time scaling strategies, and fine-tuned large language models — 
+                        bridging the gap between RL and modern LLM systems.
                     </p>
                     <p class="text-lg text-gray-600 leading-relaxed">
                         Currently at <strong>InstaDeep</strong> working with the Mava team on 
@@ -110,11 +112,15 @@
                 <div class="space-y-4">
                     <div class="p-4 bg-gray-50 rounded-lg">
                         <h3 class="font-semibold text-gray-900">Research Interests</h3>
-                        <p class="text-gray-600 mt-1">Multi-Agent RL • Goal-Conditioned RL • Contrastive Learning • Curriculum Learning • LLM Agents</p>
+                        <p class="text-gray-600 mt-1">Multi-Agent RL • Goal-Conditioned RL • Contrastive Learning • Curriculum Learning • LLM Agents • Inference-Time Scaling</p>
                     </div>
                     <div class="p-4 bg-gray-50 rounded-lg">
                         <h3 class="font-semibold text-gray-900">Tech Stack</h3>
-                        <p class="text-gray-600 mt-1">JAX • Python • PyTorch • TPU/GPU • Distributed Systems</p>
+                        <p class="text-gray-600 mt-1">JAX • Python • PyTorch • vLLM • HuggingFace • TPU/GPU • Distributed Systems</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h3 class="font-semibold text-gray-900">LLM Experience</h3>
+                        <p class="text-gray-600 mt-1">Autonomous LLM Agents • Inference-Time Scaling • SFT/Fine-tuning • vLLM Serving • MLE-Bench Evaluation</p>
                     </div>
                 </div>
             </div>
@@ -199,15 +205,22 @@
                 </a>
                 <!-- Project 3 -->
                 <a href="https://github.com/Asimawad/aide-agent" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">Research</span>
+                        <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded">Master's Thesis</span>
+                    </div>
                     <h3 class="text-lg font-semibold mb-2">AIDE Agent</h3>
                     <p class="text-gray-600 text-sm mb-4">
-                        Automatic tree search LLM-based agent for code generation and 
-                        problem solving with intelligent exploration.
+                        Autonomous LLM agent for end-to-end ML engineering via tree search. 
+                        Implements inference-time scaling strategies (Self-Reflection, Planner-Coder, 
+                        Self-Consistency) to make open-source LLMs competitive with GPT-4 on MLE-Bench. 
+                        Served locally via vLLM.
                     </p>
-                    <div class="flex gap-2">
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">LLM</span>
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">Agents</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">LLM Agents</span>
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">Tree Search</span>
+                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">vLLM</span>
+                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">Inference Scaling</span>
                     </div>
                 </a>
                 <!-- Project 4 -->
@@ -228,16 +241,18 @@
                 <!-- Project 5 -->
                 <a href="https://github.com/Asimawad/DeepSeek-SFT" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs font-medium rounded">Private</span>
+                        <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded">LLM Engineering</span>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">DeepSeek-SFT</h3>
                     <p class="text-gray-600 text-sm mb-4">
-                        Supervised fine-tuning experiments on DeepSeek-7B for specialized 
-                        task performance.
+                        Supervised fine-tuning pipeline for DeepSeek-7B. Custom training data curation, 
+                        LoRA/full fine-tuning experiments, and evaluation for specialized ML engineering tasks.
                     </p>
-                    <div class="flex gap-2">
+                    <div class="flex flex-wrap gap-2">
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">LLM</span>
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">Fine-tuning</span>
+                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">SFT</span>
+                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">DeepSeek</span>
+                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">HuggingFace</span>
                     </div>
                 </a>
                 <!-- Project 6 -->
@@ -352,7 +367,7 @@
     <!-- Footer -->
     <footer class="py-8 bg-gray-900 border-t border-gray-800">
         <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
-            <p>© 2025 Asim Osman. Built with curiosity and caffeine.</p>
+            <p>© 2026 Asim Osman. Built with curiosity and caffeine.</p>
         </div>
     </footer>
 </body>
