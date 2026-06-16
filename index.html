@@ -45,6 +45,7 @@
                 <a href="#about" class="hover:text-gray-900 transition">About</a>
                 <a href="#experience" class="hover:text-gray-900 transition">Experience</a>
                 <a href="#projects" class="hover:text-gray-900 transition">Projects</a>
+                <a href="#publications" class="hover:text-gray-900 transition">Publications</a>
                 <a href="/journey.html" class="hover:text-gray-900 transition text-indigo-600">Journey</a>
                 <a href="#contact" class="hover:text-gray-900 transition">Contact</a>
             </div>
@@ -68,7 +69,7 @@
                 <a href="#projects" class="px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition">
                     View Projects
                 </a>
-                <a href="assets/docs/Asim_Osman_CV.pdf" download class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition">
+                <a href="assets/docs/Asim_resume.pdf" download="Asim_Osman_CV.pdf" class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition">
                     📄 Download CV
                 </a>
                 <a href="#contact" class="px-6 py-3 border border-gray-300 rounded-lg font-medium hover:border-gray-400 transition">
@@ -97,14 +98,16 @@
                         <strong>Multi-Agent Reinforcement Learning</strong> and <strong>LLM Agents &amp; Engineering</strong>. 
                         At InstaDeep, I develop MARL algorithms using contrastive learning and curriculum strategies. 
                         During my Master's, I built autonomous LLM agents for ML engineering, 
-                        designed inference-time scaling strategies, and fine-tuned large language models — 
-                        bridging the gap between RL and modern LLM systems.
+                        designed inference-time scaling strategies, and fine-tuned large language models —
+                        bridging the gap between RL and modern LLM systems. My recent work, <strong>CPPO</strong> —
+                        the first on-policy contrastive RL algorithm — is under review at NeurIPS 2026
+                        (<a href="https://arxiv.org/abs/2605.13554" target="_blank" class="text-indigo-600 hover:underline">arXiv:2605.13554</a>).
                     </p>
                     <p class="text-lg text-gray-600 leading-relaxed">
-                        Currently at <strong>InstaDeep</strong> working with the Mava team on 
-                        cutting-edge MARL research. I hold a Master's degree from 
-                        <strong>AIMS South Africa</strong> through the AI for Science program 
-                        in partnership with DeepMind.
+                        Currently at <strong>InstaDeep</strong> working with the Mava team on
+                        cutting-edge MARL research. I hold a Master's in AI for Science from
+                        <strong>AIMS South Africa / UCT</strong> — graduated with Distinction (top of cohort)
+                        as a Google DeepMind Scholar.
                     </p>
                 </div>
                 <div class="space-y-4">
@@ -136,7 +139,7 @@
                             <h3 class="text-xl font-semibold">AI Research Engineer</h3>
                             <p class="text-indigo-600 font-medium"><a href="https://instadeep.com/" target="_blank" class="hover:underline">InstaDeep</a></p>
                         </div>
-                        <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Jul 2025 - Present</span>
+                        <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Aug 2025 - Present</span>
                     </div>
                     <p class="text-gray-600">
                         Working with the Mava team on multi-agent reinforcement learning research. 
@@ -200,6 +203,24 @@
                 A selection of my original research and engineering projects
             </p>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project: CPPO -->
+                <a href="https://arxiv.org/abs/2605.13554" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block border border-indigo-100">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">Research</span>
+                        <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded">NeurIPS 2026 (under review)</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">CPPO — Contrastive Proximal Policy Optimisation</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        The first on-policy contrastive RL algorithm, and the first to handle discrete action
+                        spaces — learns goal-conditioned behaviour with no reward function, replay buffer, or GAE.
+                        Across 18 tasks in 5 suites, matches or beats reward-engineered PPO. arXiv:2605.13554.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">Contrastive RL</span>
+                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">MARL</span>
+                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">JAX/Flax</span>
+                    </div>
+                </a>
                 <!-- Project 1 -->
                 <a href="https://github.com/Asimawad/VinePPO" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block">
                     <div class="flex items-center gap-2 mb-3">
@@ -240,10 +261,10 @@
                     </div>
                     <h3 class="text-lg font-semibold mb-2">AIDE Agent</h3>
                     <p class="text-gray-600 text-sm mb-4">
-                        Autonomous LLM agent for end-to-end ML engineering via tree search. 
-                        Implements inference-time scaling strategies (Self-Reflection, Planner-Coder, 
-                        Self-Consistency) to make open-source LLMs competitive with GPT-4 on MLE-Bench. 
-                        Served locally via vLLM.
+                        Autonomous LLM agent for end-to-end ML engineering via tree search.
+                        Uses inference-time scaling (Self-Reflection, Planner-Coder, Self-Consistency)
+                        and a self-hosted vLLM backend to get a distilled 32B open model to a 30% medal
+                        rate on MLE-Bench — matching OpenAI o4-mini. (MSc thesis.)
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">LLM Agents</span>
@@ -271,26 +292,6 @@
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">Agentic Workflows</span>
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">LiteLLM</span>
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">Hydra</span>
-                    </div>
-                </div>
-                <!-- Project 5: Tinkerer v1 -->
-                <div class="bg-gray-50 p-6 rounded-xl card-hover block">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded">LLM Engineering</span>
-                        <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded">InstaDeep</span>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">Tinkerer: ML Research Assistant</h3>
-                    <p class="text-gray-600 text-sm mb-4">
-                        AI coding agent that generates ML ideas, implements them in code, 
-                        auto-debugs using stack traces, and launches experiments on cloud compute. 
-                        Acts as an autonomous research intern exploring the solution space.
-                        Built with OpenAI API, LiteLLM, Flask, and Docker.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">LLM Agents</span>
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">Auto-Debug</span>
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">Flask</span>
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">Docker</span>
                     </div>
                 </div>
                 <!-- Project 6 -->
@@ -323,37 +324,6 @@
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">SFT</span>
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">DeepSeek</span>
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">HuggingFace</span>
-                    </div>
-                </a>
-                <!-- Project 6 -->
-                <a href="https://github.com/Asimawad/ITS-bench" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">Research</span>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">ITS-Bench</h3>
-                    <p class="text-gray-600 text-sm mb-4">
-                        Benchmarking inference time scaling strategies on MLE-bench. 
-                        Measuring how well AI agents perform at ML engineering.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">Benchmark</span>
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">Agents</span>
-                    </div>
-                </a>
-                <!-- Project 7 -->
-                <a href="https://github.com/Asimawad/aide-ds" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">Research</span>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">AIDE-DS</h3>
-                    <p class="text-gray-600 text-sm mb-4">
-                        AIDE: The Machine Learning CodeGen Agent. Automated ML engineering 
-                        through intelligent code generation.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">LLM</span>
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">CodeGen</span>
-                        <span class="text-xs bg-gray-200 px-2 py-1 rounded">Agents</span>
                     </div>
                 </a>
                 <!-- Project 8 -->
@@ -389,10 +359,6 @@
                         <h4 class="font-medium mb-1">Bayesian Active Learning</h4>
                         <p class="text-sm text-gray-600">BNNs for uncertainty quantification</p>
                     </a>
-                    <a href="https://github.com/Asimawad/Cryptography-and-Security-Technology" target="_blank" class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition">
-                        <h4 class="font-medium mb-1">Cryptography</h4>
-                        <p class="text-sm text-gray-600">SHA, AES, Vigenere implementations</p>
-                    </a>
                 </div>
             </div>
 
@@ -404,6 +370,29 @@
                 <a href="https://github.com/Asimawad?tab=repositories" target="_blank" 
                    class="text-indigo-600 hover:text-indigo-700 font-medium py-3">
                     All repositories →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Publications</h2>
+            <div class="space-y-4">
+                <a href="https://arxiv.org/abs/2605.13554" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm card-hover">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded">NeurIPS 2026 (under review)</span>
+                    </div>
+                    <h3 class="font-semibold">Self-Supervised On-Policy Reinforcement Learning via Contrastive Proximal Policy Optimisation (CPPO)</h3>
+                    <p class="text-gray-600 text-sm mt-1">Asim Osman, et al. — arXiv:2605.13554, 2026. Workshop version submitted to RLBRew @ RLC 2026.</p>
+                </a>
+                <a href="https://openreview.net/pdf?id=aVepdnlRb5" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm card-hover">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">ICLR 2023</span>
+                    </div>
+                    <h3 class="font-semibold">Machine Translation Baselines for Arabic–Swahili</h3>
+                    <p class="text-gray-600 text-sm mt-1">Asim Osman, et al. — ICLR 2023, Tiny Papers Initiative.</p>
                 </a>
             </div>
         </div>
