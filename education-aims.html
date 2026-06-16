@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS / UCT — My Education | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .prose-c p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose-c a { color: #4f46e5; }
+        .prose-c a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <div class="flex gap-8 text-sm font-medium text-gray-600">
+                <a href="/" class="hover:text-gray-900 transition">← Back Home</a>
+                <a href="education-uofk.html" class="hover:text-gray-900 transition">University of Khartoum</a>
+                <a href="/journey.html" class="hover:text-gray-900 transition text-indigo-600">Journey</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div class="max-w-3xl mx-auto px-6">
+            <p class="text-sm font-semibold uppercase tracking-wider text-indigo-500 mb-2">About my Education</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-3">AIMS South Africa <span class="text-gray-400 font-normal">/ UCT</span></h1>
+            <p class="text-xl text-gray-600 mb-4">MSc in Artificial Intelligence for Science — 2024–2025</p>
+            <div class="flex flex-wrap gap-2 text-sm">
+                <span class="px-3 py-1 bg-white rounded-full text-gray-700 shadow-sm">Distinction · Top Student (AIMS Excellence Award)</span>
+                <span class="px-3 py-1 bg-white rounded-full text-gray-700 shadow-sm">Google DeepMind Scholarship</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essay -->
+    <section class="py-16">
+        <div class="max-w-3xl mx-auto px-6 text-gray-700 text-lg prose-c">
+            <p>
+                AIMS was the year that turned me from someone who liked AI into someone who does AI research.
+                It is a pan-African program — I studied alongside a cohort of scholars from across the continent,
+                in Muizenberg, just outside Cape Town, on a
+                <strong>Google DeepMind scholarship</strong>. The pace was relentless and the people were
+                extraordinary, and I came out of it as the top student in the cohort.
+            </p>
+            <p>
+                The curriculum was compressed and broad. The skills courses gave me the foundations —
+                <a href="https://github.com/Asimawad/Machine-Learning-Calorimeter-Showers-Classifier" target="_blank">Introduction to Machine Learning</a>,
+                <a href="https://github.com/Asimawad/Computer-Vision-Transfer-Learning" target="_blank">Computer Vision</a>,
+                Bayesian Inference, and a three-week intensive in
+                <strong>CUDA programming for GPUs</strong> with Mike Giles, where I wrote GPU kernels in C/C++ for
+                Monte Carlo simulation and finite-difference PDE solvers. The review courses pushed in every
+                direction at once: <a href="https://github.com/Asimawad/RL-LunarLander-REINFORCE" target="_blank">Reinforcement Learning</a>,
+                <a href="https://github.com/Asimawad/Bayesian-Deep-Active-Learning" target="_blank">Active Learning &amp; Information Theory</a>,
+                generative models, simulation for neuroscience, and AI for climate and public health. I earned a
+                Distinction in almost all of them.
+            </p>
+            <p>
+                The turning point was the three-week
+                <a href="https://github.com/Asimawad/llm-workshop-aims-2025" target="_blank">Science &amp; Engineering of Large Language Models</a>
+                workshop, taught by researchers from Google DeepMind and Meta. We went from tokenization and
+                attention all the way to the systems side — scaling laws, roofline models, FSDP, sharding,
+                quantization, and serving. That was where I realized I cared not just about the models but about
+                <em>how you make them run efficiently</em> — the part of ML I keep gravitating back to.
+            </p>
+            <p>
+                Somewhere along the way I became the person people came to for two things: explaining a concept
+                from first principles, and getting the technical stack actually working. I like both. Teaching a
+                thing is how I make sure I really understand it.
+            </p>
+            <p>
+                My thesis,
+                <a href="https://github.com/Asimawad/aide-agent" target="_blank">Scaling Inference-Time Compute for ML-Engineering Agents (AIDE)</a>,
+                pulled all of it together. I built an autonomous LLM agent that tackles Kaggle-style ML problems
+                as a tree search, served distilled DeepSeek-R1 models on a self-hosted vLLM backend, and studied
+                how inference-time strategies let small open models punch above their weight. The best configuration
+                — a 32B model with a decomposed planner–coder — reached a <strong>30% medal rate on MLE-Bench,
+                matching OpenAI's o4-mini</strong>. It was supervised by Arnu Pretorius at InstaDeep, which is how
+                I ended up there afterwards, working on reinforcement learning.
+            </p>
+            <p>
+                AIMS gave me the breadth, the confidence, and the network — and it's where the thread that runs
+                through my work now (RL, goal-conditioned learning, and the systems that support them) really began.
+            </p>
+        </div>
+    </section>
+
+    <!-- Quick links -->
+    <section class="pb-20">
+        <div class="max-w-3xl mx-auto px-6">
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">Relevant work</h3>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <a href="https://github.com/Asimawad/aide-agent" target="_blank" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h4 class="font-medium">AIDE Agent (Thesis)</h4>
+                    <p class="text-sm text-gray-600">Autonomous LLM agent for ML engineering — 30% MLE-Bench medal rate.</p>
+                </a>
+                <a href="https://github.com/Asimawad/llm-workshop-aims-2025" target="_blank" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h4 class="font-medium">LLM Workshop (AIMS 2025)</h4>
+                    <p class="text-sm text-gray-600">Materials from the DeepMind/Meta LLM systems workshop.</p>
+                </a>
+                <a href="https://github.com/Asimawad/Computer-Vision-Transfer-Learning" target="_blank" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h4 class="font-medium">Computer Vision</h4>
+                    <p class="text-sm text-gray-600">Transfer learning, denoising, and vehicle re-identification.</p>
+                </a>
+                <a href="https://github.com/Asimawad/Bayesian-Deep-Active-Learning" target="_blank" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h4 class="font-medium">Bayesian Active Learning</h4>
+                    <p class="text-sm text-gray-600">Uncertainty quantification with Bayesian neural networks.</p>
+                </a>
+            </div>
+            <div class="mt-8 flex gap-4">
+                <a href="education-uofk.html" class="px-5 py-2.5 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition">← University of Khartoum</a>
+                <a href="/" class="px-5 py-2.5 border border-gray-300 rounded-lg text-sm font-medium hover:border-gray-400 transition">Back home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-gray-900 text-center text-gray-500 text-sm">
+        <p>© 2026 Asim Osman.</p>
+    </footer>
+</body>
+</html>

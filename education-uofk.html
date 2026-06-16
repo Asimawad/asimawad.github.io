@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Khartoum — My Education | Asim Osman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .prose-c p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose-c a { color: #4f46e5; }
+        .prose-c a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold gradient-text">AO</a>
+            <div class="flex gap-8 text-sm font-medium text-gray-600">
+                <a href="/" class="hover:text-gray-900 transition">← Back Home</a>
+                <a href="education-aims.html" class="hover:text-gray-900 transition">AIMS / UCT</a>
+                <a href="/journey.html" class="hover:text-gray-900 transition text-indigo-600">Journey</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div class="max-w-3xl mx-auto px-6">
+            <p class="text-sm font-semibold uppercase tracking-wider text-indigo-500 mb-2">About my Education</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-3">University of Khartoum</h1>
+            <p class="text-xl text-gray-600 mb-4">BSc (Hons), Electrical &amp; Electronic / Software Engineering — 2016–2023</p>
+            <div class="flex flex-wrap gap-2 text-sm">
+                <span class="px-3 py-1 bg-indigo-600 text-white rounded-full font-semibold shadow-sm">First Class Honours · 9.18 / 10 (final year)</span>
+                <span class="px-3 py-1 bg-white rounded-full text-gray-700 shadow-sm">Best Graduation Project (Joint First)</span>
+                <span class="px-3 py-1 bg-white rounded-full text-gray-700 shadow-sm">Best Student in Department, 2022</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essay -->
+    <section class="py-16">
+        <div class="max-w-3xl mx-auto px-6 text-gray-700 text-lg prose-c">
+            <p>
+                Khartoum is where the foundations were laid. I studied electrical and electronic engineering with
+                a software engineering track, which in practice meant a lot of math and a lot of building — from
+                circuits and signals to data structures, algorithms,
+                <a href="https://github.com/Asimawad/Computer-Graphics-code-CPP" target="_blank">computer graphics</a>,
+                <a href="https://github.com/Asimawad/Assembly-Code" target="_blank">computer architecture (assembly)</a>, and
+                <a href="https://github.com/Asimawad/Cryptography-and-Security-Technology" target="_blank">cryptography</a>.
+                It was a broad, demanding degree, and it gave me the habit I still rely on: understand something
+                from first principles, then build it.
+            </p>
+            <p>
+                Outside of coursework, I fell into competitive programming. I competed in
+                <strong>IEEEXtreme</strong> — our team placed around 4th in Sudan and roughly 300th of 5,500+ teams
+                worldwide — alongside the university's coding club and hackathons. Those late nights solving algorithm
+                problems taught me to think under pressure. I stopped after university, which I regret; it's a muscle
+                I'm rebuilding now.
+            </p>
+            <p>
+                This is also where I found the AI community — and started bringing others into it. With
+                <a href="https://github.com/Asimawad/IndabaX-2022" target="_blank"><strong>IndabaX Sudan</strong></a> I went from volunteer (2019) to content-team lead, organizer, and
+                speaker (2022), and organizer again (2025) — including an "Introduction to Deep Learning with PyTorch"
+                talk to around 200 people, some of whom went on to careers in AI. I also tutored Calculus to junior
+                students, led the Social Affairs Committee of the Outstanding Students Congress (Almultaga), and was
+                active in the Google Developer Student Club. I still mentor Sudanese students applying to Master's programs.
+            </p>
+            <p>
+                My graduation project was my first real taste of research. With <strong>Ahmed Elmahdy</strong> , <strong>Mohammed Saeed</strong> and
+                <strong>Hiba Imam</strong>, I built neural machine translation systems for <strong>Arabic–Swahili</strong>,
+                a low-resource pair with almost no parallel data. I studied the Transformer architecture from scratch and
+                implemented a baseline from the ground up; then we created the data ourselves — aligning the Bible
+                verse-by-verse into what was, at the time, the largest Arabic–Swahili parallel corpus — and fine-tuned
+                multilingual models on top of it. The work was accepted to
+                <a href="https://openreview.net/pdf?id=aVepdnlRb5" target="_blank">ICLR 2023 (Tiny Papers)</a>.
+                Going from an idea, to a dataset, to a published paper showed me what research actually feels like.
+            </p>
+            <p>
+                All of this happened against an unstable backdrop in Sudan, and eventually the war — my transcript even
+                carries a visible gap, with years lost between 2020 and 2022. Finishing took as much resilience as
+                anything else. I still graduated <strong>First Class</strong> — earning a <strong>9.18 / 10 in my final,
+                specialization year</strong> — along with the Best Graduation Project award and recognition as a top
+                student in my department. I left Khartoum
+                with strong fundamentals, a first publication, a community I'd helped build, and the conviction to go
+                further — which took me to AIMS.
+            </p>
+        </div>
+    </section>
+
+    <!-- Quick links -->
+    <section class="pb-20">
+        <div class="max-w-3xl mx-auto px-6">
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">Relevant work</h3>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <a href="https://github.com/Asimawad/Arabic-to-Swahili-Machine-Translation" target="_blank" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h4 class="font-medium">Arabic–Swahili NMT (Thesis)</h4>
+                    <p class="text-sm text-gray-600">First large-scale dataset + NMT baselines · ICLR 2023.</p>
+                </a>
+                <a href="https://github.com/Asimawad/Cryptography-and-Security-Technology" target="_blank" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h4 class="font-medium">Cryptography</h4>
+                    <p class="text-sm text-gray-600">SHA, AES, and Vigenère implementations.</p>
+                </a>
+                <a href="https://github.com/Asimawad/Computer-Graphics-code-CPP" target="_blank" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h4 class="font-medium">Computer Graphics (C++)</h4>
+                    <p class="text-sm text-gray-600">Graphics programming coursework in C++.</p>
+                </a>
+                <a href="https://github.com/Asimawad/Assembly-Code" target="_blank" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h4 class="font-medium">Assembly</h4>
+                    <p class="text-sm text-gray-600">Low-level / computer-architecture coursework.</p>
+                </a>
+                <a href="https://github.com/Asimawad/IndabaX-2022" target="_blank" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h4 class="font-medium">IndabaX Sudan 2022</h4>
+                    <p class="text-sm text-gray-600">Workshop content I prepared and presented.</p>
+                </a>
+            </div>
+            <div class="mt-8 flex gap-4">
+                <a href="education-aims.html" class="px-5 py-2.5 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition">AIMS / UCT →</a>
+                <a href="/" class="px-5 py-2.5 border border-gray-300 rounded-lg text-sm font-medium hover:border-gray-400 transition">Back home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-gray-900 text-center text-gray-500 text-sm">
+        <p>© 2026 Asim Osman.</p>
+    </footer>
+</body>
+</html>
