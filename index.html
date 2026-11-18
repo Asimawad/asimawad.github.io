@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asim Osman | AI Research Engineer</title>
+    <title>Asim Osman | Reinforcement Learning Researcher</title>
+    <meta name="description" content="Asim Osman — ML researcher working on contrastive, goal-conditioned and multi-agent reinforcement learning. Co-first author of CPPO (NeurIPS 2026).">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +42,7 @@
     <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold gradient-text">AO</a>
-            <div class="flex gap-8 text-sm font-medium text-gray-600">
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
                 <a href="#about" class="hover:text-gray-900 transition">About</a>
                 <a href="#experience" class="hover:text-gray-900 transition">Experience</a>
                 <a href="#projects" class="hover:text-gray-900 transition">Projects</a>
@@ -64,7 +65,7 @@
                             <h3 class="font-semibold text-gray-900">AIMS South Africa / UCT</h3>
                             <span class="text-indigo-600">→</span>
                         </div>
-                        <p class="text-sm text-gray-600">MSc in AI for Science · Distinction (Top Student)</p>
+                        <p class="text-sm text-gray-600">MSc in AI for Science · Distinction · AIMS Excellence Award</p>
                         <p class="text-xs text-gray-400 mt-1">Google DeepMind Scholar · 2024–2025</p>
                     </a>
                     <a href="education-uofk.html" class="block bg-white p-5 rounded-xl shadow-sm card-hover border border-gray-100">
@@ -73,7 +74,7 @@
                             <span class="text-indigo-600">→</span>
                         </div>
                         <p class="text-sm text-gray-600">BSc Electrical &amp; Electronic / Software Engineering</p>
-                        <p class="text-xs text-gray-400 mt-1">GPA 9.18/10 · 2016–2023</p>
+                        <p class="text-xs text-gray-400 mt-1">First Class · final-year GPA 9.18/10 · 2016–2023</p>
                     </a>
                 </div>
             </div>
@@ -83,15 +84,19 @@
             <h1 class="text-5xl md:text-6xl font-bold mb-4">
                 Hi, I'm <span class="gradient-text">Asim</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                I'm an AI Engineer based in Cape Town, South Africa. I specialize in Multi-Agent Reinforcement Learning, 
-                LLM Agents &amp; Engineering, and Goal-Conditioned Reinforcement Learning
+            <p class="text-xl md:text-2xl text-gray-600 mb-6 max-w-2xl mx-auto">
+                I'm a machine learning researcher based in Kigali, Rwanda. I work on reinforcement learning
+                without hand-designed rewards (contrastive &amp; goal-conditioned RL) and cooperative multi-agent RL.
             </p>
-            <div class="flex gap-4 justify-center">
+            <div class="flex flex-wrap gap-2 justify-center mb-8">
+                <a href="#publications" class="px-3 py-1 bg-indigo-50 text-indigo-700 text-sm font-medium rounded-full border border-indigo-100 hover:bg-indigo-100 transition">🎉 Two papers at NeurIPS 2026</a>
+                <span class="px-3 py-1 bg-green-50 text-green-700 text-sm font-medium rounded-full border border-green-100">Open to PhD positions for 2027</span>
+            </div>
+            <div class="flex flex-wrap gap-4 justify-center">
                 <a href="#projects" class="px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition">
                     View Projects
                 </a>
-                <a href="assets/docs/Asim_resume.pdf" download="Asim_Osman_CV.pdf" class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition">
+                <a href="assets/docs/Asim_Osman_CV.pdf" download="Asim_Osman_CV.pdf" class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition">
                     📄 Download CV
                 </a>
                 <a href="#contact" class="px-6 py-3 border border-gray-300 rounded-lg font-medium hover:border-gray-400 transition">
@@ -117,26 +122,24 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                        I'm an AI Research Engineer with experience spanning 
-                        <strong>Multi-Agent Reinforcement Learning</strong> and <strong>LLM Agents &amp; Engineering</strong>. 
-                        At InstaDeep, I develop MARL algorithms using contrastive learning and curriculum strategies. 
-                        During my Master's, I built autonomous LLM agents for ML engineering, 
-                        designed inference-time scaling strategies, and fine-tuned large language models —
-                        bridging the gap between RL and modern LLM systems. My recent work, <strong>CPPO</strong> —
-                        the first on-policy contrastive RL algorithm — is under review at NeurIPS 2026
+                        I work on <strong>reinforcement learning that learns from goals instead of rewards</strong>.
+                        My recent work, <strong>CPPO</strong>, is an on-policy contrastive RL algorithm that needs no reward
+                        function and no replay buffer, and matches or beats PPO trained on hand-designed rewards on 12 of 18 tasks.
+                        It was accepted to the <strong>NeurIPS 2026 main track</strong>, where I'm co-first author
                         (<a href="https://arxiv.org/abs/2605.13554" target="_blank" class="text-indigo-600 hover:underline">arXiv:2605.13554</a>).
+                        I'm also a co-author on <strong>ATLAS</strong>, inference-time search for teams of up to 200 agents, also at NeurIPS 2026.
                     </p>
                     <p class="text-lg text-gray-600 leading-relaxed">
-                        Currently at <strong>InstaDeep</strong> working with the Mava team on
-                        cutting-edge MARL research. I hold a Master's in AI for Science from
-                        <strong>AIMS South Africa / UCT</strong> — graduated with Distinction (top of cohort)
-                        as a Google DeepMind Scholar.
+                        I did this work as a research engineer at <strong>InstaDeep</strong> with the Mava team, and I'm now a
+                        machine learning engineer at <strong>DeepGate</strong>. Before that, I did my MSc in AI for Science at
+                        <strong>AIMS South Africa / UCT</strong> as a Google DeepMind Scholar, graduating with Distinction and the
+                        AIMS Excellence Award. I'm applying for PhD positions starting in 2027.
                     </p>
                 </div>
                 <div class="space-y-4">
                     <div class="p-4 bg-gray-50 rounded-lg">
                         <h3 class="font-semibold text-gray-900">Research Interests</h3>
-                        <p class="text-gray-600 mt-1">Multi-Agent RL • Goal-Conditioned RL • Contrastive Learning • Curriculum Learning • LLM Agents • Inference-Time Scaling</p>
+                        <p class="text-gray-600 mt-1">Contrastive RL • Goal-Conditioned RL • Multi-Agent RL • Self-Supervised RL • Curriculum Learning • LLM Agents &amp; Inference-Time Scaling</p>
                     </div>
                     <div class="p-4 bg-gray-50 rounded-lg">
                         <h3 class="font-semibold text-gray-900">Tech Stack</h3>
@@ -151,23 +154,49 @@
         </div>
     </section>
 
+    <!-- News -->
+    <section id="news" class="py-16">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center">News</h2>
+            <ul class="bg-white rounded-xl shadow-sm divide-y divide-gray-100">
+                <li class="p-4 flex gap-4"><span class="text-sm text-gray-400 w-24 shrink-0">Oct 2026</span><span class="text-gray-700">Joined <strong>DeepGate</strong> as a machine learning engineer.</span></li>
+                <li class="p-4 flex gap-4"><span class="text-sm text-gray-400 w-24 shrink-0">Sep 2026</span><span class="text-gray-700"><strong>CPPO</strong> (co-first author) and <strong>ATLAS</strong> accepted to the <strong>NeurIPS 2026</strong> main track.</span></li>
+                <li class="p-4 flex gap-4"><span class="text-sm text-gray-400 w-24 shrink-0">Sep 2026</span><span class="text-gray-700">Graduated MSc in AI for Science (UCT / AIMS South Africa) with Distinction.</span></li>
+                <li class="p-4 flex gap-4"><span class="text-sm text-gray-400 w-24 shrink-0">Aug 2026</span><span class="text-gray-700">Received a <strong>NeurIPS 2026 Affinity Support award</strong> (Muslims in ML) to present CPPO.</span></li>
+                <li class="p-4 flex gap-4"><span class="text-sm text-gray-400 w-24 shrink-0">2026</span><span class="text-gray-700">Workshop version of CPPO selected as a <strong>spotlight</strong> at RLBRew @ RLC 2026.</span></li>
+            </ul>
+        </div>
+    </section>
+
     <!-- Experience -->
     <section id="experience" class="py-24">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12 text-center">Experience</h2>
             <div class="space-y-8">
                 <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-                    <div class="flex justify-between items-start mb-2">
+                    <div class="flex justify-between items-start mb-2 gap-4">
                         <div>
-                            <h3 class="text-xl font-semibold">AI Research Engineer</h3>
-                            <p class="text-indigo-600 font-medium"><a href="https://instadeep.com/" target="_blank" class="hover:underline">InstaDeep</a></p>
+                            <h3 class="text-xl font-semibold">Machine Learning Engineer</h3>
+                            <p class="text-indigo-600 font-medium">DeepGate · United Kingdom (remote)</p>
                         </div>
-                        <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Aug 2025 - Present</span>
+                        <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full whitespace-nowrap">Oct 2026 - Present</span>
                     </div>
                     <p class="text-gray-600">
-                        Working with the Mava team on multi-agent reinforcement learning research. 
-                        Developing novel approaches combining contrastive learning, goal-conditioned RL, 
-                        and curriculum learning for complex multi-agent environments. 
+                        Machine learning engineer at a UK AI startup.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold">Research Engineer Intern</h3>
+                            <p class="text-indigo-600 font-medium"><a href="https://instadeep.com/" target="_blank" class="hover:underline">InstaDeep</a></p>
+                        </div>
+                        <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Aug 2025 - Sep 2026</span>
+                    </div>
+                    <p class="text-gray-600">
+                        Worked with the Mava team on multi-agent reinforcement learning research. 
+                        Developed <strong>CPPO</strong>, an on-policy contrastive RL algorithm (NeurIPS 2026, co-first author),
+                        and contributed to <strong>ATLAS</strong> (NeurIPS 2026). 
                         Also built Tinkerer — an autonomous LLM-powered multi-agent system for 
                         automated scientific discovery, featuring a closed-loop workflow of idea generation, 
                         code implementation, experiment scheduling, and result collection.
@@ -227,16 +256,16 @@
             </p>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Project: CPPO -->
-                <a href="https://arxiv.org/abs/2605.13554" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block border border-indigo-100">
+                <a href="https://github.com/Asimawad/Contrastive-PPO" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block border border-indigo-100">
                     <div class="flex items-center gap-2 mb-3">
                         <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">Research</span>
-                        <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded">NeurIPS 2026 (under review)</span>
+                        <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded">NeurIPS 2026</span>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">CPPO — Contrastive Proximal Policy Optimisation</h3>
                     <p class="text-gray-600 text-sm mb-4">
                         The first on-policy contrastive RL algorithm, and the first to handle discrete action
                         spaces — learns goal-conditioned behaviour with no reward function, replay buffer, or GAE.
-                        Across 18 tasks in 5 suites, matches or beats reward-engineered PPO. arXiv:2605.13554.
+                        Across 18 tasks in 5 suites, matches or beats reward-engineered PPO on 12. Code on GitHub.
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">Contrastive RL</span>
@@ -249,7 +278,7 @@
                     <div class="flex items-center gap-2 mb-3">
                         <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">Research</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">VinePPO</h3>
+                    <h3 class="text-lg font-semibold mb-2">VinePPO / CAL-GRPO</h3>
                     <p class="text-gray-600 text-sm mb-4">
                         Fine-Grained Credit Assignment for RL Training. Token-level reward 
                         assignment to improve training stability and sample efficiency for LLMs.
@@ -261,7 +290,7 @@
                     </div>
                 </a>
                 <!-- Project 2 -->
-                <a href="https://github.com/Asimawad/Contrastive-RL-UED" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block">
+                <div class="bg-gray-50 p-6 rounded-xl card-hover block">
                     <div class="flex items-center gap-2 mb-3">
                         <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded">Research</span>
                         <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs font-medium rounded">Private</span>
@@ -275,7 +304,7 @@
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">MARL</span>
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">Curriculum</span>
                     </div>
-                </a>
+                </div>
                 <!-- Project 3 -->
                 <a href="https://github.com/Asimawad/aide-agent" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block">
                     <div class="flex items-center gap-2 mb-3">
@@ -318,7 +347,7 @@
                     </div>
                 </div>
                 <!-- Project 6 -->
-                <a href="https://github.com/Asimawad/Elm-Challenges-Digital_Integrity" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block">
+                <div class="bg-gray-50 p-6 rounded-xl card-hover block">
                     <div class="flex items-center gap-2 mb-3">
                         <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs font-medium rounded">Private</span>
                     </div>
@@ -331,11 +360,12 @@
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">GenAI</span>
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">Detection</span>
                     </div>
-                </a>
+                </div>
                 <!-- Project 5 -->
-                <a href="https://github.com/Asimawad/DeepSeek-SFT" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block">
+                <div class="bg-gray-50 p-6 rounded-xl card-hover block">
                     <div class="flex items-center gap-2 mb-3">
                         <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded">LLM Engineering</span>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs font-medium rounded">Private</span>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">DeepSeek-SFT</h3>
                     <p class="text-gray-600 text-sm mb-4">
@@ -348,11 +378,11 @@
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">DeepSeek</span>
                         <span class="text-xs bg-gray-200 px-2 py-1 rounded">HuggingFace</span>
                     </div>
-                </a>
+                </div>
                 <!-- Project 8 -->
-                <a href="https://github.com/Asimawad/Arabic-to-Swahili-Machine-Translation" target="_blank" class="bg-gray-50 p-6 rounded-xl card-hover block">
+                <a href="projects/arabic-swahili-mt.html" class="bg-gray-50 p-6 rounded-xl card-hover block">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">Graduation Project</span>
+                        <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">ICLR 2023 Tiny Paper</span>
                     </div>
                     <h3 class="text-lg font-semibold mb-2">Arabic-Swahili MT</h3>
                     <p class="text-gray-600 text-sm mb-4">
@@ -382,6 +412,10 @@
                         <h4 class="font-medium mb-1">Bayesian Active Learning</h4>
                         <p class="text-sm text-gray-600">BNNs for uncertainty quantification</p>
                     </a>
+                    <a href="projects/aims/recommender-system.html" class="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition">
+                        <h4 class="font-medium mb-1">Recommender System</h4>
+                        <p class="text-sm text-gray-600">Collaborative filtering at scale, with a live demo</p>
+                    </a>
                 </div>
             </div>
 
@@ -404,18 +438,26 @@
             <h2 class="text-3xl font-bold mb-12 text-center">Publications</h2>
             <div class="space-y-4">
                 <a href="https://arxiv.org/abs/2605.13554" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm card-hover">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded">NeurIPS 2026 (under review)</span>
+                    <div class="flex flex-wrap items-center gap-2 mb-2">
+                        <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded">NeurIPS 2026 · Main Track</span>
+                        <span class="px-2 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded">Spotlight · RLBRew @ RLC 2026</span>
                     </div>
                     <h3 class="font-semibold">Self-Supervised On-Policy Reinforcement Learning via Contrastive Proximal Policy Optimisation (CPPO)</h3>
-                    <p class="text-gray-600 text-sm mt-1">Asim Osman, et al. — arXiv:2605.13554, 2026. Workshop version submitted to RLBRew @ RLC 2026.</p>
+                    <p class="text-gray-600 text-sm mt-1"><strong>Asim Osman</strong>*, Sasha Abramowitz*, et al., Arnu Pretorius. *Equal contribution. arXiv:2605.13554.</p>
+                </a>
+                <a href="https://openreview.net/forum?id=mLNxExQR4f" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm card-hover">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs font-medium rounded">NeurIPS 2026 · Main Track</span>
+                    </div>
+                    <h3 class="font-semibold">Coordinating RL Agents through Scalable Inference-Time Search (ATLAS)</h3>
+                    <p class="text-gray-600 text-sm mt-1">Daniel Rajaonarivonivelomanantsoa, et al., <strong>Asim Osman</strong>, et al., Arnu Pretorius, Felix Chalumeau.</p>
                 </a>
                 <a href="https://openreview.net/pdf?id=aVepdnlRb5" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm card-hover">
                     <div class="flex items-center gap-2 mb-2">
-                        <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">ICLR 2023</span>
+                        <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">ICLR 2023 · Tiny Papers</span>
                     </div>
                     <h3 class="font-semibold">Machine Translation Baselines for Arabic–Swahili</h3>
-                    <p class="text-gray-600 text-sm mt-1">Asim Osman, et al. — ICLR 2023, Tiny Papers Initiative.</p>
+                    <p class="text-gray-600 text-sm mt-1"><strong>Asim Osman</strong>, et al.</p>
                 </a>
             </div>
         </div>
@@ -426,8 +468,8 @@
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
             <p class="text-gray-400 mb-8 max-w-xl mx-auto">
-                I'm always interested in discussing research collaborations, new opportunities, 
-                or just chatting about RL and AI.
+                I'm looking for PhD positions starting in 2027, and I'm always happy to talk about
+                research collaborations or just chat about RL and AI.
             </p>
             <div class="flex gap-4 justify-center flex-wrap">
                 <a href="mailto:asim.awad98@gmail.com" class="px-6 py-3 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100 transition">
